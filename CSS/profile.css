@@ -11,12 +11,40 @@ body {
 header .wrapper{
     background-color: #444;
     height: 70px;
+
+}
+
+.navbar div{
+    float: right;
+    margin-top: 11px;
+}
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.navbar button{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
 }
 
 .logo {
     color: orange;
     float: left;
-    margin-left: 15%;
+    margin-left: 5%;
+    font-size: 1.5em;
+}
+.logo h3{
+    vertical-align: middle;
+    margin-top: 20px;
 }
 
 .list{
