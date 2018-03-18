@@ -196,10 +196,29 @@ header .wrapper{
 }
 
 
+
+.link-account{
+    margin-top: 30px;
+    background-color: #444;
+    padding: 25px;
+    display: inline-block;
+    border-radius: 10px;
+
+}
+
+.link-acc{
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    /* padding: 30px; */
+    
+}
+
+
 .loginBtn {
-    box-sizing: border-box;
-    position: relative;
-    margin: 0.2em;
+    /* box-sizing: border-box; */
+    margin-top:  0px;
+    margin-left: 80px;
     padding: 0 15px;
     border: none;
     text-align: left;
@@ -218,6 +237,8 @@ header .wrapper{
     background-image: linear-gradient(#4C69BA, #3B55A0);
     text-shadow: 0 -1px 0 #354C8C;
   }
+
+
 
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
