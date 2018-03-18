@@ -87,7 +87,7 @@ input[type=text]:focus {
     width: 80%;
 }
 input[type=submit]{
-    background-image: url('/img/search.svg');
+    background-image: url('../Images/search.svg');
     background-repeat: no-repeat; 
     width :20px;
     height: 20px;
@@ -135,13 +135,9 @@ input[type=submit]:hover{
   }
 
 .banner{
-    background: url('/img/Vinyl_Records.jpg') fixed no-repeat;
+    background: url('../Images/Vinyl_Records.jpg') fixed no-repeat;
     background-size: cover;
     height: 200px;
-    
-  
-   
-   
 }
 .banner p {
     text-align: center;
@@ -234,20 +230,38 @@ input[type=submit]:hover{
 }
 .product-container .product-list .product{
     list-style-type: none;
-    
+    position: relative;
+    top: 0;
+    left: 0;
     padding: 2%;
     flex-basis: 29%;
+    transition: .3s ease-in;
  
+}
+.product-container .product-list .product .preview{
+    position: absolute;
+    top:40%;
+    left:40%;
+    
+    transition: .3s ease-in;
+    width: 20%;
+    z-index: 25;
+    
 }
 .product-container .product-list .product img{
     list-style-type: none;
     width:100%;
+    
 }
 
+
+
 .product-container .product-list .product:hover{
-    
+   
+    transition: .3s ease-in;
     
 }
+
 
 
 
