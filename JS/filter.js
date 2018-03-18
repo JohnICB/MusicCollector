@@ -1,8 +1,24 @@
 $(document).ready(function(){
-    $("product").mouseover(function(){
-        $(this).css("opacity","0.3");
+    $(".vyn").hover(function(){
+        // $(this).css("opacity","0.3");
+        let img = $(this);
+        img.css("opacity","0.4");
+        img=$(this).find(".preview");
+        img.css("opacity","1");
+        
+        // let img2 = $(this).getElementsByClassName('vyn');
+        // console.log(img2);
+        // img2.css("opacity","0.3");
+        // $(this).find('preview').css("opacity","1");
+       
+        
     },function(){
-        $(this).css("opacity","1");
+        // $(this).css("opacity","1");
+        // $(".preview").css("opacity","0");
+        let img = $(this);
+        img.css("opacity","1");
+        img=$(this).find(".preview");
+        img.css("opacity","0");
     });
 });
 function toggleFilter(){

@@ -111,8 +111,9 @@ header a:hover{
 
 /* Showcase */
 #showcase{
-  min-height:100vh;
-  background:url('https://images.pexels.com/photos/371836/pexels-photo-371836.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+  
+  min-height:50vh;
+  background:url('https://images.pexels.com/photos/371836/pexels-photo-371836.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') fixed;
   text-align:center;
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
@@ -545,4 +546,4 @@ body #myDIV {
   background-repeat:   no-repeat;
   background-position: center center;
 }
-}
+
