@@ -41,7 +41,7 @@ body{
     
   }
   header li{
-    float:left;
+    /* float:left; */
     display:inline;
     padding: 15px  15px 0px 15px;
   }
@@ -242,8 +242,8 @@ input[type=submit]:hover{
     position: absolute;
     top:40%;
     left:40%;
-    
-    transition: .3s ease-in;
+    opacity: 0;
+    transition: .1s ease-in;
     width: 20%;
     z-index: 25;
     
@@ -256,13 +256,15 @@ input[type=submit]:hover{
 
 
 
-.product-container .product-list .product:hover{
+/* .product-container .product-list .product:hover{
    
-    transition: .3s ease-in;
     
+    
+} */
+
+.vyn{
+    /* opacity: 0.2; */
 }
-
-
 
 
   footer {
