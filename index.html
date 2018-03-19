@@ -87,54 +87,21 @@
   </div>
   </section>
 
-
-  <div id="myDIV">
-    <div class="sign-up-container">
-      <div class="envelope">
-        <div class="paper">
-          <h1>Subscribe our Newslatter</h1>
-          <form id="sign-up-form">
-            <input type="text" placeholder="Email" class="text-input" />
-            <button onclick="myFunction()" type="submit" class="button">Sign up</button>
-          </form>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
+  <section class="bottom-section">
+      
   </section>
 
-  <footer class="text-center">
 
+  <footer class="text-center">
     <div class="social-icons">
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-instagram"></a>
     </div>
-
     <p id="coded">Music with love,By all artist on the world .</p>
     <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
 
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      //document.getElementsByClassName('sign-up-form')[0].on('submit', submit);
-      var form = document.getElementById('sign-up-form');
-      form.addEventListener('submit', submit);
-    });
-
-
-
-    function submit(e) {
-      var el = document.getElementsByClassName('sign-up-container')[0];
-      el.classList.add('submitted');
-      e.preventDefault();
-    }
-
-
-
-  </script>
 </body>
 
 </html>
