@@ -1,7 +1,7 @@
 body{
   margin: 0px;
 	font-size: 17px;
-  font-family: 'Bowlby One';
+  font-family: 'ABeeZee', Arial, Helvetica, sans-serif;
   
 	
 }
@@ -51,7 +51,7 @@ header{
 header a{
   color:#FF9999;
   text-decoration:none;
-  font-size:3vh;
+  font-size:28px;
   text-align: center;
   font-family: 'ABeeZee', Arial, Helvetica, sans-serif;
 }
@@ -69,22 +69,6 @@ header .container #logo{
   width: 15%;
 }
 
-/* header #branding{
-  float:left;
-  color:white;
-  display: inline-block;
-  width: 100px;
-}
-
-header #branding img{
-  /* margin-top: 5%;
-  margin-bottom: 1.5%; 
-  margin: 0px;
-  display: inline-block;
-} */
-
-
-
 header nav{
   float:right;
   margin-top: 3 20;
@@ -93,7 +77,6 @@ header nav{
 
 header .highlight, header .current a{
   color:#FFC8C8;
-  
 }
 
 header a:hover{
@@ -104,7 +87,6 @@ header a:hover{
 
 /* Showcase */
 #showcase{
-  
   min-height:50vh;
   background:url('https://images.pexels.com/photos/371836/pexels-photo-371836.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') fixed;
   text-align:center;
@@ -117,9 +99,7 @@ header a:hover{
 }
 
 #showcase h1{
-  
   font-size:55px;
-  
 }
 
 #showcase p{
@@ -127,64 +107,77 @@ header a:hover{
 }
 #showcase .container{
   padding:0px;
-
 }
 
 
 
 /*Portofoliu*/
-.portfolio-section {
+
+.middle-section{
   background-color:#444F5A;
-  padding-top:5vh;
+   color: white;
+  margin-top:5vh;
   padding-bottom:5vh;
+}
+
+.portfolio-section {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 2em;  
-  justify-items: center;
+  grid-row-gap: 3em;
+  grid-column-gap: 2em;
+  justify-items: left;
+  text-align: left;
   /* vertical-align: middle; */
 }
+
 .portfolio-section > img {
   width: 400px;
   height: 300px;
+  /* padding-left: 50px; */
+  border-radius: 10px;
+  /* margin-left: 20%; */
 }
 
-.portfolio-section .stanga-sus, .portfolio-section .stanga-jos{
+.title{
+ 
+  padding: 20px;
+
+}
+
+.portfolio-section .stanga-sus, 
+.portfolio-section .mijloc-dreapta, 
+.portfolio-section .stanga-jos{
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
-  justify-self: center;
-}
-
-.portfolio-section .mijloc-dreapta{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  justify-self: center;
-
+  justify-self: right;
 }
 
 .portfolio-section .stanga-jos{
   grid-row-start: 3;
+
+}
+
+.portfolio-section .mijloc-dreapta{
+  grid-row-start: 2;
 }
 
 
-.text, .text2 {
+.text, .text2, .text3 {
   grid-column-start: 3;
   grid-column-end: 4;
-  align-self: center;
+  width: 60%;
 }
 
 .text2 {
-  grid-row-start: 3;
+  grid-row-start: 2;
 }
 
 .text3 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  align-self: center;
+  grid-row-start: 3;
+  width: 60%;
 }
 
 /* .text3{
