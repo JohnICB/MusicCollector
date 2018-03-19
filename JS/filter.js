@@ -1,10 +1,9 @@
 $(document).ready(function(){
     $(".vyn").hover(function(){
         // $(this).css("opacity","0.3");
-        let img = $(this);
-        img.css("opacity","0.4");
-        img=$(this).find(".preview");
-        img.css("opacity","1");
+        let img = $(this).parent();
+        $(this).css("opacity","0.4");
+        img.find(".preview").css("opacity","1");
         
         // let img2 = $(this).getElementsByClassName('vyn');
         // console.log(img2);
@@ -15,10 +14,24 @@ $(document).ready(function(){
     },function(){
         // $(this).css("opacity","1");
         // $(".preview").css("opacity","0");
-        let img = $(this);
-        img.css("opacity","1");
-        img=$(this).find(".preview");
-        img.css("opacity","0");
+        let img = $(this).parent();
+        $(this).css("opacity","1");
+        img.find(".preview").css("opacity","0");
+    });
+    $(".preview").hover(function(){
+        // $(this).css("opacity","0.3");
+        let img = $(this).parent();
+        $(this).css("opacity","1");
+        img.find(".vyn").css("opacity","0.4");
+        
+        // let img2 = $(this).getElementsByClassName('vyn');
+        // console.log(img2);
+        // img2.css("opacity","0.3");
+        // $(this).find('preview').css("opacity","1");
+       
+        
+    },function(){
+      
     });
 });
 function toggleFilter(){
