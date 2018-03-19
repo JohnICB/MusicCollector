@@ -39,53 +39,51 @@ ul{
 /* Header **/
 header{
   background-color:#3E4149;
-  z-index:600000;
-  /*Opacity end*/
+  z-index:60;
   color: #FF9999;
   position: fixed;
   width: 100%;
-  min-height: 5px;
+  min-height: 55px;
   padding-top: -100px;
-  
-  
-  
-  
-  
+  /* height: 8vh; */
 }
 
 header a{
   color:#FF9999;
   text-decoration:none;
-
   font-size:3vh;
-
   text-align: center;
-
-  font-family: 'ABeeZee';
-  
-  
+  font-family: 'ABeeZee', Arial, Helvetica, sans-serif;
 }
 
 header li{
   float:left;
   display:inline;
-  padding: 5px  20px 0px 10px;
+  padding: 15px;
 }
 
-header #branding{
+header .container #logo{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15%;
+}
+
+/* header #branding{
   float:left;
   color:white;
-   
-  
+  display: inline-block;
+  width: 100px;
 }
 
-header #branding h1{
-  margin:0;
-}
-#branding img{
-  width :50%;
+header #branding img{
+  /* margin-top: 5%;
+  margin-bottom: 1.5%; 
+  margin: 0px;
+  display: inline-block;
+} */
 
-}
+
 
 header nav{
   float:right;
@@ -99,11 +97,10 @@ header .highlight, header .current a{
 }
 
 header a:hover{
-  
   color: #FFC8C8;
-  
-  font-family: 'ABeeZee';
+  /* font-family: 'ABeeZee'; */
 }
+
 
 /* Showcase */
 #showcase{
@@ -130,106 +127,70 @@ header a:hover{
 }
 #showcase .container{
   padding:0px;
-  /* vertical-align: middle */
 
 }
-/* Services */
 
 
 
-
-footer {
-  width:100%;
-  height:200px;
-  background-color:
-  #3E4149;
-  margin: 0;
-  color:#FF9999;
-  display:flex;
-  align-items: center;
-  justify-content:space-around;
-  flex-direction: column;
-  padding-top:20px;
-  
-}
-
-footer p {
-  font-size:0.7em;
-}
-
-footer  .fa {
-  padding: 23px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  
-}
-
-/* Add a hover effect if you want */
-footer .fa:hover {
-  opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-footer .fa-facebook {
-  color: white;
-  background: #3B5998;
-}
-
-/* Twitter */
-footer .fa-twitter {
-
-  color: white;
-  background: #55ACEE
-}
-footer .fa-instagram {
-  background: #ea4c89;
-  color: white;
-}
 /*Portofoliu*/
 .portfolio-section {
   background-color:#444F5A;
   padding-top:5vh;
   padding-bottom:5vh;
   position: relative;
-  
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 2em;  
+  justify-items: center;
+  /* vertical-align: middle; */
 }
-.image {
-  width: 450px;
-  height: 450px;
-  margin: 30px 0;
-  display: inline-block;
- 
+.portfolio-section > img {
+  width: 400px;
+  height: 300px;
 }
+
+.portfolio-section .stanga-sus, .portfolio-section .stanga-jos{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  justify-self: center;
+}
+
+.portfolio-section .mijloc-dreapta{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  justify-self: center;
+
+}
+
+.portfolio-section .stanga-jos{
+  grid-row-start: 3;
+}
+
 
 .text, .text2 {
-  /* background-color: rgba(188, 200, 235, 0.178); */
-  color: white;
-  font-size: 16px;
-  float: right;
-  width:500px ;
-  padding: 30px;
-  width: 700px;
-  text-align: left;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  align-self: center;
 }
-
 
 .text2 {
-  float: left;
-  text-align: left;
+  grid-row-start: 3;
 }
 
-.portfolio-section .image2{
-  width: 450px;
-  height: 450px;
-  float: right;
-  /* margin-bottom: ; */
-  /* margin: 30px 0; */
+.text3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  align-self: center;
 }
+
+/* .text3{
+  float: right;
+} */
+
 
 /* .line{
   vertical-align: middle;
@@ -245,6 +206,9 @@ footer .fa-instagram {
   margin-right: 150px;
   margin-left: 80px;
 }
+
+
+
 
 /*newsletter button*/
 .sign-up-container {
@@ -573,5 +537,56 @@ box-sizing: border-box;
  color:#FFC8C8;
 }
 
+footer {
+  width:100%;
+  height:200px;
+  background-color:
+  #3E4149;
+  margin: 0;
+  color:#FF9999;
+  display:flex;
+  align-items: center;
+  justify-content:space-around;
+  flex-direction: column;
+  padding-top:20px;
+  
+}
 
+footer p {
+  font-size:0.7em;
+}
+
+footer  .fa {
+  padding: 23px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  
+}
+
+/* Add a hover effect if you want */
+footer .fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+footer .fa-facebook {
+  color: white;
+  background: #3B5998;
+}
+
+/* Twitter */
+footer .fa-twitter {
+
+  color: white;
+  background: #55ACEE
+}
+footer .fa-instagram {
+  background: #ea4c89;
+  color: white;
+}
 
