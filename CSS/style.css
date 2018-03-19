@@ -53,9 +53,10 @@ header{
 header a{
   color:white;
   text-decoration:none;
-  font-size:28px;
+  font-size:22px;
   text-align: center;
   font-family: 'ABeeZee', Arial, Helvetica, sans-serif;
+  border-radius: 10px;
 }
 
 header li{
@@ -78,7 +79,12 @@ header nav{
 }
 
 header .highlight, header .current a{
-  color:white;
+  color: var(--light-gray);
+}
+
+header .reg {
+  border: white 1px solid;
+  padding: 10px;
 }
 
 header a:hover{
@@ -94,6 +100,8 @@ header a:hover{
   font-size:26px;
   margin: 50px 20px;
   font-family: 'Allerta Stencil';
+  width: 170px;
+  padding: 13px;
 }
 
 .buttonexplore {
@@ -102,8 +110,6 @@ header a:hover{
   box-sizing: border-box;
   background-color:var(--button-color);
   border-radius:20px;
-  padding: 20px;
-  width: 250px;
   transition: all 0.5s;
 }
 
@@ -140,8 +146,6 @@ header a:hover{
 	border-width: 0 7px;
   box-sizing: border-box;
   border-radius:20px;
-  padding: 20px;
-  width: 250px;
   text-align: center;
   transition-duration: 0.4s;
   text-decoration: none;
@@ -183,8 +187,6 @@ header a:hover{
   padding:0px;
 }
 
-
-
 /*Portofoliu*/
 
 .middle-section{
@@ -200,7 +202,7 @@ header a:hover{
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 3em;
-  grid-column-gap: 2em;
+  grid-column-gap: 3em;
   justify-items: left;
   text-align: left;
 
@@ -209,17 +211,12 @@ header a:hover{
 .portfolio-section > img {
   width: 400px;
   height: 300px;
-  /* padding-left: 50px; */
   border-radius: 10px;
   margin: auto 0px;
-  /* margin-left: 20%; */
-   /* vertical-align: middle; */
 }
 
 .title{
- 
-  padding: 20px;
-
+  padding: 40px;
 }
 
 .portfolio-section .stanga-sus, 
@@ -244,7 +241,7 @@ header a:hover{
 .text, .text2, .text3 {
   grid-column-start: 3;
   grid-column-end: 4;
-  width: 60%;
+  width: 80%;
 }
 
 .text2 {
@@ -253,20 +250,14 @@ header a:hover{
 
 .text3 {
   grid-row-start: 3;
-  width: 60%;
 }
 
-
-
-/*Textul de la image*/
-#text1{
-  font-family: 'Bangers';
-  font-size: 50px;
-  margin-top: 120px;
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
+.bottom-section .bottom-wrapper{
+  width: auto;
+  height: 300px;
+  background-color: tomato;
 }
+
 
 
 footer {
