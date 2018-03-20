@@ -2,7 +2,7 @@
 header{
     background-color: var(--nav-color);
     z-index:6000000;
-    position: fixed;
+    position: relative;
     width: 100%;
     min-height: 55px;
     padding-top: -100px;
