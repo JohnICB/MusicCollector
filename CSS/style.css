@@ -44,7 +44,7 @@ ul{
 /* Header **/
 header{
   background-color: var(--nav-color);
-  z-index:60;
+  z-index:6000000;
   position: fixed;
   width: 100%;
   min-height: 55px;
@@ -358,12 +358,12 @@ h3 {
 
 .button {
   
-  border: 1px solid #999;
+  border: 1px solid #4c5baf;
   -webkit-transition: background 0.1s, color 0.1s;
   transition: background 0.1s, color 0.1s;
 }
 .button:hover {
-  background: #db4344;
+  background: #4c5baf;
   color: #fef8e1;
 }
 
@@ -575,17 +575,18 @@ h3 {
   height: 100%;
     width: 0;
     position: fixed;
-    z-index:1;
-    top: 0;
+    z-index:6;
+    top:6%;
     right:-30px;
-    background: url(../images/register_bg.jpeg);
+    background:whitesmoke;
     text-align:center;
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
     overflow-x: hidden;
-    transition: 1s;
-    padding-top: 60px;
+    transition: 100ms;
+    padding-top: 50px;
+    border-left:1px solid black;
     
     
     
@@ -633,18 +634,20 @@ input:not([type="radio"]) {
   border-radius: 7px;
   padding: 0 10px;
   overflow: hidden;
-  width: 250px;
+  width: 350px;
   opacity: 0;
   font-size: 16px;
   text-align: center;
   outline: 0;
 }
 [id="sign-in"]:checked ~ input.sign-in, [id="sign-up"]:checked ~ input.sign-up, [id="reset"]:checked ~ input.reset {
-  max-height: 40px;
+  max-height: 50px;
   padding: 20px;
   margin: 20px 0;
   opacity: 1;
 }
+
+
 button:before {
   font-size: 16px;
 }
@@ -663,7 +666,7 @@ label {
   position: relative;
     display: inline-block;
     text-align: center;
-    font-size:25px; 
+    font-size:15px; 
     cursor: pointer;
     color: #000;
   
@@ -696,7 +699,8 @@ label:after {
   
 }
 #buttonlog{
-  background-color: #4caf50;
+
+  background-color: #4c5baf;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
