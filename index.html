@@ -17,7 +17,9 @@
 </head>
 
 <body>
+
   <header>
+
     <div class="container">
       <!-- <div id="branding"> -->
       <img id="logo" src="Images/logo.png" ;>
@@ -27,11 +29,40 @@
           <li class="current">
             <a href="index.html">Home</a>
           </li>
+
           <li>
             <a href="index.html">About</a>
+
           </li>
           <li>
-            <a href="#">Log in </a>
+            <a href="#">
+              </href>
+              <span style="color:aliceblue;" onclick="openNav()"> Log in</span>
+            </a>
+          </li>
+          <li id="mySidenav" class="sidenav" id=main>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="flex-wrap">
+
+              <fieldset id=background>
+                <form action novalidate>
+
+                  <input type="radio" name="rg" id="sign-in" checked/>
+                  <input type="radio" name="rg" id="reset" />
+
+                  <label for="sign-in">Sign in </label>
+                  <label for="reset">Reset</label>
+                  <input class=" sign-in reset" type="name" placeholder="Name" />
+                  <input class=" sign-in reset" type="email" placeholder="Email" />
+                  <input class=" sign-in" type="password" placeholder="Password" />
+                  <button id=buttonlog></button>
+
+
+                </form>
+              </fieldset>
+            </div>
+
+
           </li>
           <li>
             <a href="Index/registration.html">Register</a>
@@ -39,6 +70,7 @@
         </ul>
       </nav>
     </div>
+
   </header>
 
   <section id="showcase">
@@ -55,53 +87,103 @@
 
     </div>
 
-  <section class="middle-section">
-  <h2 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit.</h2>
-  <div class="portfolio-section">
+    <section class="middle-section">
+      <h2 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit.</h2>
+      <div class="portfolio-section">
 
-    <div class="text">
-      <h4>Lorem, ipsum dolor.</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
-        distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae officiis
-        tempora placeat doloribus dolorum suscipit?</p>
-    </div>
+        <div class="text">
+          <h4>Lorem, ipsum dolor.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
+            distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae
+            officiis tempora placeat doloribus dolorum suscipit?</p>
+        </div>
 
-    <img class="stanga-sus" src="Images/img-ds.jpeg" alt="">
+        <img class="stanga-sus" src="Images/img-ds.jpeg" alt="">
 
-    <div class="text2">
-      <h4>Lorem ipsum dolor sit amet.</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
-        distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae officiis
-        tempora placeat doloribus dolorum suscipit?</p>
-    </div>
-    <img class="mijloc-dreapta" src="Images/img-js.jpeg" alt="">
+        <div class="text2">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
+            distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae
+            officiis tempora placeat doloribus dolorum suscipit?</p>
+        </div>
+        <img class="mijloc-dreapta" src="Images/img-js.jpeg" alt="">
 
-    <div class="text3">
-      <h4>Lorem ipsum dolor sit.</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
-        distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae officiis
-        tempora placeat doloribus dolorum suscipit?</p>
-    </div>
-    <img class="stanga-jos" src="Images/img-md.jpeg" alt="">
+        <div class="text3">
+          <h4>Lorem ipsum dolor sit.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
+            distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae
+            officiis tempora placeat doloribus dolorum suscipit?</p>
+        </div>
+        <img class="stanga-jos" src="Images/img-md.jpeg" alt="">
 
-  </div>
+      </div>
+    </section>
+
+    <section class="bottom-section">
+
+    </section>
+    <section>
+      <div>
+        <div class="sign-up-container">
+          <p id=textmultumire>THANK YOU FOR SUBSCRIBE!!!</p>
+          <div class="envelope">
+            <div class="paper">
+
+              <h3>Subscribe our Newslatter</h3>
+
+              <form id="sign-up-form">
+                <input id="emailAddress" type="email">
+                <button onclick="myFunction()" type="submit" class="button">Sign up</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer class="text-center">
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+      <p id="coded">Music with love,By all artist on the world .</p>
+      <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
+
+    </footer>
   </section>
 
-  <section class="bottom-section">
-      
-  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      //document.getElementsByClassName('sign-up-form')[0].on('submit', submit);
+      var form = document.getElementById('sign-up-form');
+      form.addEventListener('submit', submit);
+    });
 
 
-  <footer class="text-center">
-    <div class="social-icons">
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-instagram"></a>
-    </div>
-    <p id="coded">Music with love,By all artist on the world .</p>
-    <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
 
-  </footer>
+    function submit(e) {
+      var el = document.getElementsByClassName('sign-up-container')[0];
+      el.classList.add('submitted');
+      e.preventDefault();
+    }
+
+  </script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+
+    }
+  </script>
 </body>
 
 </html>
