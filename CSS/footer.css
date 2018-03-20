@@ -1,3 +1,9 @@
+:root {
+  --nav-color: #000; 
+  --light-gray: #AAABBB;
+  --middle-section-bg: #fff;
+  --button-color: #4c5baf;
+}
 footer {
     width:100%;
     height:200px;

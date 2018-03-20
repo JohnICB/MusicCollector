@@ -1,4 +1,10 @@
 /* Header **/
+:root {
+  --nav-color: #000; 
+  --light-gray: #AAABBB;
+  --middle-section-bg: #fff;
+  --button-color: #4c5baf;
+}
 header{
     background-color: var(--nav-color);
     z-index:6000000;
