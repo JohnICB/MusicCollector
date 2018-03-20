@@ -119,15 +119,20 @@ input[type=submit]:hover{
    
   
   }
+  #textimg{
+    color:#000;
+    text-align: center;
+    padding-top:6%;
+  }
 
   .main{
       min-height: 100vh;
-      background-color: #8d807a;
+      background-color: #AAABBB;
      
   }
   .main .center{
     min-height: 100vh;
-    background-color: #7c6f69;
+    background-color: #fff;
     width: 70%;
     margin:auto;
   }
@@ -178,7 +183,7 @@ input[type=submit]:hover{
   list-style-type: none;
   overflow-y: scroll;
   height: 20vh;
-  border-left: .5rem solid #493c35;
+  border-left: .5rem solid white;
  
 }
 
@@ -210,11 +215,11 @@ input[type=submit]:hover{
   padding-top:1%;
   padding-bottom: 1%; 
   border-bottom: .1rem solid #e2ded3;
-  border-right: .5rem solid #55ACEE;
+  border-right: .5rem solid white;
   border-radius: 0px;
   border-width: 50%;
   transition: 0.2s ease-out;
-  background-color: #504743;
+  background-color: #AAABBB;
      
 }
 
