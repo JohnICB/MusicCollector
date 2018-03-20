@@ -346,43 +346,25 @@ input[type=submit]:hover{
     color: white;
   }
   .list-view-buttons {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
- .list-view-buttons button{
-       width: 3rem;
-       margin: 1px;
-       background-color: rgb(243, 241, 241);
-       border: 0;
-       box-shadow: #332e2b;
-       
-   }
-   .list-view-buttons button:focus{
-   outline: none;
-   
+   padding: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
-.list-view-buttons {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.list-view-buttons button{
+      width: 3rem;
+      margin: 1px;
+      background-color: rgb(243, 241, 241);
+      border: 0;
+      box-shadow: #332e2b;
+      transition: 0.2s ease-out;
+  }
+  .list-view-buttons button:focus{
+    outline: none;
  }
- .list-view-buttons button{
-       width: 3rem;
-       margin: 1px;
-       background-color: rgb(243, 241, 241);
-       border: 0;
-       box-shadow: #332e2b;
-       transition: 0.2s ease-out;
-   }
-   .list-view-buttons button:focus{
-     outline: none;
-  }
-  .list-view-buttons button:hover{
-     background-color: #979797;
-     transition: 0.2s ease-out;
-     border-radius: 2px;
-     border:2px #979797 solid;
-  }
+ .list-view-buttons button:hover{
+    background-color: #979797;
+    transition: 0.2s ease-out;
+    border-radius: 2px;
+    border:2px #979797 solid;
+ }

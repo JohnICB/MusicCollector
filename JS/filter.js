@@ -63,3 +63,11 @@ function toggleFilter(){
         btn.src="../Images/angle-double-down.svg";
     }
 }
+function toggleView(){
+    var el = document.getElementsByClassName("product-list");
+    el.classList.toggle("box");
+    el = document.getElementsByClassName("product");
+    for(i=0;i<el.length;i++){
+        el[i].classList.toggle("box");
+    }
+}
