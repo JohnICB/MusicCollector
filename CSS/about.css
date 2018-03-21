@@ -1,0 +1,61 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.preview{
+    height: 200px;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.164); */
+    text-align: center;
+    background: url("../Images/about-bg.jpeg") fixed center center no-repeat;
+    color: rgb(15, 32, 29);
+}
+
+.preview .title{
+    font-size: 3em;
+    padding-top: 30px;
+}
+
+.preview .sub-title{
+    width: 60%;
+    margin: auto;
+}
+
+.middle-section{
+    background-color: #fff;
+    color: black;
+}
+
+.middle-section .text{
+    margin: 0 20% 0 20%;
+}
+
+.middle-section .text .paragraph{
+    margin-top: 0px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.middle-section .wrp{
+    background-color: #aaa;
+}
+
+.middle-section .who{
+    width: 50%;
+    margin: auto;
+}
+
+.who .product{
+    font-size: 3em;
+}
+
+.middle-section .us{
+    width: 60%;
+    margin: auto;
+}
