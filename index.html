@@ -7,7 +7,8 @@
 
   <title>JBC MUSIC | Welcome</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
   <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Bowlby One' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
@@ -22,7 +23,10 @@
 
     <div class="container">
       <!-- <div id="branding"> -->
-      <img id="logo" src="Images/logo.png" ;>
+      <img id="logo" src="Images/logo.png" alt="">
+      <button class="menu-button">
+        <img src="../Images/bars.svg" alt="">
+      </button>
       <!-- </div> -->
       <nav>
         <ul>
@@ -31,29 +35,30 @@
           </li>
 
           <li>
-            <a href="index.html">About</a>
+            <a href="Index/about.html">About</a>
 
           </li>
-          <li><a>|</a></li>
+          <li>
+            <a>|</a>
+          </li>
           <li>
             <a href="#">
-              </href>
               <span style="color:aliceblue;" onclick="openNav()"> Log in</span>
             </a>
           </li>
-          <li id="mySidenav" class="sidenav" id=main>
+          <li id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="flex-wrap">
 
               <fieldset id=background>
-                <form action novalidate>
+                <form action="novalidate" >
 
                   <input type="radio" name="rg" id="sign-in" checked/>
                   <input type="radio" name="rg" id="reset" />
 
                   <label for="sign-in">Sign in </label>
                   <label for="reset">Forgot Password</label>
-                  <input class=" sign-in reset" type="name" placeholder="Name" />
+                  <input class=" sign-in reset" type="text" placeholder="Name" />
                   <input class=" sign-in reset" type="email" placeholder="Email" />
                   <input class=" sign-in" type="password" placeholder="Password" />
                   <button id=buttonlog></button>
@@ -80,10 +85,11 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eum molestias alias temporibus autem explicabo debitis
         dolorem sequi omnis iure!</p>
       <div class=stil>
-        <button class=buttonsingup>SING UP!</button>
-        <button class=buttonexplore>
+        <a href="Index/registration.html"><button class=buttonsingup>JOIN US!</button></a>
+        <a href="Index/about.html"><button class=buttonexplore>
           <span>EXPLORE!</span>
         </button>
+      </a>
       </div>
 
     </div>
@@ -96,7 +102,9 @@
           <h4>Lorem, ipsum dolor.</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
             distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae
-            officiis tempora placeat doloribus dolorum suscipit?</p>
+            officiis tempora placeat doloribus dolorum suscipit?
+            <a href="Index/cassetts.html">CASSETS</a>
+          </p>
         </div>
 
         <img class="stanga-sus" src="Images/img-ds.jpeg" alt="">
@@ -105,7 +113,9 @@
           <h4>Lorem ipsum dolor sit amet.</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
             distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae
-            officiis tempora placeat doloribus dolorum suscipit?</p>
+            officiis tempora placeat doloribus dolorum suscipit?
+            <a href="Index/profile.html">PROFILE</a>
+          </p>
         </div>
         <img class="mijloc-dreapta" src="Images/img-js.jpeg" alt="">
 
@@ -113,7 +123,9 @@
           <h4>Lorem ipsum dolor sit.</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
             distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae
-            officiis tempora placeat doloribus dolorum suscipit?</p>
+            officiis tempora placeat doloribus dolorum suscipit?
+            <a href="Index/vinyl.html">VINYL</a>
+          </p>
         </div>
         <img class="stanga-jos" src="Images/img-md.jpeg" alt="">
 
@@ -126,17 +138,14 @@
     <section>
       <div>
         <div class="sign-up-container">
-          <p id=textmultumire>THANK YOU FOR SUBSCRIBE!!!</p>
-          <div class="envelope">
-            <div class="paper">
-
-              <h3>Subscribe our Newslatter</h3>
-
-              <form id="sign-up-form">
-                <input id="emailAddress" type="email">
-                <button onclick="myFunction()" type="submit" class="button">Sign up</button>
-              </form>
-            </div>
+          <div id="containersign">
+            <h2>Subscribe</h2>
+            <p>Stay updated with our newsletter</p>
+            <form>
+              <input id=email type="email" placeholder="Type your Email" required>
+              <br>
+              <button>Subscribe</button>
+            </form>
           </div>
 
         </div>
@@ -146,6 +155,7 @@
 
 
     <footer>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <div class="social-icons">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
@@ -157,23 +167,6 @@
     </footer>
   </section>
 
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      //document.getElementsByClassName('sign-up-form')[0].on('submit', submit);
-      var form = document.getElementById('sign-up-form');
-      form.addEventListener('submit', submit);
-    });
-
-
-
-    function submit(e) {
-      var el = document.getElementsByClassName('sign-up-container')[0];
-      el.classList.add('submitted');
-      e.preventDefault();
-    }
-
-  </script>
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "25%";
