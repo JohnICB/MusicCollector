@@ -255,13 +255,13 @@ input[type=submit]:hover{
     align-items: center;
  
 }
-.product-container .product-list .product .box{
+.product-container .product-list.box .product.box{
     list-style-type: none;
     position: relative;
     top: 0;
     left: 0;
-    padding: 15%;
-    flex-basis: 29%;
+    padding: 1%;
+    flex-basis: 50%;
     transition: .3s ease-in;
     align-items: center;
  
