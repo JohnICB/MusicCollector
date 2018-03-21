@@ -1,11 +1,10 @@
 body{
-    margin: 0px;
-    font-size: 20px;
-    font-family: 'Bowlby One';font-size: 22px;
-    padding: 0;
-    
-      
-  }
+  margin: 0px;
+	font-size: 17px;
+  font-family: 'ABeeZee', Arial, Helvetica, sans-serif;
+
+  
+}
 .container{
     position: relative;
     width:80%;
