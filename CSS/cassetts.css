@@ -176,6 +176,8 @@ input[type=submit]:hover{
     height: 0;
     background-color: #fff;
     text-align: center;
+    display:flex;
+    justify-content: center;
 }
 
 .dropped{
@@ -188,16 +190,16 @@ input[type=submit]:hover{
 }
 
 .section{
-    display: inline-block;
+    
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding-left: 10% ;
     padding-right: 10%;
     padding-top: 0;
     text-align: left;
-    margin: 0 !important;
    
+    flex-basis: 10%;
     overflow: hidden;
-    height: 0;
+    
 
 }
 
@@ -278,6 +280,10 @@ input[type=submit]:hover{
     list-style-type: none;
     width:100%;
     
+}
+.product a{
+    color:black;
+    text-decoration: none;
 }
 
 

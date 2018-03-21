@@ -279,6 +279,11 @@ input[type=submit]:hover{
     width:100%;
     
 }
+.product a{
+    color:black;
+    text-decoration: none;
+}
+
 
 
 
