@@ -1,0 +1,3 @@
+com\musiccollector\api\WelcomeServlet.class
+com\musiccollector\api\LoginService.class
+com\musiccollector\api\LoginServlet.class
