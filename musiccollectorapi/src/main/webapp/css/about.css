@@ -12,7 +12,7 @@ body{
     width: 100%;
     /* background-color: rgba(255, 255, 255, 0.164); */
     text-align: center;
-    background: url("../Images/about-bg.jpeg") fixed center center no-repeat;
+    background: url("../WEB-INF/Images/about-bg.jpeg") fixed center center no-repeat;
     color: rgb(15, 32, 29);
 }
 

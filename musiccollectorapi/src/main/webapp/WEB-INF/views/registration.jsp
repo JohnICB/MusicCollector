@@ -7,15 +7,16 @@
     <title>JBC Music | Join us!</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/register.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="${pageContext.request.contextPath}/css/register.css" />
     <!-- <script src="main.js"></script> -->
+    <!-- <LINK REL=STYLESHEET HREF="../css/PDS_style.css"> -->
 </head>
 
 <body>
 
     <section id="form">
         <!-- action="/action_page.php" -->
-        <form>
+        <form action="${pageContext.request.contextPath}/register" method="POST">
             <div class="container">
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
@@ -56,7 +57,7 @@
                     <b>Account type</b>
                 </label>
                 <div class="tooltip">
-                <select name="account-type"class="dropdown-select" required>
+                <select name="account-type" class="dropdown-select" required>
                     <option value="" disabled selected>-----------</option>
                     <option value="personal">Person</option>
                     <option value="company">Company</option>
@@ -68,7 +69,7 @@
 
                 <div class="clearfix">
                     <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-                    <button type="submit" class="signupbtn">Sign Up</button>
+                    <button type="submit" class="signupbtn"> Sign Up </button>
                 </div>
             </div>
         </form>

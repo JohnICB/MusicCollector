@@ -1,0 +1,33 @@
+        USER
+    UserName      varchar2(16) not null PK;
+    Password      varchar2(64) not null;
+    Email         varchar2(20) not null;
+    User_Type     varchar2(8) not null;
+    Name          varchar2(16) default null;
+    Surname       varchar2(16) default null;
+    Description   varchar2(256) default null;
+    Gendre        varchar2(16) default null;
+    Birthday      Date default null;
+
+
+        COLLECTION
+    UserName      External Key
+    Name          varchar2(16) not null;
+    Song_ID       PK not null;
+    Type          Varchar(12) not null;
+
+
+        CONCERTS
+    Name          varchar2(16) not null;
+    StartDate     Date not null;
+    EndDate       Date not null;
+    URL           varchar2(128) not null;
+
+        CONNECTED_USERS
+    Token         varchar2(256) not null;
+    UserName      varchar2(16) not null;
+    Date          Date not null;
+    
+
+
+        

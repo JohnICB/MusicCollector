@@ -108,7 +108,7 @@ header .wrapper{
     border-radius: 50%;
 }
 .prof-pic-wrapper{
-  background: url(../Images/register_bg.jpeg) no-repeat center center;
+  background: url(../WEB-INF/Images/register_bg.jpeg) no-repeat center center;
   background-size: cover;
   border-radius: 50%;
   width: 80px;

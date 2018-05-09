@@ -12,7 +12,7 @@ body{
     padding: 0px;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
-    background: url("../Images/concert-bg.jpeg");
+    background: url("../WEB-INF/Images/concert-bg.jpeg");
     background-position: center center;
     background-attachment: fixed;
 }

@@ -42,7 +42,7 @@ input[type=text]:focus {
     width: 80%;
 }
 input[type=submit]{
-    background-image: url('../Images/search.svg');
+    background-image: url('../WEB-INF/Images/search.svg');
     background-repeat: no-repeat; 
     width :20px;
     height: 20px;
@@ -95,7 +95,7 @@ input[type=submit]:hover{
   }
 
 .banner{
-    background: url('../Images/Vinyl_Records.jpg') fixed no-repeat;
+    background: url('../WEB-INF/Images/Vinyl_Records.jpg') fixed no-repeat;
     background-size: cover;
     height: 200px;
 }

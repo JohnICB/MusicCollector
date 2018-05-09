@@ -1,4 +1,4 @@
-package com.musiccollector.api;
+package com.musiccollector.api.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        //TODO Check cookies
+        // Check cookies
         request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
     }
 
@@ -33,8 +33,6 @@ public class LoginServlet extends HttpServlet {
         if (isValidUser) {
 //            request.setAttribute("name", name);
 //            request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
-            //TODO Add cookie
-
             Cookie nameCookie = new Cookie("name", name);
             nameCookie.setMaxAge(-1);
             response.addCookie(nameCookie);

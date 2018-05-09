@@ -1,3 +1,5 @@
-D:\Programare_Avansata\musiccollectorapi\src\main\java\com\musiccollector\api\LoginService.java
-D:\Programare_Avansata\musiccollectorapi\src\main\java\com\musiccollector\api\LoginServlet.java
-D:\Programare_Avansata\musiccollectorapi\src\main\java\com\musiccollector\api\WelcomeServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\login\LoginServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\WelcomeServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\login\LoginService.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\login\RegisterServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\TemplateServlet.java
