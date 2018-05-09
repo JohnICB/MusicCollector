@@ -1,0 +1,7 @@
+https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2
+
+La acel link avem documentatia pentru API-ul pe care il vom folosi
+
+-facem un apel GET la adresa https://musicbrainz.org/ws/2/ urmat de parametrii pentru cautare
+-vom primi un xml sau un json pe care il vom serializa in server
+-controllerul va trimite la view
