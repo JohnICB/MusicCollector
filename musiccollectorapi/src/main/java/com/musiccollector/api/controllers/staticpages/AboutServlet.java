@@ -1,4 +1,4 @@
-package com.musiccollector.api.staticpages;
+package com.musiccollector.api.controllers.staticpages;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

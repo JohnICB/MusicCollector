@@ -1,4 +1,4 @@
-package com.musiccollector.api.login;
+package com.musiccollector.api.controllers.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +28,7 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String account_type = request.getParameter("account-type");
 
-        
+
 
         //TODO: Hash password
         //TODO: Check if reienter password is == password

@@ -1,4 +1,4 @@
 package com.musiccollector.api.model.collections;
 
-public class Vinyl {
+public class Vinyl implements IMusical {
 }

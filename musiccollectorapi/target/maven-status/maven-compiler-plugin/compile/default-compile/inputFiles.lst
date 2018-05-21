@@ -1,5 +1,14 @@
-D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\login\LoginServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\AboutServlet.java
 D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\WelcomeServlet.java
-D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\login\LoginService.java
-D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\login\RegisterServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\HomepageServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\users\User.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\QueryBuilder.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\collections\Collection.java
 D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\TemplateServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\collections\Cassetts.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\collections\Song.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\collections\IMusical.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\collections\Vinyl.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LoginServlet.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LoginService.java
+D:\WEB\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\RegisterServlet.java

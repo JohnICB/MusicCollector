@@ -87,12 +87,10 @@ input[type=text]:focus {
     width: 80%;
 }
 input[type=submit]{
-    background-image: url('../WEB-INF/Images/search.svg');
-    background-repeat: no-repeat; 
     width :20px;
     height: 20px;
     border: 1px black;
-    background-color: black;
+    background: black url('../WEB-INF/Images/search.svg') no-repeat;
     padding-top: 1px;
 
 }

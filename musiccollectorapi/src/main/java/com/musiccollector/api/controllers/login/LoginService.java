@@ -1,4 +1,4 @@
-package com.musiccollector.api.login;
+package com.musiccollector.api.controllers.login;
 
 public class LoginService {
     public boolean validateUser(String user, String password) {

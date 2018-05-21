@@ -1,4 +1,4 @@
-package com.musiccollector.api.login;
+package com.musiccollector.api.controllers.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
