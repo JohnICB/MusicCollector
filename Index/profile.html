@@ -57,9 +57,35 @@
     </div>
 
   </header>
-  <div class='text'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quo facilis nesciunt blanditiis commodi? Laudantium corrupti perspiciatis quod commodi asperiores sunt numquam ad! Laborum atque quos possimus, impedit illo autem.
-  </div>
+  <div class="split left">
+    <div class="centered">
+      <img src="../Images/profile.png" alt="Avatar woman">
+    </div>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
+      <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
+      <button class="tablinks" onclick="openCity(event, 'My playlist')">My playlist</button>
+    </div>
+    </div>
+    
+  <div class="split right">
+    
+      <div id="Home" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+      </div>
+      
+      <div id="Profile" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p> 
+      </div>
+      
+      <div id="My playlist" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      
+    </div>
   
     <footer>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -85,6 +111,24 @@
 
     }
   </script>
+  <script>
+    function openCity(evt, button) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(button).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
 </body>
 
 </html>
