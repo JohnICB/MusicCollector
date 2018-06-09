@@ -13,7 +13,7 @@
 
     <!--<servlet>-->
         <!--<servlet-name>RegisterServlet</servlet-name>-->
-        <!--<servlet-class>com.musiccollector.api.controllers.login.RegisterServlet</servlet-class>-->
+        <!--<servlet-class>com.musiccollector.api.controllers.register.RegisterServlet</servlet-class>-->
     <!--</servlet>-->
 
     <!--<servlet-mapping>-->

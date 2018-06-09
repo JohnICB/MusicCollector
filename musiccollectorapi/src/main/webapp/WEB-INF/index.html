@@ -51,16 +51,16 @@
             <div class="flex-wrap">
 
               <fieldset id=background>
-                <form action="novalidate" >
+                <form action="/login" method="POST" >
 
                   <input type="radio" name="rg" id="sign-in" checked/>
                   <input type="radio" name="rg" id="reset" />
 
                   <label for="sign-in">Sign in </label>
                   <label for="reset">Forgot Password</label>
-                  <input class=" sign-in reset" type="text" placeholder="Name" />
-                  <input class=" sign-in reset" type="email" placeholder="Email" />
-                  <input class=" sign-in" type="password" placeholder="Password" />
+                  <input class=" sign-in reset" type="text" placeholder="Username" name="username" />
+                  <!--<input class=" sign-in reset" type="email" placeholder="Email" />-->
+                  <input class=" sign-in" type="password" placeholder="Password" name="password" />
                   <button id=buttonlog></button>
 
 
@@ -71,7 +71,7 @@
 
           </li>
           <li>
-            <a class="reg" href="views/registration.html">Register</a>
+            <a class="reg" href="/register">Register</a>
           </li>
         </ul>
       </nav>

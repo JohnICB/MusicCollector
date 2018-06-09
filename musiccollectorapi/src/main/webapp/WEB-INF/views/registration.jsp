@@ -1,3 +1,4 @@
+<% String registerStatus = (String) request.getAttribute("registerStatus"); %>
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
     <link rel="stylesheet" type="text/css" media="screen" href="${pageContext.request.contextPath}/css/register.css" />
-    <!-- <script src="main.js"></script> -->
     <!-- <LINK REL=STYLESHEET HREF="../css/PDS_style.css"> -->
 </head>
 
@@ -16,7 +16,7 @@
 
     <section id="form">
         <!-- action="/action_page.php" -->
-        <form action="${pageContext.request.contextPath}/register" method="POST">
+        <form action="${pageContext.request.contextPath}/register" method="POST" >
             <div class="container">
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
@@ -48,7 +48,7 @@
                     <b>Repeat Password</b>
                 </label>
                 <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                <!--           
+                <!--
           <label>
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
           </label> -->
@@ -69,11 +69,26 @@
 
                 <div class="clearfix">
                     <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-                    <button type="submit" class="signupbtn"> Sign Up </button>
+                    <button type="submit" class="signupbtn" > Sign Up </button>
                 </div>
             </div>
         </form>
     </section>
+
+    <script>
+        let response =<%= registerStatus %>;
+
+        function getRegisterResponse() {
+
+            console.log(response);
+            console.log("click");
+            alert(response);
+
+            return true;
+
+        }
+    </script>
+    <%--<script src="../../JS/main.js"></script>--%>
 </body>
 
 </html>
