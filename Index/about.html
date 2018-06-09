@@ -2,51 +2,136 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JBC Music | About</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/about.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>JBC MUSIC | Welcome</title>
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bowlby One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+
+
 </head>
 
 <body>
 
-    <!-- ################################ -->
-    <nav></nav>
-    <!-- ################################ -->
+  <header>
 
-    <section class="preview">
-        <div class="wrapper">
-            <h2 class="title">WHY CHOOSE US?</h2>
-                <h3 class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nemo odit exercitationem sit natus, labore
-                    illum saepe aperiam officia est.</h3>
-        </div>
-    </section>
+    <div class="container">
+      <!-- <div id="branding"> -->
+      <img id="logo" src="../Images/logo.png" alt="">
+      <button class="menu-button">
+        <img src="../Images/bars.svg" alt="">
+      </button>
+      <!-- </div> -->
+      <nav>
+        <ul>
+          <li class="current">
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li>
+            <a>|</a>
+          </li>
+          <li>
+            <a href="#">
+              <span style="color:aliceblue;" onclick="openNav()"> Log in</span>
+            </a>
+          </li>
+          <li id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="flex-wrap">
+
+              <fieldset id=background>
+                <form action="novalidate" >
+
+                  <input type="radio" name="rg" id="sign-in" checked/>
+                  <input type="radio" name="rg" id="reset" />
+
+                  <label for="sign-in">Sign in </label>
+                  <label for="reset">Forgot Password</label>
+                  <input class=" sign-in reset" type="text" placeholder="Name" />
+                  <input class=" sign-in reset" type="email" placeholder="Email" />
+                  <input class=" sign-in" type="password" placeholder="Password" />
+                  <button id=buttonlog></button>
+
+
+                </form>
+              </fieldset>
+            </div>
+
+
+          </li>
+          <li>
+            <a class="reg" href="../Index/registration.html">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <section id="showcase">
+    <div class="container">
+      <h1>Explore our universe!</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eum molestias alias temporibus autem explicabo debitis
+        dolorem sequi omnis iure!</p>
+   
+
+    </div>
 
     <section class="middle-section">
-        <div class="wrapper">
+      
+      <div class="portfolio-section">
 
-            <div class="text">
-                <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt ipsam omnis officia quo, nemo unde libero?
-                    Labore doloribus dicta quia deleniti suscipit sequi sunt, esse, assumenda aperiam obcaecati quidem quas
-                    dolor? Quaerat laudantium mollitia quos minima molestiae placeat dolores, corporis assumenda, delectus
-                    is labore temporibus optio rerum tempora, doloremque minus qui reprehenderit, nam accusamus.</p>
-            </div>
-            <div class="wrp">
-                <div class="who">
-                    <h2 class="product">WHO ARE WE?</h2>
-                    <p class="us">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat unde ullam in labore, eveniet officiis
-                        expedita magnam qui laborum? Tenetur voluptatem iste voluptatum veniam numquam dolorum placeat ab
-                        nobis, magni non voluptatibus odio autem, laboriosam corrupti. Ducimus ipsa nostrum beatae non doloribus
-                        to tempore quo beatae, laudantium ut tenetur laboriosam quas corporis molestiae
-                        voluptates perferendis?</p>
-
-                        <!-- <img src=" POZA CU NOI " alt=""> -->
-                </div>
-            </div>
+        <div class="text">
+          <h4>About us!.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corporis distinctio est fuga! Doloremque, quos sapiente
+            distinctio enim possimus ad dicta iure totam sequi sint ullam quasi tempore voluptatum a, impedit quis eum quae
+            officiis tempora placeat doloribus dolorum suscipit?
+            
+          </p>
         </div>
+
+
+      </div>
     </section>
 
+    <section class="bottom-section">
+
+    </section>
+    
+
+
+
+    <footer>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+      <p id="coded">Music with love,By all artist on the world .</p>
+      <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
+
+    </footer>
+  </section>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "25%";
+
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+
+    }
+  </script>
 </body>
 
 </html>

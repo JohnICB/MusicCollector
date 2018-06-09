@@ -2,125 +2,89 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Name | My profile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/profile.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="main.js"></script> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>JBC MUSIC | Welcome</title>
+  <link rel="stylesheet" href="../css/profile.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bowlby One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+
+
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="wrapper">
-            <div class="logo">
-                <h3>JBC MUSIC</h3>
-            </div>
-            <nav class="navbar">
+  <header>
 
-                <ul class="list">
-                    <li>SIGN OUT</li>
-                </ul>
-                <div>
-                    <input type="text" placeholder="Search..">
-                    <button type="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                    <!-- <li><img src="" alt=""></li> -->
-                </div>
-            </nav>
-            </div>
-    </header>
+    <div class="container">
+      <!-- <div id="branding"> -->
+      <img id="logo" src="../Images/logo.png" alt="">
+      <button class="menu-button">
+        <img src="../Images/bars.svg" alt="">
+      </button>
+      <!-- </div> -->
+      <nav>
+        <ul>
+          <li class="current">
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+                <a class="current" href="../Index/cassetts.html">Cassetts</a>
+          </li>
+          <li>
+                    <a class="current" href="../Index/vinyl.html">Vinyls</a>
+          </li>
+          <li>
+                <a class="current" href="../Index/events.html">Concert tickets!</a>
+          </li>
 
-
-    <div class="content-container">
-        <div class="sidenav">
-            <a class="prof-pic-wrapper" href="#"></a>
-            <a href="#">Profile</a>
-            <a href="#">Collections</a>
-            <a href="#">Clients</a>
-            <a href="#">Settings</a>
-        </div>
-
-        <section class="section-A">
-            <div class="sect-A-wrapper">
-                <h2>Nume Prenume.</h2>
-                <h4>(icon) City city country</h4>
-            </div>
-
-            <!-- in partea draepta -->
-            <!-- TODO: add settings icon -->
-            <button class="edit-profile">Edit profile</button>
-        </section>
-
-        <section class="section-B">
-
-            <div class="collections">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio, voluptas quasi fugit eveniet dolor facere ex
-                    possimus, cupiditate nostrum itaque expedita natus. Eveniet, magnam rerum nobis nulla maxime alias debitis
-                    nihil magni iste quidem labore tempora perferendis iure. Beatae. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Debitis distinctio, voluptas quasi fugit eveniet dolor facere ex possimus, cupiditate
-                    nostrum itaque expedita natus. Eveniet, magnam rerum nobis nulla maxime alias debitis nihil magni iste
-                    quidem labore tempora perferendis iure. Beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Debitis distinctio, voluptas quasi fugit eveniet dolor facere ex possimus, cupiditate nostrum itaque
-                    expedita natus. Eveniet, magnam rerum nobis nulla maxime alias debitis nihil magni iste quidem labore
-                    tempora perferendis iure. Beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio,
-                    voluptas quasi fugit eveniet dolor facere ex possimus, cupiditate nostrum itaque expedita natus. Eveniet,
-                    magnam rerum nobis nulla maxime alias debitis nihil magni iste quidem labore tempora perferendis iure.
-                    Beatae.
-                </p>
-            </div>
-
-            <div class="sect-B-wrapper">
-                <fieldset class="personal">
-                    <legend>Personalia:</legend>
-                    <b>Firstname: </b>
-                    <span>Lorem, ipsum dolor.</span>
-                    <br>
-                    <b>Lastname: </b>
-                    <span>Lorem, ipsum dolor.</span>
-                    <br>
-                    <b>Username: </b>
-                    <span>Lorem, ipsum dolor.</span>
-                    <br>
-                    <b>Email: </b>
-                    <span>Lorem, ipsum dolor.</span>
-                    <br>
-                </fieldset>
-            </div>
-
-
-            <div class="sect-C-wrapper">
-                <fieldset class="details">
-                    <legend>Personalia:</legend>
-                    <b>Email: </b>
-                    <span>Lorem, ipsum dolor.</span>
-                    <br>
-                    <b>Birthday: </b>
-                    <span>Lorem, ipsum dolor.</span>
-                    <br>
-                    <b>Profile type: </b>
-                    <span>Lorem, ipsum dolor.</span>
-                    <br>
-                    <b>Visibility: </b>
-                    <span>Lorem, ipsum dolor.</span>
-                    <br>
-                </fieldset>
-            </div>
-
-            <div class="link-account">
-                <h2 class="link-acc">Link your account: </h2>
-                <button class="loginBtn loginBtn--facebook">
-                    Connect with Facebook
-                </button>
-            </div>
-        </section>
-
+          <li>
+            <a>|</a>
+          </li>
+          <li>
+            <a href="../index.html">
+              <span style="color:aliceblue;" onclick="openNav()"> Log out</span>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
     </div>
 
+  </header>
+  <div class='text'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quo facilis nesciunt blanditiis commodi? Laudantium corrupti perspiciatis quod commodi asperiores sunt numquam ad! Laborum atque quos possimus, impedit illo autem.
+  </div>
+  
+    <footer>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+      <p id="coded">Music with love,By all artist on the world .</p>
+      <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
+
+    </footer>
+  
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "25%";
+
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+
+    }
+  </script>
 </body>
 
 </html>
