@@ -36,6 +36,7 @@ public class Users {
 
   }
 
+
   public void insert() throws SQLException {
     Connection connection = Database.getConnection();
     PreparedStatement preparedStatement = connection.prepareStatement(

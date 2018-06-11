@@ -43,6 +43,9 @@ public class LoginService {
      */
     public static boolean isUserLoggedIn(Cookie cookies[])
     {
+
+        if (cookies == null) return false;
+
         Connection connection;
         try {
              connection = Database.getConnection();

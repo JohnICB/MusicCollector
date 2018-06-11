@@ -4,6 +4,8 @@ package com.musiccollector.api.model.database.entities;
 import com.musiccollector.api.model.Database;
 import com.musiccollector.api.model.database.CollectionJava;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -79,6 +81,48 @@ public class Collections {
 
     }
 
+    public static void insert(long uid, String title, boolean isVinyl, String description) {
+
+        try {
+            Connection connection = Database.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE) VALUES (?, ?, ?, ?)");
+
+            preparedStatement.setLong(1,uid);
+            preparedStatement.setString(2,description);
+            preparedStatement.setBoolean(3,isVinyl);
+            preparedStatement.setString(4,title);
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static void insert(long uid, long idMusic, String title, boolean isVinyl, String description) {
+
+        try {
+            Connection connection = Database.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE, ID_MUSIC) VALUES (? ,?, ?, ?, ?)");
+
+            preparedStatement.setLong(1,uid);
+            preparedStatement.setString(2,description);
+            preparedStatement.setBoolean(3,isVinyl);
+            preparedStatement.setString(4,title);
+            preparedStatement.setLong(5,idMusic);
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
     public long getIdCollection() {
     return idCollection;

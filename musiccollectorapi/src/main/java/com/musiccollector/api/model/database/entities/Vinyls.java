@@ -1,11 +1,9 @@
 package com.musiccollector.api.model.database.entities;
 
 import com.google.gson.JsonObject;
+import com.musiccollector.api.model.Database;
 
-import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Time;
+import java.sql.*;
 import java.util.Objects;
 
 public class Vinyls {
@@ -26,7 +24,7 @@ public class Vinyls {
   private String rarity;
   private java.sql.Date releaseDate;
 
-  public Vinyls(String externalId, String title, String album, String artists)
+  public Vinyls()
   {
 
   }
@@ -127,6 +125,47 @@ public class Vinyls {
     }
 
 
+    public void insert() {
+
+        Connection connection = null;
+        try {
+            connection = Database.getConnection();
+
+        PreparedStatement preparedStatement = connection.prepareStatement(
+                "INSERT INTO vinyls (EXTERNAL_ID, TITLE, ARTISTS, REGION" +
+                        ", AGE, ALBUM, SIZE, IS_COLORED, IS_STEREO, IS_SPECIAL_EDITION," +
+                        "DURATION, GENRE, RARITY, RELEASE_DATE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, this.externalId);
+            preparedStatement.setString(2, this.title);
+            preparedStatement.setString(3, this.artists);
+            preparedStatement.setString(4, this.region);
+            preparedStatement.setString(5, this.age);
+            preparedStatement.setString(6, this.album);
+            preparedStatement.setString(7, this.size);
+            preparedStatement.setBoolean(8, this.isColored);
+            preparedStatement.setBoolean(9, this.isStereo);
+            preparedStatement.setBoolean(10, this.isSpecialEdition);
+            preparedStatement.setTime(11, this.duration);
+            preparedStatement.setString(12, this.genre);
+            preparedStatement.setString(13, this.rarity);
+            preparedStatement.setDate(14, this.releaseDate);
+
+            preparedStatement.executeUpdate();
+
+            ResultSet r = connection.prepareStatement("SELECT LAST_INSERT_ID() from vinyls").executeQuery();
+
+            this.idVinyl = r.getLong(1);
 
 
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public long getIdVinyl() {
+        return idVinyl;
+    }
 }
+
