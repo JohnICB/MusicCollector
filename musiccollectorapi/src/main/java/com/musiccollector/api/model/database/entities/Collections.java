@@ -104,6 +104,8 @@ public class Collections {
 
     public static void insert(long uid, long idMusic, String title, boolean isVinyl, String description) {
 
+        System.out.println("id music " + idMusic);
+
         try {
             Connection connection = Database.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(

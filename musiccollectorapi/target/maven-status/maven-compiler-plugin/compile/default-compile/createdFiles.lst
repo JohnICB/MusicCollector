@@ -6,6 +6,7 @@ com\musiccollector\api\model\database\user\Users.class
 com\musiccollector\api\controllers\login\LoginServlet.class
 com\musiccollector\api\controllers\login\LoginService.class
 com\musiccollector\api\generators\TokenGenerator.class
+com\musiccollector\api\controllers\collections\VinylsServlet.class
 com\musiccollector\api\controllers\staticpages\EventsServlet.class
 com\musiccollector\api\controllers\staticpages\HomepageServlet.class
 com\musiccollector\api\model\database\entities\Cassettes.class

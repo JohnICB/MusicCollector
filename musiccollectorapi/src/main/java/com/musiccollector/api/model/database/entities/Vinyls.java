@@ -19,10 +19,10 @@ public class Vinyls {
   private boolean isColored;
   private boolean isStereo;
   private boolean isSpecialEdition;
-  private java.sql.Time duration;
+  private String duration;
   private String genre;
   private String rarity;
-  private java.sql.Date releaseDate;
+  private String releaseDate;
 
   public Vinyls()
   {
@@ -31,7 +31,7 @@ public class Vinyls {
 
     public Vinyls(String externalId, String title, String artists, String region, String age,
                   String album, String size, boolean isColored, boolean isStereo, boolean isSpecialEdition,
-                  Time duration, String genre, String rarity, Date releaseDate) {
+                  String duration, String genre, String rarity, String releaseDate) {
         this.externalId = externalId;
         this.title = title;
         this.artists = artists;
@@ -48,7 +48,7 @@ public class Vinyls {
         this.releaseDate = releaseDate;
     }
 
-    public Vinyls(long idVinyl, String externalId, String title, String artists, String region, String age, String album, String size, boolean isColored, boolean isStereo, boolean isSpecialEdition, Time duration, String genre, String rarity, Date releaseDate) {
+    public Vinyls(long idVinyl, String externalId, String title, String artists, String region, String age, String album, String size, boolean isColored, boolean isStereo, boolean isSpecialEdition, String duration, String genre, String rarity, String releaseDate) {
         this.idVinyl = idVinyl;
         this.externalId = externalId;
         this.title = title;
@@ -87,10 +87,10 @@ public class Vinyls {
                 boolean isColored = resultSet.getBoolean(9);
                 boolean isStereo = resultSet.getBoolean(10);
                 boolean isSpecialEdition = resultSet.getBoolean(11);
-                java.sql.Time duration = resultSet.getTime(12);
+                String duration = resultSet.getString(12);
                 String genre = resultSet.getString(13);
                 String rarity = resultSet.getString(14);
-                java.sql.Date releaseDate = resultSet.getDate(15);
+                String releaseDate = resultSet.getString(15);
 
                 return new Vinyls(idVinyl, externalID, title, artists, region,age, album, size, isColored, isStereo, isSpecialEdition, duration, genre, rarity, releaseDate);
 
@@ -146,15 +146,16 @@ public class Vinyls {
             preparedStatement.setBoolean(8, this.isColored);
             preparedStatement.setBoolean(9, this.isStereo);
             preparedStatement.setBoolean(10, this.isSpecialEdition);
-            preparedStatement.setTime(11, this.duration);
+            preparedStatement.setString(11, this.duration);
             preparedStatement.setString(12, this.genre);
             preparedStatement.setString(13, this.rarity);
-            preparedStatement.setDate(14, this.releaseDate);
+            preparedStatement.setString(14, this.releaseDate);
 
             preparedStatement.executeUpdate();
 
             ResultSet r = connection.prepareStatement("SELECT LAST_INSERT_ID() from vinyls").executeQuery();
 
+            if (r.next())
             this.idVinyl = r.getLong(1);
 
 

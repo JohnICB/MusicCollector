@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.musiccollector.api.controllers.login.LoginService;
 import com.musiccollector.api.model.database.CollectionJava;
+import com.musiccollector.api.model.database.entities.Cassettes;
 import com.musiccollector.api.model.database.entities.Collections;
 import com.musiccollector.api.model.database.entities.Vinyls;
 import com.musiccollector.api.model.database.user.Users;
@@ -15,11 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Time;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Objects;
 
 @WebServlet(urlPatterns = "/collections")
@@ -100,6 +97,7 @@ public class CollectionsServlet extends HttpServlet {
                 description = "";
 
             String reqType = request.getParameter("reqType");
+            System.out.println(reqType + reqType.equals("add") + " - " + isVinyl);
             if (reqType.equals("new"))
             {
                 Collections.insert(uid, title, isVinyl, description);
@@ -109,48 +107,45 @@ public class CollectionsServlet extends HttpServlet {
                 {
                     if (isVinyl)
                     {
-                        Vinyls vinyl = new Vinyls();
-                        try {
+                        System.out.println("add vinyl /collection");
+                        Vinyls vinyl  = new Vinyls(
+                        request.getParameter("mbid"),
+                        request.getParameter("musicTitle"),
+                        request.getParameter("artists"),
+                        request.getParameter("region"),
+                        request.getParameter("age"),
+                        request.getParameter("album"),
+                        request.getParameter("size"),
+                        Boolean.parseBoolean(request.getParameter("isColored")),
+                        Boolean.parseBoolean(request.getParameter("isStereo")),
+                        Boolean.parseBoolean(request.getParameter("isSpecialEdition")),
+                        request.getParameter("duration"),
+                        request.getParameter("genre"),
+                        request.getParameter("rarity"),
+                        request.getParameter("releaseDate"));
 
-                            Calendar now = Calendar.getInstance();
-                            now.set(Calendar.HOUR, 0);
-                            now.set(Calendar.MINUTE, 0);
-                            now.set(Calendar.SECOND, 0);
-                            now.set(Calendar.HOUR_OF_DAY, 0);
+                        vinyl.insert();
 
-                            Time t = (Time) now.getTime();
-
-                           if (request.getParameter("duration") != null)
-                           t = new Time(new SimpleDateFormat().parse(request.getParameter("duration")).getTime());
-
-
-                           java.sql.Date d = (java.sql.Date) now.getTime();
-
-                           if (request.getParameter("duration") != null)
-                               d = (java.sql.Date) new SimpleDateFormat().parse(request.getParameter("releaseDate"));
-
-                            vinyl = new Vinyls(
-                            request.getParameter("mbid"),
-                            title,
-                            request.getParameter("artists"),
-                            request.getParameter("region"),
-                            request.getParameter("age"),
-                            request.getParameter("album"),
-                            request.getParameter("size"),
-                            Boolean.parseBoolean(request.getParameter("isColored")),
-                            Boolean.parseBoolean(request.getParameter("isStereo")),
-                            Boolean.parseBoolean(request.getParameter("isSpecialEdition")),
-                            t,
-                            request.getParameter("genre"),
-                            request.getParameter("rarity"),
-                            (java.sql.Date) new SimpleDateFormat().parse(request.getParameter("releaseDate")));
-
-                            vinyl.insert();
-
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
                         Collections.insert(uid, vinyl.getIdVinyl(), title, true,description);
+                    }
+                    else
+                    {
+                        System.out.println("add cassettes /collections");
+
+                        Cassettes cassette = new Cassettes(
+                                request.getParameter("mbid"),
+                                request.getParameter("musicTitle"),
+                                request.getParameter("album"),
+                                request.getParameter("artists"),
+                                request.getParameter("genre"),
+                                request.getParameter("duration"),
+                                request.getParameter("age"),
+                                request.getParameter("usageGrade"),
+                                request.getParameter("releaseDate")
+                        );
+
+                        cassette.insert();
+                        Collections.insert(uid, cassette.getIdCassettes(), title, true,description);
                     }
                 }
             }
