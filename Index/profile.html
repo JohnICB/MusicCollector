@@ -64,52 +64,130 @@
     </div>
     
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Profile Settings</button>
-      <button class="tablinks" onclick="openCity(event, 'Profile')">Change Avatar</button>
-      <button class="tablinks" onclick="openCity(event, 'My playlist')">My playlist</button>
+      <button class="tablinks" onclick="openCity(event, 'My Collection')" id="defaultOpen">My Collection</button>
+      <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
+      <button class="tablinks" onclick="openCity(event, 'Change')">Change avatar</button>
     </div>
     </div>
     
   <div class="split right">
-    
-      <div id="Home" class="tabcontent">
-        <h3>E-mail reset!</h3>
-        <form>
-          E-mail:
-          <input type="email" name="email">
-          New E-mail:
-          <input type="email" name="email">
-        </form>
-        <button id="buttonn"></button>
-        <h3>Reset password</h3>
-        <form>
-          Old password:
-          <input type="password" name="psw">
-          New password:
-          <input type="password" name="psw">
-          
-        </form>
-        <button id="buttonn"></button>
-        <h3>Change username!</h3>
-        <form>
-          New username:
-          <input type="text" name="username"><br>
-          
-          </form>
-          <button id="buttonn"></button>
-          
+    <div id="My Collection" class="tabcontent">
+        <div class="contact" onclick="myFunction()">Add Colection
+
+            <span class="contactForm" id="mypopup">
+            
+              <h1>Keep in touch!</h1>
+              <small>I'll get back to you as quickly as possible</small>
+              
+              <form action="#">
+                <input placeholder="Name" type="text" required />
+                <input placeholder="Email" type="email" required />
+                <input placeholder="Subject" type="text" required />
+                <textarea placeholder="Comment"></textarea>
+                <input class="formBtn" type="submit" />
+                <input class="formBtn" type="reset" />
+              </form>
+            </span>
+              </div>        
+          <div class="product-container">
+            <ul class="product-list">
+                <li class="product">
+                    <a href="cassetts-preview.html">
+                        <h3>Cassette Y</h3>
+                        <img class="vyn" src="../Images/cassette.jpg" alt="">
+                        <p>DESCRIPTION</p>
+                        <img class="preview" src="../Images/bars.svg" alt="">
+                    </a>
+                </li>
+                <li class="product">
+                    <a href="cassetts-preview.html">
+                        <h3>Cassette Y</h3>
+  
+                        <img class="vyn" src="../Images/cassette.jpg" alt="">
+                        <p>DESCRIPTION</p>
+                        <img class="preview" src="../Images/bars.svg" alt="">
+                    </a>
+                </li>
+                <li class="product">
+                    <a href="cassetts-preview.html">
+                        <h3>Cassette Y</h3>
+  
+                        <img class="vyn" src="../Images/cassette.jpg" alt="">
+                        <p>DESCRIPTION</p>
+                        <img class="preview" src="../Images/bars.svg" alt="">
+  
+                    </a>
+                </li>
+                <li class="product" href="vinyl-preview.html">
+                  <a href="vinyl-preview.html">
+                      <h3>Vinyl X</h3>
+                      <img class="vyn" src="../Images/vinyl.png" alt="">
+                      <p>DESCRIPTION</p>
+                      <img class="preview" src="../Images/bars.svg" alt="">
+                  </a>
+              </li>
+              <li class="product" href="vinyl-preview.html">
+                  <a href="vinyl-preview.html">
+                      <h3>Vinyl X</h3>
+                      <img class="vyn" src="../Images/vinyl.png" alt="">
+                      <p>DESCRIPTION</p>
+                      <img class="preview" src="../Images/bars.svg" alt="">
+                  </a>
+              </li>
+              <li class="product" href="vinyl-preview.html">
+                  <a href="vinyl-preview.html">
+                      <h3>Vinyl X</h3>
+                      <img class="vyn" src="../Images/vinyl.png" alt="">
+                      <p>DESCRIPTION</p>
+                      <img class="preview" src="../Images/bars.svg" alt="">
+                  </a>
+              </li>
+            </ul>
+        </div>
       </div>
-      
-      
-      <div id="Profile" class="tabcontent">
+      <div id="Change" class="tabcontent">
         
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati consectetur labore error voluptates eveniet explicabo! Error voluptatum expedita consectetur eius facilis voluptatibus itaque perferendis quos similique aut, dolor ratione exercitationem.</p> 
       </div>
-      
-      <div id="My playlist" class="tabcontent">
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione ad accusamus, aliquam iusto, qui nulla sint libero obcaecati, earum nam similique! Qui assumenda deleniti eum accusamus nam laborum autem?</p>
+    
+      <div id="Profile" class="tabcontent">
+          <div>
+            <h3>E-mail reset!</h3>
+              <form>
+                E-mail:
+                <input type="email" name="email">
+                New E-mail:
+                <input type="email" name="email">
+              </form>
+        <button id="buttonn"></button>
+          </div>
+        <div>
+                <h3>Reset password</h3>
+                <form>
+                Old password:
+                <input type="password" name="psw">
+                New password:
+                <input type="password" name="psw">
+                
+                </form>
+                <button id="buttonn"></button>
       </div>
+        <div>
+              <h3>Change username!</h3>
+              <form>
+              New username:
+              <input type="text" name="username"><br>
+              
+              </form>
+              <button id="buttonn"></button>
+        </div>
+          
+      </div>
+      
+      
+      
+      
+      
       
     </div>
   
@@ -154,6 +232,12 @@
     
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+        function myFunction() {
+        var popup = document.getElementById("mypopup");
+        popup.classList.toggle("show");
+    }
     </script>
     
 </body>

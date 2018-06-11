@@ -391,8 +391,9 @@
 .right {
     right: 0;
     text-align: center;
+    display:inline-block;
     top:-5%;
-    background-color: red;
+    background-color: #fff;
     width:85%;
 }
 
@@ -450,12 +451,59 @@
 .tabcontent {
   height: 100%;
 
-  display: center;
+  display: inline-block;
   padding: 100px 200px;
   background: #fff;
   
 }
 form{
+text-align: center;
+padding-top:40px;
+padding-bottom:40px;
+
+  
+ 
+}
+h3{
+  text-align: center;
+}
+#buttonn {
+  
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #4c5baf;
+  color: #4c5baf;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+#buttonn:hover {
+  color: #fff;
+  background: #4c5baf;
+}
+#buttonn:active {
+  letter-spacing: 2px;
+}
+#buttonn:after {
+  content: "SUBMIT";
+}
+.tabcontent {
+  height: 100%;
+
+  display:inline-block;
+  padding: 80px 150px;
+  background: #fff;
+  
+}
+form{
+
 text-align: center;
 padding-top:40px;
 padding-bottom:40px;
@@ -493,4 +541,131 @@ h3{
   content: "SUBMIT";
 }
 
+.product-container{
+  width: 100%;
+  text-align: center;
+  
+ 
+}
+.product-container .product-list{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  
+  
+ 
+
+}
+.product-container .product-list .box{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:left;
+  flex-direction: column;
+  
+ 
+
+}
+
+.product-container .product-list .product{
+  list-style-type: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 2%;
+  flex-basis: 29%;
+  transition: .3s ease-in;
+  align-items: center;
+
+}
+.product-container .product-list.box .product.box{
+  list-style-type: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 1%;
+  flex-basis: 50%;
+  transition: .3s ease-in;
+  align-items: center;
+
+}
+.product-container .product-list .product .preview{
+  position: absolute;
+  top:40%;
+  left:40%;
+  opacity: 0;
+  transition: .1s ease-in;
+  width: 20%;
+  z-index: 25;
+  
+}
+.product-container .product-list .product img{
+  list-style-type: none;
+  width:100%;
+  
+}
+.product a{
+  color:black;
+  text-decoration: none;
+}
+.contact { 
+  
+  margin: 4em auto;
+  width: 100px; 
+  height: 30px; 
+  line-height: 30px;
+  background: teal;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+}
+.contact:hover { background: #666; }
+.contact:active { background: #444; }
+
+.contact .contactForm { 
+  visibility: hidden;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 400px;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+input, textarea { 
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  
+  display: block; 
+  width: 280px; 
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn { 
+  width: 140px;
+  display: inline-block;
+  
+  background: teal;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2em;
+  border: none;
+  height: 30px;
+}
+.contact .contactForm .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
 

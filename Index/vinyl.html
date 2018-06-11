@@ -25,10 +25,7 @@
             <!-- <div id="branding"> -->
             <img id="logo" src="../Images/logo.png" alt="asd">
             <!-- </div> -->
-            <div class="search">
-                <input id="search-bar" type="text" placeholder="Search">
-                <input type="submit" value="">
-            </div>
+           
             <nav>
                 <ul>
                     <li class="current">
@@ -98,8 +95,25 @@
                 <button onclick="toggleView()">
                     <img src="../Images/list-ul.svg" alt="">
                 </button>
+                
 
             </div>
+            <div class="search-container">
+
+                    <input class="search-bar" type="text" placeholder="Cautare dupa nume..." name="search">
+                    <select class="search-art">
+                          <option value="Artist">Artist</option>
+                          <option value="Albums">Albums</option>
+                          <option value="Tracks">Tracks</option>
+                          
+                        </select>
+                    <select class="search-bar">
+                          <option value="Vinyl">Vinyl</option>
+                          <option value="Cassets">Cassets</option>
+                    </select>
+                    <button class="button-search">Cautare</button>
+
+                </div>
             <div class="product-container">
                 <ul class="product-list">
                     <li class="product">
