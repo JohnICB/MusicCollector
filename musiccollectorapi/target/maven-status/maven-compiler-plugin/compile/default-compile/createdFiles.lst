@@ -9,6 +9,7 @@ com\musiccollector\api\controllers\staticpages\HomepageServlet.class
 com\musiccollector\api\model\database\entities\Cassettes.class
 com\musiccollector\api\musicbrainzapi\QueryBuilder.class
 com\musiccollector\api\model\Database.class
+com\musiccollector\api\model\database\CollectionJava.class
 com\musiccollector\api\controllers\register\RegisterService.class
 com\musiccollector\api\model\database\entities\Collections.class
 com\musiccollector\api\model\database\entities\Concerts.class

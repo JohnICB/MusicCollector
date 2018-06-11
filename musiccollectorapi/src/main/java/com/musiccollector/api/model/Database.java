@@ -36,6 +36,16 @@ public class Database {
         return preparedStatement.executeQuery();
     }
 
+    public static ResultSet selectQuery(String query, long ... longParameters) throws SQLException
+    {
+        PreparedStatement preparedStatement = Database.getConnection().prepareStatement(query);
+        for (int i = 1; i <= longParameters.length; ++i) {
+            preparedStatement.setLong(i, longParameters[i - 1]);
+        }
+
+        return preparedStatement.executeQuery();
+    }
+
     public static int updateOperation(String query, String ... parameters) throws SQLException {
 
         if (connection == null) connection = getConnection();

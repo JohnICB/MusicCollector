@@ -1,5 +1,8 @@
 package com.musiccollector.api.model.database.entities;
 
+import java.sql.Date;
+import java.sql.Time;
+
 public class Vinyls {
 
   private long idVinyl;
@@ -18,8 +21,32 @@ public class Vinyls {
   private String rarity;
   private java.sql.Date releaseDate;
 
+  public Vinyls(String externalId, String title, String album, String artists)
+  {
 
-  public long getIdVinyl() {
+  }
+
+    public Vinyls(String externalId, String title, String artists, String region, String age,
+                  String album, String size, String isColored, String isStereo, String isSpecialEdition,
+                  Time duration, String genre, String rarity, Date releaseDate) {
+        this.externalId = externalId;
+        this.title = title;
+        this.artists = artists;
+        this.region = region;
+        this.age = age;
+        this.album = album;
+        this.size = size;
+        this.isColored = isColored;
+        this.isStereo = isStereo;
+        this.isSpecialEdition = isSpecialEdition;
+        this.duration = duration;
+        this.genre = genre;
+        this.rarity = rarity;
+        this.releaseDate = releaseDate;
+    }
+
+
+    public long getIdVinyl() {
     return idVinyl;
   }
 
