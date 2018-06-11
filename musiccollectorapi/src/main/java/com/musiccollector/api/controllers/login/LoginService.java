@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class LoginService {
 
-    public boolean validateUser(String user, String password) {
+    public boolean validateLoginCredentials(String user, String password) {
 
         try {
             Connection connection = Database.getConnection();
@@ -92,6 +92,24 @@ public class LoginService {
 //                b = true;
 //            }
 //            return b;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public static boolean validateUsername(String username)
+    {
+        try {
+            Connection connection = Database.getConnection();
+            ResultSet resultSet = Database.selectQuery(connection,"SELECT ID_USER FROM jbcdb.USERS WHERE USERNAME LIKE ?", username);
+
+            if (resultSet.next())
+            {
+                return true;
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();

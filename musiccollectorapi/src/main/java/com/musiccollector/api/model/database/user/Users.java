@@ -93,6 +93,25 @@ public class Users {
 
     return idUser;
   }
+
+  public static long getIDbyName(String username)
+  {
+    long id = -1;
+    try {
+      ResultSet resultSet = Database.selectQuery(Database.getConnection(),
+              "SELECT ID_USER FROM USERS WHERE USERNAME LIKE ?",
+              username);
+
+      if (resultSet.next())
+      {
+        id = resultSet.getLong(1);
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
+    return id;
+  }
   private long getIdUserByEmail(String email)
   {
     if (this.idUser == -1)

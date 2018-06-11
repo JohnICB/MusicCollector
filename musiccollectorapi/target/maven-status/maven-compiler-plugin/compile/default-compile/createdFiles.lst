@@ -1,10 +1,12 @@
 com\musiccollector\api\model\database\entities\Vinyls.class
 com\musiccollector\api\WelcomeServlet.class
 com\musiccollector\api\TemplateServlet.class
+com\musiccollector\api\controllers\collections\CollectionsServlet.class
 com\musiccollector\api\model\database\user\Users.class
 com\musiccollector\api\controllers\login\LoginServlet.class
 com\musiccollector\api\controllers\login\LoginService.class
 com\musiccollector\api\generators\TokenGenerator.class
+com\musiccollector\api\controllers\staticpages\EventsServlet.class
 com\musiccollector\api\controllers\staticpages\HomepageServlet.class
 com\musiccollector\api\model\database\entities\Cassettes.class
 com\musiccollector\api\musicbrainzapi\QueryBuilder.class
@@ -12,7 +14,9 @@ com\musiccollector\api\model\Database.class
 com\musiccollector\api\model\database\CollectionJava.class
 com\musiccollector\api\controllers\register\RegisterService.class
 com\musiccollector\api\model\database\entities\Collections.class
+com\musiccollector\api\controllers\events\EventsServiceServlet.class
 com\musiccollector\api\model\database\entities\Concerts.class
+com\musiccollector\api\controllers\events\EventsService.class
 com\musiccollector\api\controllers\register\RegisterServlet.class
 com\musiccollector\api\controllers\staticpages\AboutServlet.class
 com\musiccollector\api\model\database\user\ConnectedUsers.class

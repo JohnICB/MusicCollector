@@ -53,8 +53,9 @@ public class Collections {
             long id = resultSet.getLong(1);
 
             ResultSet newResults = Database.selectQuery(
-                    "SELECT ID_MUSIC, ID_USER, DESCRIPTION, IS_VINYL, TITLE FROM COLLECTIONS" +
-                            "WHERE COLLECTION ID = ?", id);
+                    "SELECT ID_MUSIC, ID_USER, DESCRIPTION, IS_VINYL, TITLE FROM COLLECTIONS WHERE ID_COLLECTION = ?", id);
+
+
 
             if (!newResults.next()) { continue; }
 

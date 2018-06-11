@@ -1,5 +1,8 @@
 package com.musiccollector.api.model.database;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 import java.util.ArrayList;
 
 public class CollectionJava {
@@ -19,5 +22,36 @@ public class CollectionJava {
         this.title = title;
     }
 
+    public static JsonArray toJsonPreview (ArrayList<CollectionJava> collectionJava)
+    {
+        JsonArray jsonArray = new JsonArray();
+        JsonObject jobj = new JsonObject();
 
+        for (CollectionJava i : collectionJava)
+        {
+            jobj = new JsonObject();
+
+            jobj.addProperty("title", i.getTitle());
+            jobj.addProperty("description", i.getDescription());
+            jobj.addProperty("isVinyl", i.isVinyl());
+
+            jsonArray.add(jobj);
+        }
+
+
+
+        return jsonArray;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean isVinyl() {
+        return isVinyl;
+    }
 }
