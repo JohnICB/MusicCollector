@@ -1,7 +1,12 @@
 package com.musiccollector.api.model.database.entities;
 
+import com.google.gson.JsonObject;
+
 import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Time;
+import java.util.Objects;
 
 public class Vinyls {
 
@@ -13,9 +18,9 @@ public class Vinyls {
   private String age;
   private String album;
   private String size;
-  private String isColored;
-  private String isStereo;
-  private String isSpecialEdition;
+  private boolean isColored;
+  private boolean isStereo;
+  private boolean isSpecialEdition;
   private java.sql.Time duration;
   private String genre;
   private String rarity;
@@ -27,7 +32,7 @@ public class Vinyls {
   }
 
     public Vinyls(String externalId, String title, String artists, String region, String age,
-                  String album, String size, String isColored, String isStereo, String isSpecialEdition,
+                  String album, String size, boolean isColored, boolean isStereo, boolean isSpecialEdition,
                   Time duration, String genre, String rarity, Date releaseDate) {
         this.externalId = externalId;
         this.title = title;
@@ -45,139 +50,83 @@ public class Vinyls {
         this.releaseDate = releaseDate;
     }
 
+    public Vinyls(long idVinyl, String externalId, String title, String artists, String region, String age, String album, String size, boolean isColored, boolean isStereo, boolean isSpecialEdition, Time duration, String genre, String rarity, Date releaseDate) {
+        this.idVinyl = idVinyl;
+        this.externalId = externalId;
+        this.title = title;
+        this.artists = artists;
+        this.region = region;
+        this.age = age;
+        this.album = album;
+        this.size = size;
+        this.isColored = isColored;
+        this.isStereo = isStereo;
+        this.isSpecialEdition = isSpecialEdition;
+        this.duration = duration;
+        this.genre = genre;
+        this.rarity = rarity;
+        this.releaseDate = releaseDate;
+    }
 
-    public long getIdVinyl() {
-    return idVinyl;
-  }
+    public static Vinyls processResults(ResultSet resultSet) //select * from vinyls where id = ?
+    {
 
-  public void setIdVinyl(long idVinyl) {
-    this.idVinyl = idVinyl;
-  }
+        try {
+            if (resultSet == null || !resultSet.next())
+            {
+                return null;
+            }
+            else
+            {
+                long idVinyl = resultSet.getLong(1);
+                String externalID = resultSet.getString(2);
+                String title = resultSet.getString(3);
+                String artists = resultSet.getString(4);
+                String region = resultSet.getString(5);
+                String age = resultSet.getString(6);
+                String album = resultSet.getString(7);
+                String size = resultSet.getString(8);
+                boolean isColored = resultSet.getBoolean(9);
+                boolean isStereo = resultSet.getBoolean(10);
+                boolean isSpecialEdition = resultSet.getBoolean(11);
+                java.sql.Time duration = resultSet.getTime(12);
+                String genre = resultSet.getString(13);
+                String rarity = resultSet.getString(14);
+                java.sql.Date releaseDate = resultSet.getDate(15);
 
-
-  public String getExternalId() {
-    return externalId;
-  }
-
-  public void setExternalId(String externalId) {
-    this.externalId = externalId;
-  }
-
-
-  public String getTitle() {
-    return title;
-  }
-
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
-
-  public String getArtists() {
-    return artists;
-  }
-
-  public void setArtists(String artists) {
-    this.artists = artists;
-  }
-
-
-  public String getRegion() {
-    return region;
-  }
-
-  public void setRegion(String region) {
-    this.region = region;
-  }
-
-
-  public String getAge() {
-    return age;
-  }
-
-  public void setAge(String age) {
-    this.age = age;
-  }
+                return new Vinyls(idVinyl, externalID, title, artists, region,age, album, size, isColored, isStereo, isSpecialEdition, duration, genre, rarity, releaseDate);
 
 
-  public String getAlbum() {
-    return album;
-  }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
-  public void setAlbum(String album) {
-    this.album = album;
-  }
+    public JsonObject toJson()
+    {
+        JsonObject vinylJson = new JsonObject();
 
+        vinylJson.addProperty("title", Objects.requireNonNullElse(title, ""));
+        vinylJson.addProperty("artists", Objects.requireNonNullElse(this.artists, ""));
+        vinylJson.addProperty("region",  Objects.requireNonNullElse(this.region, ""));
+        vinylJson.addProperty("age",  Objects.requireNonNullElse(this.age, ""));
+        vinylJson.addProperty("album",  Objects.requireNonNullElse(this.album, ""));
+        vinylJson.addProperty("size",  Objects.requireNonNullElse(this.size, ""));
+        vinylJson.addProperty("isColored",  Objects.requireNonNullElse(this.isColored, false));
+        vinylJson.addProperty("isStereo",  Objects.requireNonNullElse(this.isStereo, false));
+        vinylJson.addProperty("isSpecialEdition",  Objects.requireNonNullElse(this.isSpecialEdition, false));
+        vinylJson.addProperty("duration",  Objects.requireNonNullElse(this.duration.toString(), ""));
+        vinylJson.addProperty("genre",  Objects.requireNonNullElse(this.genre, ""));
+        vinylJson.addProperty("rarity",  Objects.requireNonNullElse(this.rarity, ""));
+        vinylJson.addProperty("releaseDate",  Objects.requireNonNullElse(this.releaseDate.toString(), ""));
 
-  public String getSize() {
-    return size;
-  }
+        return vinylJson;
 
-  public void setSize(String size) {
-    this.size = size;
-  }
-
-
-  public String getIsColored() {
-    return isColored;
-  }
-
-  public void setIsColored(String isColored) {
-    this.isColored = isColored;
-  }
-
-
-  public String getIsStereo() {
-    return isStereo;
-  }
-
-  public void setIsStereo(String isStereo) {
-    this.isStereo = isStereo;
-  }
+    }
 
 
-  public String getIsSpecialEdition() {
-    return isSpecialEdition;
-  }
 
-  public void setIsSpecialEdition(String isSpecialEdition) {
-    this.isSpecialEdition = isSpecialEdition;
-  }
-
-
-  public java.sql.Time getDuration() {
-    return duration;
-  }
-
-  public void setDuration(java.sql.Time duration) {
-    this.duration = duration;
-  }
-
-
-  public String getGenre() {
-    return genre;
-  }
-
-  public void setGenre(String genre) {
-    this.genre = genre;
-  }
-
-
-  public String getRarity() {
-    return rarity;
-  }
-
-  public void setRarity(String rarity) {
-    this.rarity = rarity;
-  }
-
-
-  public java.sql.Date getReleaseDate() {
-    return releaseDate;
-  }
-
-  public void setReleaseDate(java.sql.Date releaseDate) {
-    this.releaseDate = releaseDate;
-  }
 
 }

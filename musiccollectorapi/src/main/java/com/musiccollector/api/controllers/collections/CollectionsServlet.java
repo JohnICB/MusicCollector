@@ -61,7 +61,6 @@ public class CollectionsServlet extends HttpServlet {
                     response.setContentType("application/json");
                     response.getWriter().write(collectionsJson.toString());
 
-
                 }
             }
         }

@@ -2,7 +2,12 @@ package com.musiccollector.api.model.database;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.musiccollector.api.model.Database;
+import com.musiccollector.api.model.database.entities.Cassettes;
+import com.musiccollector.api.model.database.entities.Vinyls;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class CollectionJava {
@@ -38,9 +43,40 @@ public class CollectionJava {
             jsonArray.add(jobj);
         }
 
-
-
         return jsonArray;
+    }
+
+    public ArrayList<Vinyls> getVinylContent()
+    {
+
+        ArrayList<Vinyls> vinylArray = new ArrayList<>();
+        for (long id : id_music)
+        {
+            try {
+                ResultSet resultSet = Database.selectQuery(
+                        "SELECT * FROM VINYLS WHERE ID_VINYL = ?", id);
+
+                Vinyls vinyl = Vinyls.processResults(resultSet);
+
+                if (vinyl != null)
+                {
+                    vinylArray.add(vinyl);
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return vinylArray;
+    }
+
+    public ArrayList<Cassettes> getCassetesContent(CollectionJava collectionJava)
+    {
+        ArrayList<Cassettes> cassettesArray = new ArrayList<>();
+
+        return cassettesArray;
     }
 
     public String getDescription() {
