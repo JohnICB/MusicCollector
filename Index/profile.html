@@ -60,10 +60,12 @@
   <div class="split left">
     <div class="centered">
       <img src="../Images/profile.png" alt="Avatar woman">
+      <p>Bogdan</p>
     </div>
+    
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
-      <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
+      <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Profile Settings</button>
+      <button class="tablinks" onclick="openCity(event, 'Profile')">Change Avatar</button>
       <button class="tablinks" onclick="openCity(event, 'My playlist')">My playlist</button>
     </div>
     </div>
@@ -71,18 +73,42 @@
   <div class="split right">
     
       <div id="Home" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
+        <h3>E-mail reset!</h3>
+        <form>
+          E-mail:
+          <input type="email" name="email">
+          New E-mail:
+          <input type="email" name="email">
+        </form>
+        <button id="buttonn"></button>
+        <h3>Reset password</h3>
+        <form>
+          Old password:
+          <input type="password" name="psw">
+          New password:
+          <input type="password" name="psw">
+          
+        </form>
+        <button id="buttonn"></button>
+        <h3>Change username!</h3>
+        <form>
+          New username:
+          <input type="text" name="username"><br>
+          
+          </form>
+          <button id="buttonn"></button>
+          
       </div>
       
+      
       <div id="Profile" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p> 
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati consectetur labore error voluptates eveniet explicabo! Error voluptatum expedita consectetur eius facilis voluptatibus itaque perferendis quos similique aut, dolor ratione exercitationem.</p> 
       </div>
       
       <div id="My playlist" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione ad accusamus, aliquam iusto, qui nulla sint libero obcaecati, earum nam similique! Qui assumenda deleniti eum accusamus nam laborum autem?</p>
       </div>
       
     </div>
@@ -129,6 +155,7 @@
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
     </script>
+    
 </body>
 
 </html>
