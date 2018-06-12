@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="musiccollector-api:war">
+    <output-path>$PROJECT_DIR$/musiccollectorapi/target</output-path>
+    <root id="archive" name="musiccollector-api-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="musiccollector-api:war exploded" />
+    </root>
+  </artifact>
+</component>
