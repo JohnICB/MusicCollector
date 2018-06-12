@@ -29,7 +29,7 @@ public class CollectionsServlet extends HttpServlet {
 
         Cookie[] cookies = request.getCookies();
 
-        System.out.println("/collections");
+            System.out.println("/collections");
 
         if (cookies != null)
         {
@@ -61,7 +61,6 @@ public class CollectionsServlet extends HttpServlet {
 
                     System.out.println(collectionsJson.toString());
 
-                    response.getWriter();
                     response.setContentType("application/json");
                     response.getWriter().write(collectionsJson.toString());
 
@@ -78,6 +77,8 @@ public class CollectionsServlet extends HttpServlet {
 
         boolean isLoggedIn = LoginService.isUserLoggedIn(request.getCookies());
         String name = "";
+
+        JsonObject jobj = new JsonObject();
 
         if (isLoggedIn)
         {
@@ -101,6 +102,7 @@ public class CollectionsServlet extends HttpServlet {
             if (reqType.equals("new"))
             {
                 Collections.insert(uid, title, isVinyl, description);
+                jobj.addProperty("status","success");
             }
             else {
                 if (reqType.equals("add"))
@@ -127,6 +129,7 @@ public class CollectionsServlet extends HttpServlet {
                         vinyl.insert();
 
                         Collections.insert(uid, vinyl.getIdVinyl(), title, true,description);
+                        jobj.addProperty("status","success");
                     }
                     else
                     {
@@ -146,11 +149,16 @@ public class CollectionsServlet extends HttpServlet {
 
                         cassette.insert();
                         Collections.insert(uid, cassette.getIdCassettes(), title, true,description);
+                        jobj.addProperty("status","success");
                     }
                 }
             }
 
 
+        }
+        else
+        {
+            jobj.addProperty("status","fail");
         }
 
 

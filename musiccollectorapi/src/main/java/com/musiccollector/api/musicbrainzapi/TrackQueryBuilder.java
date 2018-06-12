@@ -69,19 +69,23 @@ public class TrackQueryBuilder {
             JsonObject jsonObject = getJson.Retrieve(url);
 
 
-            nou.add("trackmatches", jsonObject.get("results").getAsJsonObject().get("trackmatches"));
+            //nou.add("trackmatches", jsonObject.get("results").getAsJsonObject().get("trackmatches"));
 
 
             for(JsonElement j :  jsonObject.get("results").getAsJsonObject().get("trackmatches").getAsJsonObject().get("track").getAsJsonArray()){
-
-                trackmatches.add(j);
-                System.out.println("this is a matched track:"+j.toString());
+                JsonObject obj = new JsonObject();
+                obj.add("name",j.getAsJsonObject().get("name"));
+                obj.add("artist",j.getAsJsonObject().get("artist"));
+                obj.add("image",j.getAsJsonObject().getAsJsonArray("image").get(2));
+                obj.add("mbid",j.getAsJsonObject().get("mbid"));
+                trackmatches.add(obj);
+                System.out.println("this is a matched track:"+obj.toString());
 
 
             }
-           // nou.add("track ",trackmatches);
+            nou.add("tracks",trackmatches);
 
-            System.out.println("this is track search:" + nou.toString());
+
 
         } catch (IOException e) {
             e.printStackTrace();

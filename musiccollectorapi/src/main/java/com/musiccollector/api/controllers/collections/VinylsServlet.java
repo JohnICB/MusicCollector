@@ -1,8 +1,8 @@
 package com.musiccollector.api.controllers.collections;
 
 import com.musiccollector.api.controllers.login.LoginService;
-import com.musiccollector.api.model.database.CollectionJava;
 import com.musiccollector.api.model.database.entities.Vinyls;
+import com.musiccollector.api.model.database.user.Users;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,22 +22,35 @@ public class VinylsServlet extends HttpServlet {
             throws IOException, ServletException {
 
         Cookie[] cookies = request.getCookies();
-
+        request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
         System.out.println("/vinylsGET");
+
 
         if (cookies != null)
         {
             boolean isLogged = LoginService.isUserLoggedIn(cookies);
+            long id = 1;
+
+            for (Cookie c : cookies)
+            {
+                if (c.getName().equals("user")) {
+                    id = Users.getIDbyName(c.getValue());
+                    break;}
+
+                }
 
             if (isLogged)
             {
+                String colName = request.getParameter("colName");
+
                 ArrayList<Vinyls> vinylsArray;
-                CollectionJava collectionJava ;
+
 
             }
         }
 
-        request.getRequestDispatcher("/WEB-INF/views/TEMPLATE.jsp").forward(request, response);
+        //response.setContentType("application/json");
+        //response.getWriter().write("");
     }
 
     @Override
