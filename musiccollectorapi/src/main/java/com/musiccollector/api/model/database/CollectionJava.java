@@ -79,7 +79,10 @@ public class CollectionJava {
         return cassettesArray;
     }
 
-
+//    public static CollectionJava getCollectionByNameAndUID(String name, long uid)
+//    {
+//
+//    }
 
     public String getDescription() {
         return description;
