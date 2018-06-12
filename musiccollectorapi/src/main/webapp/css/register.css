@@ -1,9 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: url(../images/register_bg.jpeg);
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center; 
+    background-size:     cover;
+    background: url(../Images/register_bg.jpeg) no-repeat center center;
 }
 
 * {
