@@ -5,11 +5,14 @@ D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\ap
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\WelcomeServlet.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\EventsServlet.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\TemplateServlet.java
+D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\CassettesServlet.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\register\RegisterService.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\generators\TokenGenerator.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Collections.java
+D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\profile\ProfileServlet.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\register\RegisterServlet.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\events\EventsService.java
+D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\profile\ProfileService.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\HomepageServlet.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\QueryBuilder.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Cassettes.java

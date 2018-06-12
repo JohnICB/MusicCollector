@@ -1,5 +1,6 @@
 package com.musiccollector.api.controllers.staticpages;
 
+import com.musiccollector.api.controllers.login.LoginService;
 import com.musiccollector.api.model.database.user.Users;
 
 import javax.servlet.ServletException;
@@ -19,9 +20,12 @@ public class HomepageServlet extends HttpServlet {
             throws IOException, ServletException {
 
        Cookie[] coockie = request.getCookies();
-        Users user = new Users();
 
-        request.getRequestDispatcher("/WEB-INF/index.html").forward(request, response);
+
+        if(LoginService.isUserLoggedIn(coockie))
+             request.getRequestDispatcher("/WEB-INF/index-logat.html").forward(request, response);
+        else
+             request.getRequestDispatcher("/WEB-INF/index.html").forward(request, response);
     }
 
     @Override
