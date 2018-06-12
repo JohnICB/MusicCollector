@@ -35,3 +35,6 @@
 0:0:0:0:0:0:0:1 - - [12/Jun/2018:02:40:32 +0300] "POST /login HTTP/1.1" 302 - http-bio-8081-exec-1 298
 0:0:0:0:0:0:0:1 - - [12/Jun/2018:02:40:32 +0300] "GET /welcome HTTP/1.1" 200 6116 http-bio-8081-exec-2 10
 0:0:0:0:0:0:0:1 - - [12/Jun/2018:02:40:42 +0300] "GET /collections HTTP/1.1" 200 500 http-bio-8081-exec-3 40
+0:0:0:0:0:0:0:1 - - [12/Jun/2018:07:41:31 +0300] "GET /welcome HTTP/1.1" 304 - http-bio-8081-exec-1 39
+0:0:0:0:0:0:0:1 - - [12/Jun/2018:07:41:49 +0300] "GET /views/profile.html HTTP/1.1" 404 987 http-bio-8081-exec-2 7
+0:0:0:0:0:0:0:1 - - [12/Jun/2018:07:41:59 +0300] "GET /profile HTTP/1.1" 404 965 http-bio-8081-exec-3 2

@@ -1,7 +1,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-    background-size:     cover;
-    background: url(../Images/register_bg.jpeg) no-repeat center center;
+  background: url(../images/register_bg.jpeg);
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center; 
 }
 
 * {
@@ -10,8 +12,9 @@ body {
 
 #form {
   width: 25em;
-    margin: 5% auto auto;
-    opacity: 0.98;
+  margin: auto;
+  margin-top: 5%;
+  opacity: 0.98;
 }
 #form:hover{
     opacity: 1;
@@ -54,8 +57,9 @@ body {
     top: 100%; /* At the bottom of the tooltip */
     left: 80%;
     margin-left: -5px;
-    border: 5px solid transparent;
-    border-top-color: black;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
 }
 .tooltip:hover .tooltiptext {
     visibility: visible;
@@ -178,8 +182,10 @@ select:focus {
 
     body{
       font-family: Arial, Helvetica, sans-serif;
-        background-size:     auto;                      /* <------ */
-        background: url(/Images/register_bg.jpeg) no-repeat center;
+      background: url(../images/register_bg.jpeg);
+      background-size:     auto;                      /* <------ */
+      background-repeat:   no-repeat;
+      background-position: center ; 
     }
 
 

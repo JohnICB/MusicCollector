@@ -22,7 +22,7 @@ public class VinylsServlet extends HttpServlet {
             throws IOException, ServletException {
 
         Cookie[] cookies = request.getCookies();
-
+        request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
         System.out.println("/vinylsGET");
 
 
@@ -49,8 +49,8 @@ public class VinylsServlet extends HttpServlet {
             }
         }
 
-        response.setContentType("application/json");
-        response.getWriter().write("");
+        //response.setContentType("application/json");
+        //response.getWriter().write("");
     }
 
     @Override

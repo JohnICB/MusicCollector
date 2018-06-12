@@ -1,0 +1,155 @@
+:root {
+    --nav-color: #000; 
+    --light-gray: #AAABBB;
+    --middle-section-bg: #fff;
+    --button-color: #3f4981;
+    --bg-col: #161332;
+  }
+  
+body{
+    background-color: var(--bg-col);
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+    background: url("../Images/concert-bg.jpeg");
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.container nav{
+    /* background-color: red; */
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+
+}
+
+.container nav ul li{
+    background-color: black;
+    /* margin: 0 0 20px 0; */
+    padding: 5px 15px;
+    position: relative;
+    bottom: 8px;
+    right: 140px;
+}
+
+#logo{
+    margin-left: 200px;
+}
+
+/* top part */
+
+.top-wrapper{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+    justify-content: space-around;
+    /* border: 1px solid beige; */
+}
+
+.line-l, .line-r{
+    border-top: 3px white solid;
+    background-color: #fff;
+    margin: auto, 0;
+    align-self: center;
+}
+
+.line-l{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.title {
+    justify-self: center;
+    /* padding: 0 15px; */
+}
+
+/* Middle section */
+
+.middle-section .wrapper{
+    position: relative;
+    /* margin: 30px, auto;    */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 60%;
+    background-color: #0000005e;
+    /* opacity: 0.4; */
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border: 2px white;
+    border-style: groove;
+}
+
+.middle-section .wrapper .ticket{
+    position: absolute;
+    right: 3%;
+    top: 35%;
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    background-color: #339969;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+.middle-section .wrapper:nth-child(2n) .ticket
+{
+    background-color: red;
+}
+
+footer{
+    text-align: center;
+    height: 15%;
+}
+
+@media screen and (max-width: 1000px){
+
+    .top-wrapper{
+        /* margin-top: 20px; */
+        justify-content: space-around;
+        grid-template-columns: 3fr minmax(120px ,1fr) 3fr ;
+         /* margin: auto; */
+    }
+
+    .line-l{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .middle-section .wrapper{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+
+    *{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+
+    .middle-section .wrapper{
+        text-align: center;
+        width: 80%;
+    }
+
+    .middle-section .wrapper .date,
+    .middle-section .wrapper .location{
+        /* text-align: left; */
+        font-size: 1em; 
+    }
+
+    .middle-section .wrapper .ticket{
+        position: static;
+    }
+    
+
+}
