@@ -1,4 +1,5 @@
 com\musiccollector\api\TemplateServlet.class
+com\musiccollector\api\controllers\apisearch\SearchServlet.class
 com\musiccollector\api\model\database\user\Users.class
 com\musiccollector\api\musicbrainzapi\TrackQueryBuilder.class
 com\musiccollector\api\controllers\staticpages\EventsServlet.class

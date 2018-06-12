@@ -10,8 +10,5 @@
         <module name="musiccollectorapi" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="musiccollector-api" target="1.9" />
-    </bytecodeTargetLevel>
   </component>
 </project>
