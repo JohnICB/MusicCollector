@@ -2,3 +2,5 @@
 musiccollectorapi/\.idea/workspace\.xml
 
 musiccollectorapi/\.idea/
+
+musiccollectorapi/target/tomcat/logs/
