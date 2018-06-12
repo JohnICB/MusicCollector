@@ -61,51 +61,7 @@ body{
     text-align: center;
   
   }
-  .search{
-      display: inline-block;
-      padding-left: 20%;
-      padding-right: 0%;
-      padding-top: 18px;
-      margin: 0;
-  }
- 
-  input[type=text] {
-    width: 130px;
-    height: 35px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    padding: 12px 0px 12px 10px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
 
-
-input[type=text]:focus {
-    width: 80%;
-}
-input[type=submit]{
-    background-image: url('../WEB-INF/Images/search.svg');
-    background-repeat: no-repeat; 
-    width :20px;
-    height: 20px;
-    border: 1px black;
-    background-color: black;
-    padding-top: 1px;
-
-}
-input[type=submit]:focus{
-    outline: none;
-}
-input[type=submit]:hover{
-    box-shadow: rgba(205, 133, 63,0.6);
-  
-
-
-
-}
   header .highlight, header .current a{
     color:#4e413b;
     font-weight:monospace;
@@ -136,7 +92,7 @@ input[type=submit]:hover{
   }
 
 .banner{
-    background: url('../WEB-INF/Images/Vinyl_Records.jpg') fixed no-repeat;
+    background: url('../Images/Vinyl_Records.jpg') fixed no-repeat;
     background-size: cover;
     height: 200px;
 }
@@ -391,3 +347,29 @@ input[type=submit]:hover{
      border-radius: 2px;
      border:2px #979797 solid;
   }
+.search-container{
+    
+    text-align: center;
+    padding-top:20px;
+}
+.search-container .search-bar{
+    padding:5px 30px;
+  border-radius:5px;
+    
+
+}
+.search-container .search-art{
+    padding:5px 30px;
+    border-radius:5px;
+}
+.button-search{
+    padding:5px 30px;
+    border-radius:10px;
+    background-color:#FFF;
+    border-color:#4c5baf;   
+}
+.button-search:hover{
+    background:#4c5baf;
+    box-shadow:0px 2px 15px 5px white;
+    color:white;
+   }

@@ -1,6 +1,4 @@
-package com.musiccollector.api.controllers.apisearch;
-
-import com.musiccollector.api.musicbrainzapi.TrackQueryBuilder;
+package com.musiccollector.api.controllers.collections;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,24 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(urlPatterns = "/search")
-public class ApiSearchServelet extends HttpServlet {
+@WebServlet(urlPatterns = "/cassettes")
+public class CassettesServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-
-        String artist =request.getParameter("seacthtype");
-        String track  =request.getParameter("searchcontent");
-
-
-
-        TrackQueryBuilder tqb = new TrackQueryBuilder();
-
-
-        response.setContentType("application/json");
-        response.getWriter().write(tqb.search(track));
+        request.getRequestDispatcher("/WEB-INF/views/cassetts.html").forward(request, response);
     }
 
     @Override

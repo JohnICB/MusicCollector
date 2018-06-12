@@ -1,6 +1,8 @@
 package com.musiccollector.api.musicbrainzapi;
 
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.io.IOException;
@@ -64,25 +66,40 @@ public class AlbumQueryBuilder {
 
 
 
-        JsonObject nou = new JsonObject();
+
         String url = api+"?method=album.search"+api_key+"&album="+album+json;
+        JsonObject nou = new JsonObject();
+        JsonObject ret = new JsonObject();
+        JsonArray artists = new JsonArray();
+
         try {
             JsonObject jsonObject = getJson.Retrieve(url);
 
 
-            nou.add("name", jsonObject.get("album").getAsJsonObject().get("name"));
-            nou.add("artist", jsonObject.get("album").getAsJsonObject().get("artist"));
-            nou.add("mbid", jsonObject.get("album").getAsJsonObject().get("mbid"));
-            nou.add("image", jsonObject.get("album").getAsJsonObject().get("image").getAsJsonArray().get(2));
-            nou.add("wiki", jsonObject.get("album").getAsJsonObject().get("wiki"));
 
 
-            System.out.println("this is: "+nou.toString());
+
+            for(JsonElement j :  jsonObject.get("results").getAsJsonObject().get("albummatches").getAsJsonObject().getAsJsonArray("album")){
+                JsonObject obj = new JsonObject();
+                obj.add("name",j.getAsJsonObject().get("name"));
+                obj.add("artist",j.getAsJsonObject().get("artist"));
+                obj.add("image",j.getAsJsonObject().getAsJsonArray("image").get(2));
+                obj.add("mbid",j.getAsJsonObject().get("mbid"));
+
+                artists.add(obj);
+
+
+
+            }
+            nou.add("artist",artists);
+
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
+        System.out.println("this is after catch:" + nou.toString());
         return nou.toString();
 
 
