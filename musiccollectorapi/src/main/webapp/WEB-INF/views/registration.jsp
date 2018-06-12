@@ -8,7 +8,7 @@
     <title>JBC Music | Join us!</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="${pageContext.request.contextPath}/css/register.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="${pageContext.request.contextPath}./../css/register.css" />
     <!-- <LINK REL=STYLESHEET HREF="../css/PDS_style.css"> -->
 </head>
 

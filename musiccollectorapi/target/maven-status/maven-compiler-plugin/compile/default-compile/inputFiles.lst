@@ -25,6 +25,7 @@ D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\ap
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\ArtistQuerryBuilder.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\GetJson.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\VinylsServlet.java
+D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LogoutServlet.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\TrackQueryBuilder.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\user\ConnectedUsers.java
 D:\Projects\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\apisearch\ApiSearchServelet.java
