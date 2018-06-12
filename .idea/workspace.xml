@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="443be7bc-5ac0-4f5d-9d6e-908dde85395f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/CollectionsServlet.class" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/CollectionsServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/VinylsServlet.class" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/VinylsServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/CollectionJava.class" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/CollectionJava.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/apisearch/ApiSearchServelet.java" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/apisearch/ApiSearchServelet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/AlbumQueryBuilder.java" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/AlbumQueryBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/ArtistQuerryBuilder.java" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/ArtistQuerryBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/TrackQueryBuilder.java" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/TrackQueryBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/main.js" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/about.html" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/staticpages/HomepageServlet.java" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/staticpages/HomepageServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/cassetts.html" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/cassetts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/events.html" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/events.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/vinyl.html" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/vinyl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/about.css" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/about.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/cassetts.css" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/cassetts.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/profile.css" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/profile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/register.css" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/register.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/vinyl-preview.css" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/vinyl-preview.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/vinyl.css" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/vinyl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musiccollectorapi/target/tomcat/logs/access_log.2018-06-12" afterPath="$PROJECT_DIR$/musiccollectorapi/target/tomcat/logs/access_log.2018-06-12" />
     </list>
     <ignored path="$PROJECT_DIR$/musiccollectorapi/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,51 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiSearchServelet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApiSearchServelet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/apisearch/ApiSearchServelet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrackQueryBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/TrackQueryBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="95" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArtistQuerryBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/ArtistQuerryBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="96" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsServiceServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/events/EventsServiceServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1017">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="900">
+              <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -101,28 +44,70 @@
       <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-225">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="617">
+              <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomeServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/WelcomeServlet.java">
+      <file leaf-file-name="HomepageServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/staticpages/HomepageServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="325">
+              <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CollectionsServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
+      <file leaf-file-name="Users.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="64" column="75" lean-forward="false" selection-start-line="63" selection-start-column="19" selection-end-line="64" selection-end-column="75" />
+            <state relative-caret-position="1117">
+              <caret line="129" column="28" lean-forward="true" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
+              <folding>
+                <marker date="1528742069917" expanded="true" signature="1236:1311" ph="INSERT INTO users... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectedUsers.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/ConnectedUsers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-283">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1054">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VinylsServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="875">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,8 +116,8 @@
       <file leaf-file-name="CassettesServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CassettesServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+            <state relative-caret-position="650">
+              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -173,6 +158,7 @@
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/TrackQueryBuilder.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/ArtistQuerryBuilder.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/AlbumQueryBuilder.java" />
+        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/staticpages/HomepageServlet.java" />
       </list>
     </option>
   </component>
@@ -278,6 +264,126 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musiccollectorapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musiccollectorapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musiccollectorapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musiccollectorapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,6 +528,102 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musiccollectorapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musiccollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicCollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musiccollectorapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musiccollector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1226,12 +1428,12 @@
       <option name="presentableId" value="Default" />
       <updated>1528760099868</updated>
       <workItem from="1528760101225" duration="3494000" />
-      <workItem from="1528764458006" duration="6354000" />
+      <workItem from="1528764458006" duration="8763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9848000" />
+    <option name="totallyTimeSpent" value="12257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
@@ -1433,26 +1635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/staticpages/HomepageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/events/EventsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-458">
           <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1497,14 +1683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1529,34 +1707,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1017">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/events/EventsServiceServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CassettesServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1580,7 +1734,7 @@
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/ArtistQuerryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
-          <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="96" selection-end-column="30" />
+          <caret line="65" column="7" lean-forward="false" selection-start-line="65" selection-start-column="7" selection-end-line="96" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1593,10 +1747,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CassettesServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/apisearch/ApiSearchServelet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="900">
+          <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/staticpages/HomepageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1117">
+          <caret line="129" column="28" lean-forward="true" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
+          <folding>
+            <marker date="1528742069917" expanded="true" signature="1236:1311" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/ConnectedUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-283">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
