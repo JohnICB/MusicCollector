@@ -1,3 +1,5 @@
+let del = 0;
+
 function searchapi() {
 
     let searchValue = document.getElementsByName("search")[0].value;
@@ -21,11 +23,14 @@ function searchapi() {
                 let r = JSON.parse(xhr.response);
                 console.log(r.artist);
 
+                del = 1;
                 for (let i = 0; i < r.artist.length; i++)
                 {
                     addElement(r.artist[i]);
 
+                    del = 0;
                 }
+
 
                 break;
             case 404:
@@ -47,6 +52,12 @@ function searchapi() {
         let name = document.createElement("h3");
         let img = document.createElement("img");
         let desc = document.createElement("p");
+
+        if (del === 1)
+        {
+            ul.innerHTML = "";
+        }
+        
 
         newLi.classList.add("product");
         a.setAttribute("href", "");
