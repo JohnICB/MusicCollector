@@ -1,6 +1,6 @@
 package com.musiccollector.api.controllers.apisearch;
 
-import com.musiccollector.api.musicbrainzapi.TrackQueryBuilder;
+import com.musiccollector.api.musicbrainzapi.AlbumQueryBuilder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(urlPatterns = "/search")
+@WebServlet(urlPatterns = "/searchapi")
 public class ApiSearchServelet extends HttpServlet {
 
     @Override
@@ -19,15 +19,15 @@ public class ApiSearchServelet extends HttpServlet {
 
 
         String artist =request.getParameter("seacthtype");
-        String track  =request.getParameter("searchcontent");
+        String searchcontent  =request.getParameter("searchContent");
 
+        System.out.println("cauta " + searchcontent);
 
-
-        TrackQueryBuilder tqb = new TrackQueryBuilder();
+        AlbumQueryBuilder tqb = new AlbumQueryBuilder();
 
 
         response.setContentType("application/json");
-        response.getWriter().write(tqb.search(track));
+        response.getWriter().write(tqb.search(searchcontent));
     }
 
     @Override

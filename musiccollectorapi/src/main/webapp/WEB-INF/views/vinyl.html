@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
 
     <title>JBC MUSIC | Browse</title>
-    <link rel="stylesheet" href="../css/vinyl.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../../css/vinyl.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Bowlby One' rel='stylesheet'>
@@ -23,21 +23,21 @@
 
         <div class="container">
             <!-- <div id="branding"> -->
-            <img id="logo" src="../Images/logo.png" alt="asd">
+            <img id="logo" src="../../Images/logo.png" alt="asd">
             <!-- </div> -->
            
             <nav>
                 <ul>
                     <li class="current">
-                        <a href="../index.html">Home</a>
+                        <a href="/profile">Home</a>
                     </li>
 
                     <li>
-                        <a href="../index.html">About</a>
+                        <a href="/about">About</a>
 
                     </li>
                     <li>
-                        <a href="../index.html">Log Out</a>
+                        <a href="/logout">Log Out</a>
 
                     </li>
                 </ul>
@@ -54,10 +54,10 @@
             </div>
             <div class="list-view-buttons">
                 <button onclick="toggleView()">
-                    <img src="../Images/box-view.svg" alt="">
+                    <img src="../../Images/box-view.svg" alt="">
                 </button>
                 <button onclick="toggleView()">
-                    <img src="../Images/list-ul.svg" alt="">
+                    <img src="../../Images/list-ul.svg" alt="">
                 </button>
                 
 
@@ -66,13 +66,13 @@
 
                     <input class="search-bar" type="text" placeholder="Cautare dupa nume..." name="search">
                     <select class="search-art">
-                          <option value="Artist">Artist</option>
                           <option value="Albums">Albums</option>
+                          <option value="Artist">Artist</option>
                           <option value="Tracks">Tracks</option>
                           
                         </select>
                     
-                    <button class="button-search">Cautare</button>
+                    <button type="button" onclick="searchapi()" class="button-search" name="buttonSearchX">Cautare</button>
 
                 </div>
             <div class="product-container">
@@ -80,50 +80,9 @@
                     <li class="product">
                         <a href="vinyl-preview.html"></a>
                         <h3>Vinyl X</h3>
-                        <img class="vyn" src="../Images/vinyl.png" alt="">
+                        <img class="vyn" src="../../Images/vinyl.png" alt="">
                         <p>DESCRIPTION</p>
-                        <img class="preview" src="../Images/bars.svg" alt="">
-                        
-                    </li>
-                    <li class="product" href="vinyl-preview.html">
-                        <a href="vinyl-preview.html">
-                            <h3>Vinyl X</h3>
-                            <img class="vyn" src="../Images/vinyl.png" alt="">
-                            <p>DESCRIPTION</p>
-                            <img class="preview" src="../Images/bars.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="product" href="vinyl-preview.html">
-                        <a href="vinyl-preview.html">
-                            <h3>Vinyl X</h3>
-                            <img class="vyn" src="../Images/vinyl.png" alt="">
-                            <p>DESCRIPTION</p>
-                            <img class="preview" src="../Images/bars.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="product" href="vinyl-preview.html">
-                        <a href="vinyl-preview.html">
-                            <h3>Vinyl X</h3>
-                            <img class="vyn" src="../Images/vinyl.png" alt="">
-                            <p>DESCRIPTION</p>
-                            <img class="preview" src="../Images/bars.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="product" href="vinyl-preview.html">
-                        <a href="vinyl-preview.html">
-                            <h3>Vinyl X</h3>
-                            <img class="vyn" src="../Images/vinyl.png" alt="">
-                            <p>DESCRIPTION</p>
-                            <img class="preview" src="../Images/bars.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="product" href="vinyl-preview.html">
-                        <a href="vinyl-preview.html">
-                            <h3>Vinyl X</h3>
-                            <img class="vyn" src="../Images/vinyl.png" alt="">
-                            <p>DESCRIPTION</p>
-                            <img class="preview" src="../Images/bars.svg" alt="">
-                        </a>
+                        <img class="preview" src="../../Images/bars.svg" alt="">
                     </li>
                 </ul>
             </div>
@@ -145,7 +104,7 @@
 
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../JS/filter.js"></script>
+    <script src="../../JS/search1.js"></script>
 
 </body>
 
