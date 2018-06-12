@@ -7,6 +7,7 @@ com\musiccollector\api\controllers\collections\CassettesServlet.class
 com\musiccollector\api\controllers\register\RegisterService.class
 com\musiccollector\api\controllers\events\EventsServiceServlet.class
 com\musiccollector\api\model\database\entities\Concerts.class
+com\musiccollector\api\controllers\profile\ProfileServlet.class
 com\musiccollector\api\model\database\user\ConnectedUsers.class
 com\musiccollector\api\model\database\entities\Vinyls.class
 com\musiccollector\api\WelcomeServlet.class
@@ -26,4 +27,5 @@ com\musiccollector\api\model\database\entities\Collections.class
 com\musiccollector\api\controllers\events\EventsService.class
 com\musiccollector\api\controllers\register\RegisterServlet.class
 com\musiccollector\api\controllers\staticpages\AboutServlet.class
+com\musiccollector\api\controllers\profile\ProfileService.class
 com\musiccollector\api\controllers\apisearch\ApiSearchServelet.class
