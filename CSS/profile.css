@@ -128,8 +128,14 @@
   
  
   
-  footer p{
-    font-size:20px;
+  #coded{
+    font-size:13px;
+  }
+  #copyright{
+    font-size:13px;
+  }
+  .social-icons{
+    padding-top:50px;
   }
 
   /*Portofoliu*/
@@ -385,7 +391,8 @@
 .left {
     left: 0;
     background-color: #AAABBB;
-    width:15%
+    width:15%;
+    height:82%
 }
 
 .right {
@@ -393,6 +400,7 @@
     text-align: center;
     display:inline-block;
     top:0%;
+    height:82%;
     background-color: #fff;
     width:85%;
 }
@@ -630,6 +638,7 @@ h3{
   padding: 20px;
   border: 1px solid #888;
   width: 20%;
+  
 }
 
 /* The Close Button */
