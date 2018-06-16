@@ -1,7 +1,11 @@
 package com.musiccollector.api.controllers.collections;
 
+import com.google.gson.JsonArray;
 import com.musiccollector.api.controllers.login.LoginService;
+import com.musiccollector.api.model.database.CollectionJava;
+import com.musiccollector.api.model.database.entities.Collections;
 import com.musiccollector.api.model.database.entities.Vinyls;
+import com.musiccollector.api.model.database.user.ConnectedUsers;
 import com.musiccollector.api.model.database.user.Users;
 
 import javax.servlet.ServletException;
@@ -12,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 
 
 @WebServlet(urlPatterns = "/vinyls")
@@ -21,32 +26,34 @@ public class VinylsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        Cookie[] cookies = request.getCookies();
-        request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
         System.out.println("/vinylsGET");
 
 
-        if (cookies != null)
+        if (LoginService.isUserLoggedIn(request.getCookies()))
         {
-            boolean isLogged = LoginService.isUserLoggedIn(cookies);
-            long id = 1;
+            long uid = ConnectedUsers.getUserIDByCookies(request.getCookies());
+            long colID = Long.parseLong(request.getParameter("id"));
 
-            for (Cookie c : cookies)
+            CollectionJava collectionJava = Collections.getCollectionByID(colID);
+
+            if (collectionJava == null || !Collections.hasUser(uid,colID))
             {
-                if (c.getName().equals("user")) {
-                    id = Users.getIDbyName(c.getValue());
-                    break;}
-
-                }
-
-            if (isLogged)
-            {
-                String colName = request.getParameter("colName");
-
-                ArrayList<Vinyls> vinylsArray;
-
-
+                response.setContentType("application/json");
+                response.getWriter().write("fail");
+                return;
             }
+
+            ArrayList<Vinyls> vinyls = collectionJava.getVinylContent();
+
+            JsonArray jarray = new JsonArray();
+            for (Vinyls v: vinyls)
+            {
+                jarray.add(v.toJson());
+            }
+
+            response.setContentType("application/json");
+            response.getWriter().write(jarray.toString());
+
         }
 
         //response.setContentType("application/json");

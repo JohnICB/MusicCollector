@@ -131,10 +131,10 @@ public class Vinyls {
         vinylJson.addProperty("isColored",  Objects.requireNonNullElse(this.isColored, false));
         vinylJson.addProperty("isStereo",  Objects.requireNonNullElse(this.isStereo, false));
         vinylJson.addProperty("isSpecialEdition",  Objects.requireNonNullElse(this.isSpecialEdition, false));
-        vinylJson.addProperty("duration",  Objects.requireNonNullElse(this.duration.toString(), ""));
+        vinylJson.addProperty("duration",  Objects.requireNonNullElse(this.duration, ""));
         vinylJson.addProperty("genre",  Objects.requireNonNullElse(this.genre, ""));
         vinylJson.addProperty("rarity",  Objects.requireNonNullElse(this.rarity, ""));
-        vinylJson.addProperty("releaseDate",  Objects.requireNonNullElse(this.releaseDate.toString(), ""));
+        vinylJson.addProperty("releaseDate",  Objects.requireNonNullElse(this.releaseDate, ""));
 
         return vinylJson;
 

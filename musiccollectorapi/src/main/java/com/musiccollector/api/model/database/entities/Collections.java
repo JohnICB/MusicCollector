@@ -40,6 +40,43 @@ public class Collections {
         return collections;
     }
 
+    public static CollectionJava getCollectionByID(long idCollection)
+    {
+        ResultSet newResults = null;
+        ArrayList<Long> musicIDs = new ArrayList<>();
+        ArrayList<Long> userIDs = new ArrayList<>();
+        String title = "";
+        String description = "";
+        boolean isVinyl = false;
+        CollectionJava collectionJava = null;
+
+        try {
+            newResults = Database.selectQuery(
+                    "SELECT ID_MUSIC, ID_USER, DESCRIPTION, IS_VINYL, TITLE FROM COLLECTIONS WHERE ID_COLLECTION = ?", idCollection);
+
+
+
+        if (!newResults.next()) { return null; }
+
+        description = newResults.getString(3);
+        isVinyl = newResults.getBoolean(4);
+        title = newResults.getString(5);
+
+        while (newResults.next())
+        {
+            musicIDs.add(newResults.getLong(1));
+            userIDs.add(newResults.getLong(2));
+        }
+
+        return new CollectionJava(idCollection, userIDs, musicIDs, description,
+                isVinyl, title);
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return null;
+    }
+
     private static ArrayList<CollectionJava> transformResults(ResultSet resultSet) throws SQLException
     {
         ArrayList<Long> musicIDs = new ArrayList<>();

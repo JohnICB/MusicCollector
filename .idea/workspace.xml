@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="443be7bc-5ac0-4f5d-9d6e-908dde85395f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/CollectionsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/CollectionsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/login/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/login/LogoutServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Cassettes.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Cassettes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/VinylsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/VinylsServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Collections.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Collections.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Vinyls.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Vinyls.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/musiccollectorapi/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,91 +56,85 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-          <file leaf-file-name="CollectionsServlet.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="275">
-                  <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#doPut#0;class#CollectionsServlet#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VinylsServlet.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="275">
-                  <caret line="22" selection-start-line="22" selection-end-line="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/profile.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3475">
-                  <caret line="139" column="1" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Cassettes.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Cassettes.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="331">
-                  <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Vinyls.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="631">
-                  <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
-                  <folding>
-                    <element signature="method#toJson#0;class#Vinyls#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Collections.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="514">
-                  <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CollectionJava.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/CollectionJava.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="600">
-                  <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-                  <folding>
-                    <element signature="method#toJsonPreview#0;class#CollectionJava#0" />
-                    <element signature="method#getVinylContent#0;class#CollectionJava#0" />
-                    <element signature="method#getCassetesContent#0;class#CollectionJava#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="Vinyls.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="133" column="83" selection-start-line="133" selection-start-column="83" selection-end-line="133" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollectionsServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="318" column="17" lean-forward="true" selection-start-line="318" selection-start-column="17" selection-end-line="318" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#doPut#0;class#CollectionsServlet#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Collections.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="248" column="26" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="26" />
+              <folding>
+                <element signature="method#insert#0;class#Collections#0" />
+                <element signature="method#insertByColID#0;class#Collections#0" />
+                <element signature="method#insert#1;class#Collections#0" />
+                <element signature="method#isVinylCol#0;class#Collections#0" />
+                <element signature="method#delete#0;class#Collections#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollectionJava.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/CollectionJava.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="56" column="31" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="31" />
+              <folding>
+                <element signature="method#getCassetesContent#0;class#CollectionJava#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VinylsServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/profile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3475">
+              <caret line="139" column="1" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cassettes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Cassettes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="581">
+              <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -169,7 +163,6 @@
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/filter.js" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/vinyl/VinylServelet.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/vinyl/VinylServerlet.java" />
-        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CassettesServlet.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/apisearch/ApiSearchServelet.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/musicbrainzapi/TrackQueryBuilder.java" />
@@ -187,10 +180,11 @@
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/ConnectedUsers.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/CollectionJava.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/profile.js" />
-        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Cassettes.java" />
-        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java" />
+        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java" />
+        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" />
+        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java" />
       </list>
     </option>
   </component>
@@ -225,9 +219,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -385,9 +379,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -571,12 +562,12 @@
       <workItem from="1529076958925" duration="4523000" />
       <workItem from="1529132713991" duration="1747000" />
       <workItem from="1529180002377" duration="3311000" />
-      <workItem from="1529183341534" duration="2666000" />
+      <workItem from="1529183341534" duration="4883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36899000" />
+    <option name="totallyTimeSpent" value="39116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -603,7 +594,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15191898" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15191898" />
       <window_info anchor="right" id="Bean Validation" order="11" weight="0.32995737" />
       <window_info id="Web" order="7" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -626,7 +617,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -918,25 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/CollectionJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="method#toJsonPreview#0;class#CollectionJava#0" />
-            <element signature="method#getVinylContent#0;class#CollectionJava#0" />
-            <element signature="method#getCassetesContent#0;class#CollectionJava#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/JsonElement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
@@ -953,36 +925,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Cassettes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="581">
           <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/CollectionJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="56" column="31" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="31" />
+          <folding>
+            <element signature="method#getCassetesContent#0;class#CollectionJava#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
+        <state relative-caret-position="489">
+          <caret line="133" column="83" selection-start-line="133" selection-start-column="83" selection-end-line="133" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="248" column="26" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="26" />
           <folding>
-            <element signature="method#toJson#0;class#Vinyls#0" />
+            <element signature="method#insert#0;class#Collections#0" />
+            <element signature="method#insertByColID#0;class#Collections#0" />
+            <element signature="method#insert#1;class#Collections#0" />
+            <element signature="method#isVinylCol#0;class#Collections#0" />
+            <element signature="method#delete#0;class#Collections#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+        <state relative-caret-position="179">
+          <caret line="318" column="17" lean-forward="true" selection-start-line="318" selection-start-column="17" selection-end-line="318" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doPut#0;class#CollectionsServlet#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
         </state>
       </provider>
     </entry>
