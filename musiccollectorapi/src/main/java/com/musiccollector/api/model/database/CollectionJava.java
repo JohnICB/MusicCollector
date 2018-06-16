@@ -1,6 +1,7 @@
 package com.musiccollector.api.model.database;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.musiccollector.api.model.Database;
 import com.musiccollector.api.model.database.entities.Cassettes;
@@ -27,6 +28,8 @@ public class CollectionJava {
         this.title = title;
     }
 
+    public long getCollectionId() {return collectionId; }
+
     public static JsonArray toJsonPreview (ArrayList<CollectionJava> collectionJava)
     {
         JsonArray jsonArray = new JsonArray();
@@ -39,6 +42,7 @@ public class CollectionJava {
             jobj.addProperty("title", i.getTitle());
             jobj.addProperty("description", i.getDescription());
             jobj.addProperty("isVinyl", i.isVinyl());
+            jobj.addProperty("id", i.getCollectionId());
 
             jsonArray.add(jobj);
         }
@@ -95,4 +99,5 @@ public class CollectionJava {
     public boolean isVinyl() {
         return isVinyl;
     }
+
 }

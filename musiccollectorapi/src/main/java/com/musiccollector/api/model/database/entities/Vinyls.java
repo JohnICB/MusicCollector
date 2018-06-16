@@ -66,6 +66,22 @@ public class Vinyls {
         this.releaseDate = releaseDate;
     }
 
+    public Vinyls(String title, String artists, String region, String age, String album, String size, boolean isColored, boolean isStereo, boolean isSpecialEdition, String duration, String genre, String rarity, String releaseDate) {
+        this.title = title;
+        this.artists = artists;
+        this.region = region;
+        this.age = age;
+        this.album = album;
+        this.size = size;
+        this.isColored = isColored;
+        this.isStereo = isStereo;
+        this.isSpecialEdition = isSpecialEdition;
+        this.duration = duration;
+        this.genre = genre;
+        this.rarity = rarity;
+        this.releaseDate = releaseDate;
+    }
+
     public static Vinyls processResults(ResultSet resultSet) //select * from vinyls where id = ?
     {
 
@@ -124,6 +140,28 @@ public class Vinyls {
 
     }
 
+
+    public static Vinyls fromJson(JsonObject jsonPayload)
+    {
+        String title = jsonPayload.get("title").getAsString();
+        String artists = jsonPayload.get("artists").getAsString();
+        String region = jsonPayload.get("region").getAsString();
+        String age = jsonPayload.get("age").getAsString();
+        String album = jsonPayload.get("album").getAsString();
+        String size = jsonPayload.get("size").getAsString();
+        boolean isColored = jsonPayload.get("isColored").getAsBoolean();
+        boolean isStereo = jsonPayload.get("isStereo").getAsBoolean();
+        boolean isSpecialEdition = jsonPayload.get("isSpecialEdition").getAsBoolean();
+        String duration = jsonPayload.get("duration").getAsString();
+        String genre = jsonPayload.get("genre").getAsString();
+        String rarity = jsonPayload.get("rarity").getAsString();
+        String releaseDate = jsonPayload.get("releaseDate").getAsString();
+
+        return new Vinyls(
+                title, artists,region,age,album,size,isColored,isStereo,
+                isSpecialEdition,duration,genre,rarity,releaseDate);
+
+    }
 
     public void insert() {
 

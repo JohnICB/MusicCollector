@@ -81,27 +81,73 @@ public class Collections {
 
     }
 
-    public static void insert(long uid, String title, boolean isVinyl, String description) {
+    public static long insert(long uid, String title, boolean isVinyl, String description) {
 
         try {
             Connection connection = Database.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(
-                    "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE) VALUES (?, ?, ?, ?)");
 
-            preparedStatement.setLong(1,uid);
-            preparedStatement.setString(2,description);
-            preparedStatement.setBoolean(3,isVinyl);
-            preparedStatement.setString(4,title);
+            ResultSet rs
+                    = connection.prepareStatement
+                    ("SELECT MAX(ID_COLLECTION) FROM COLLECTIONS").
+                    executeQuery();
+
+            long colID = -1;
+            if (rs.next())
+                colID = rs.getLong(1) + 1;
+
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE) VALUES (?, ?, ?, ?, ?)");
+
+            preparedStatement.setLong(1, uid);
+            preparedStatement.setString(2, description);
+            preparedStatement.setBoolean(3, isVinyl);
+            preparedStatement.setString(4, title);
+            preparedStatement.setLong(5, colID);
 
             preparedStatement.executeUpdate();
+
+            return colID;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static void insertByColID(long colID, long musicID)
+    {
+        try {
+            ResultSet rs = Database.selectQuery(
+                    "SELECT ID_USER, TITLE, DESCRIPTIOM, IS_VINYL FROM" +
+                            " COLLECTIONS WHERE ID_COLLECTION = ?", colID);
+
+            if (!rs.next()) { return;}
+
+            long uid = rs.getLong(1);
+            String title = rs.getString(2);
+            String description = rs.getString(3);
+            boolean isVinyl = rs.getBoolean(4);
+
+            PreparedStatement preparedStatement = Database.getConnection().prepareStatement(
+                    "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE, ID_COLLECTION) VALUES (?, ?, ?, ?, ?)");
+
+            preparedStatement.setLong(1, uid);
+            preparedStatement.setString(2, description);
+            preparedStatement.setBoolean(3, isVinyl);
+            preparedStatement.setString(4, title);
+            preparedStatement.setLong(5, colID);
+
+            preparedStatement.executeUpdate();
+
+
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-
     }
 
+    @Deprecated
     public static void insert(long uid, long idMusic, String title, boolean isVinyl, String description) {
 
         System.out.println("id music " + idMusic);
@@ -124,6 +170,67 @@ public class Collections {
         }
 
 
+    }
+
+    public static boolean isVinylCol(long colID)
+    {
+
+        try {
+            PreparedStatement ps = Database.getConnection().prepareStatement(
+                    "SELECT IS_VINYL FROM collections" +
+                            " WHERE ID_COLLECTION = ?"
+            );
+
+            ps.setLong(1, colID);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next())
+                return rs.getBoolean(1);
+            else throw new SQLException("VINYL TYPE FOUND ACI");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public static void delete(long collectionID) {
+        try {
+            PreparedStatement ps = Database.getConnection().prepareStatement(
+                    "DELETE FROM collections" +
+                            " WHERE ID_COLLECTION = ?"
+            );
+
+            ps.setLong(1, collectionID);
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean hasUser(long uid, long idCollection) {
+
+        try {
+            ResultSet rs = Database.selectQuery("SELECT ID_USER FROM COLLECTIONS WHERE" +
+                    " ID_COLLECTION = ?", idCollection);
+
+            if (!rs.next()) return false;
+
+            while (rs.next())
+            {
+                if (rs.getLong(1) == uid)
+                    return true;
+            }
+
+            return false;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return false;
     }
 
     public long getIdCollection() {

@@ -4,7 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/musiccollectorapi" />
   </component>
   <component name="JavaScriptSettings">
-    <option name="languageLevel" value="ES6" />
+    <option name="languageLevel" value="JS_1_7" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,5 +13,5 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="9.0" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="10" project-jdk-type="JavaSDK" />
 </project>

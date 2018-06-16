@@ -4,6 +4,8 @@ package com.musiccollector.api.model.database.user;
 import com.musiccollector.api.generators.TokenGenerator;
 import com.musiccollector.api.model.Database;
 
+import javax.servlet.http.Cookie;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectedUsers {
@@ -76,6 +78,21 @@ public class ConnectedUsers {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+    }
+
+    public static long getUserIDByCookies(Cookie[] cookies)
+    {
+        if (cookies == null) return -1;
+
+        String username = "";
+        for (Cookie cooky : cookies) {
+            if (cooky.getName().equals("user")) {
+                username = cooky.getValue();
+            }
+        }
+
+        return Users.getIDbyName(username);
 
     }
 }

@@ -80,21 +80,19 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <form >
+    <form id="formObj">
       <label >Collection name</label>
       <input type="text" id="fname" name="Collection name" placeholder="Name..">
       <label>Collection type</label>
-      <select id="Collection" name="Collection">
-        <option value="Cassetts">Cassetts</option>
+      <select id="Collection" name="colType">
+        <option value="Cassetts">Cassette</option>
         <option value="Vinyls">Vinyls</option>
       </select>
       <label>Description</label>
-      <textarea rows="5" cols="35">
-        
-          
-          </textarea>
-    
-      <input type="submit" id="fbutton" value="Submit">
+        <input class="textDesc" type="text" name="colDescription"/>
+
+      <input type="button" id="fbutton" value="Submit" onclick="addCollection()">
+
     </form>
   </div>
 
@@ -102,50 +100,15 @@
           <div class="product-container">
             <ul class="product-list">
                 <li class="product">
-                    <a href="cassetts-preview.html">
+                    <a href="/cassettes">
                         <h3>Cassette Y</h3>
                         <img class="vyn" src="../../Images/cassette.jpg" alt="">
                         <p>DESCRIPTION</p>
                         <img class="preview" src="../../Images/bars.svg" alt="">
                     </a>
                 </li>
-                <li class="product">
-                    <a href="cassetts-preview.html">
-                        <h3>Cassette Y</h3>
-  
-                        <img class="vyn" src="../../Images/cassette.jpg" alt="">
-                        <p>DESCRIPTION</p>
-                        <img class="preview" src="../../Images/bars.svg" alt="">
-                    </a>
-                </li>
-                <li class="product">
-                    <a href="cassetts-preview.html">
-                        <h3>Cassette Y</h3>
-  
-                        <img class="vyn" src="../../Images/cassette.jpg" alt="">
-                        <p>DESCRIPTION</p>
-                        <img class="preview" src="../../Images/bars.svg" alt="">
-  
-                    </a>
-                </li>
-                <li class="product" href="vinyl-preview.html">
-                  <a href="vinyl-preview.html">
-                      <h3>Vinyl X</h3>
-                      <img class="vyn" src="../../Images/vinyl.png" alt="">
-                      <p>DESCRIPTION</p>
-                      <img class="preview" src="../../Images/bars.svg" alt="">
-                  </a>
-              </li>
-              <li class="product" href="vinyl-preview.html">
-                  <a href="vinyl-preview.html">
-                      <h3>Vinyl X</h3>
-                      <img class="vyn" src="../../Images/vinyl.png" alt="">
-                      <p>DESCRIPTION</p>
-                      <img class="preview" src="../../Images/bars.svg" alt="">
-                  </a>
-              </li>
-              <li class="product" href="vinyl-preview.html">
-                  <a href="vinyl-preview.html">
+              <li class="product" >
+                  <a href="/vinyls">
                       <h3>Vinyl X</h3>
                       <img class="vyn" src="../../Images/vinyl.png" alt="">
                       <p>DESCRIPTION</p>
@@ -169,7 +132,7 @@
                 New E-mail:
                 <input type="email" name="email">
               </form>
-        <button id="buttonn"></button>
+        <button class="buttonn"></button>
           </div>
         <div>
                 <h3>Reset password</h3>
@@ -180,7 +143,7 @@
                 <input type="password" name="psw">
                 
                 </form>
-                <button id="buttonn"></button>
+                <button class="buttonn"></button>
       </div>
         <div>
               <h3>Change username!</h3>
@@ -189,7 +152,7 @@
               <input type="text" name="username"><br>
               
               </form>
-              <button id="buttonn"></button>
+              <button class="buttonn"></button>
         </div>
           
       </div>
@@ -212,64 +175,8 @@
       <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
 
     </footer>
-  
 
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "25%";
-
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-
-    }
-  </script>
-  <script>
-    function openCity(evt, button) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(button).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-    
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-    </script>
-    <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-        
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        </script>
+  <script src="../../JS/profile.js"></script>
 
     
 </body>

@@ -1,6 +1,7 @@
 package com.musiccollector.api.model.database.entities;
 
 
+import com.google.gson.JsonObject;
 import com.musiccollector.api.model.Database;
 
 import java.sql.Connection;
@@ -20,8 +21,9 @@ public class Cassettes {
     private String age;
     private String usageGrade;
     private String releaseDate;
+    private String region;
 
-    public Cassettes(String externalId, String title, String album, String artists, String genre, String duration, String age, String usageGrade, String releaseDate) {
+    public Cassettes(String externalId, String title, String album, String artists, String genre, String duration, String age, String usageGrade, String releaseDate, String region) {
         this.externalId = externalId;
         this.title = title;
         this.album = album;
@@ -31,6 +33,37 @@ public class Cassettes {
         this.age = age;
         this.usageGrade = usageGrade;
         this.releaseDate = releaseDate;
+        this.region = region;
+    }
+
+    public Cassettes(String title, String album, String artists,
+                     String genre, String duration, String age,
+                     String usageGrade, String releaseDate, String region) {
+        this.title = title;
+        this.album = album;
+        this.artists = artists;
+        this.genre = genre;
+        this.duration = duration;
+        this.age = age;
+        this.usageGrade = usageGrade;
+        this.releaseDate = releaseDate;
+        this.region = region;
+    }
+
+    public static Cassettes fromJson(JsonObject jsonPayload)
+    {
+        String title = jsonPayload.get("title").getAsString();
+        String duration = jsonPayload.get("duration").getAsString();
+        String artists = jsonPayload.get("artists").getAsString();
+        String region = jsonPayload.get("region").getAsString();
+        String age = jsonPayload.get("age").getAsString();
+        String album = jsonPayload.get("album").getAsString();
+        String usageGrade = jsonPayload.get("usageGrade").getAsString();
+        String genre = jsonPayload.get("genre").getAsString();
+        String releaseDate = jsonPayload.get("releaseDate").getAsString();
+
+        return new Cassettes(title,album, artists, genre, duration, age,
+                usageGrade,releaseDate, region);
     }
 
     public long getIdCassettes() {
@@ -129,7 +162,7 @@ public class Cassettes {
 
             PreparedStatement preparedStatement = connection.prepareStatement(
                     "INSERT INTO cassettes (EXTERNAL_ID, TITLE, ARTISTS" +
-                            ", AGE, ALBUM, DURATION, GENRE, RELEASE_DATE) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+                            ", AGE, ALBUM, DURATION, GENRE, RELEASE_DATE, REGION) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             preparedStatement.setString(1, this.externalId);
             preparedStatement.setString(2, this.title);
@@ -139,6 +172,7 @@ public class Cassettes {
             preparedStatement.setString(6, this.duration);
             preparedStatement.setString(7, this.genre);
             preparedStatement.setString(8, this.releaseDate);
+            preparedStatement.setString(9, this.region);
 
             preparedStatement.executeUpdate();
 
