@@ -2,37 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="443be7bc-5ac0-4f5d-9d6e-908dde85395f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/musiccollector-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/musiccollector-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/CollectionJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/CollectionJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Cassettes.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Cassettes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/ConnectedUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/ConnectedUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/index-logat.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/index-logat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/cassetts-preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/cassetts-preview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/cassetts.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/cassetts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/vinyl-preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/vinyl-preview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/CollectionsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/CollectionsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/CollectionJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/CollectionJava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/login/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/login/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Cassettes.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Cassettes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Collections.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Collections.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/user/ConnectedUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/user/ConnectedUsers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Vinyls.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/model/database/entities/Vinyls.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/musiccollectorapi/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +63,7 @@
             <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="275">
-                  <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+                  <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#doPut#0;class#CollectionsServlet#0" />
@@ -118,7 +94,7 @@
             <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Cassettes.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="331">
-                  <caret line="167" column="55" lean-forward="true" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
+                  <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
                 </state>
               </provider>
             </entry>
@@ -142,8 +118,8 @@
           <file leaf-file-name="Collections.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="208" column="9" lean-forward="true" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="9" />
+                <state relative-caret-position="514">
+                  <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -595,12 +571,12 @@
       <workItem from="1529076958925" duration="4523000" />
       <workItem from="1529132713991" duration="1747000" />
       <workItem from="1529180002377" duration="3311000" />
-      <workItem from="1529183341534" duration="2071000" />
+      <workItem from="1529183341534" duration="2666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36304000" />
+    <option name="totallyTimeSpent" value="36899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -608,7 +584,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="12" weight="0.14658849" />
+      <window_info anchor="right" id="Maven Projects" order="12" visible="true" weight="0.14658849" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="CDI" order="8" />
       <window_info id="Capture Tool" order="8" />
@@ -625,7 +601,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.15191898" />
       <window_info anchor="right" id="Bean Validation" order="11" weight="0.32995737" />
@@ -978,7 +954,7 @@
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Cassettes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
-          <caret line="167" column="55" lean-forward="true" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
+          <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -992,21 +968,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="208" column="9" lean-forward="true" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doPut#0;class#CollectionsServlet#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
         </state>
       </provider>
     </entry>

@@ -96,7 +96,7 @@ public class Collections {
                 colID = rs.getLong(1) + 1;
 
             PreparedStatement preparedStatement = connection.prepareStatement(
-                    "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE) VALUES (?, ?, ?, ?, ?)");
+                    "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE, ID_COLLECTION) VALUES (?, ?, ?, ?, ?)");
 
             preparedStatement.setLong(1, uid);
             preparedStatement.setString(2, description);
