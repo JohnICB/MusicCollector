@@ -7,9 +7,11 @@ import com.musiccollector.api.model.Database;
 import com.musiccollector.api.model.database.entities.Cassettes;
 import com.musiccollector.api.model.database.entities.Vinyls;
 
+import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class CollectionJava {
     private ArrayList<Long> idUser;
@@ -33,18 +35,25 @@ public class CollectionJava {
     public static JsonArray toJsonPreview (ArrayList<CollectionJava> collectionJava)
     {
         JsonArray jsonArray = new JsonArray();
-        JsonObject jobj = new JsonObject();
+        JsonObject jobj;
+
+        HashSet<Long> cache = new HashSet<>();
 
         for (CollectionJava i : collectionJava)
         {
-            jobj = new JsonObject();
+            if (!cache.contains(i.getCollectionId()))
+            {
+                cache.add(i.getCollectionId());
 
-            jobj.addProperty("title", i.getTitle());
-            jobj.addProperty("description", i.getDescription());
-            jobj.addProperty("isVinyl", i.isVinyl());
-            jobj.addProperty("id", i.getCollectionId());
+                jobj = new JsonObject();
 
-            jsonArray.add(jobj);
+                jobj.addProperty("title", i.getTitle());
+                jobj.addProperty("description", i.getDescription());
+                jobj.addProperty("isVinyl", i.isVinyl());
+                jobj.addProperty("id", i.getCollectionId());
+
+                jsonArray.add(jobj);
+            }
         }
 
         return jsonArray;
