@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Bowlby One' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -150,8 +151,10 @@
         </div>
         <div id="contextMenu" class="dropdown clearfix">
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display:block;position:static;margin-bottom:5px;">
-                  <a>Delete Coletion
-                  </a>
+                  
+                  <button class="button-search"><i class="fa fa-remove"></i>Delete Coletion
+                        
+                  </button>
                 </ul>
               </div>
 
@@ -172,27 +175,8 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../../JS/filter.js"></script>
-    <script>
-        $(function() {
-
-var $contextMenu = $("#contextMenu");
-
-$("body").on("contextmenu", "ul li", function(e) {
-     $contextMenu.css({
-          display: "block",
-          left: e.pageX,
-          top: e.pageY
-     });
-     return false;
-});
-
-$('html').click(function() {
-     $contextMenu.hide();
-});
-
-});
+    <script src="../../JS/cassetts.js"></script>
     
-    </script>
 
 </body>
 

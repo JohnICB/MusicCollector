@@ -192,3 +192,4 @@ function addCollection()
     // createColElement(123, colName, colDesc, isVynil);
     clearInputs();
 }
+

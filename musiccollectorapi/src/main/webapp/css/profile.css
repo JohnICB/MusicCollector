@@ -689,3 +689,38 @@ textarea{
   box-shadow:0px 2px 15px 5px white;
   color:white;
  }
+ #contextMenu {
+  position: absolute;
+  display: none;
+  box-shadow: 0;
+  z-index: 10000;
+}
+
+.wrap{
+  width:90%;
+  display:block;
+  margin:0 auto;
+}
+.dropdown .button-search{
+border-radius:0;
+  background: #FFF;
+  color:black;
+} 
+
+
+.product-list ul li:nth-child(even) {background: #F5F5F5}
+
+.product-list ul li{
+  position:relative;
+  
+}
+
+.product-list ul li:hover{
+  background:#c9e8f7;
+  position:relative;
+}
+.fa-remove{
+  padding-right:20px;
+  color:black;
+  size:20px;
+}
