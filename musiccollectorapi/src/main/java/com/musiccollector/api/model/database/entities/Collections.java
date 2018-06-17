@@ -251,13 +251,16 @@ public class Collections {
         try {
             ResultSet rs = Database.selectQuery("SELECT ID_USER FROM COLLECTIONS WHERE" +
                     " ID_COLLECTION = ?", idCollection);
+            System.out.println("User id: "+uid);
+            boolean nxt = rs.next();
+            if (!nxt) return false;
 
-            if (!rs.next()) return false;
-
-            while (rs.next())
+            while (nxt)
             {
+                System.out.println(rs.getLong(1)+"==="+uid);
                 if (rs.getLong(1) == uid)
                     return true;
+                rs.next();
             }
 
             return false;

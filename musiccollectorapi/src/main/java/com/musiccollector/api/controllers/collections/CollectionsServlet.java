@@ -314,7 +314,7 @@ public class CollectionsServlet extends HttpServlet {
 
                 long collectionID = -1;
                 collectionID = jsonPayload.get("colID").getAsLong();
-
+                System.out.println("collectionID: "+collectionID+Collections.hasUser(uid, collectionID));
                 if (collectionID < 0 || !Collections.hasUser(uid, collectionID))
                 {
                     response.setContentType("application/json");
