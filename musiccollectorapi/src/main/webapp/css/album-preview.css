@@ -1,0 +1,265 @@
+body{
+  margin: 0px;
+	font-size: 17px;
+  font-family: 'ABeeZee', Arial, Helvetica, sans-serif;
+
+  
+}
+.container{
+    position: relative;
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+  }
+  ul{
+    margin:0;
+    padding:0;
+  }
+
+  .search{
+      display: inline-block;
+      padding-left: 10%;
+      padding-right: 0%;
+      padding-top: 15px;
+      margin: 0;
+  }
+ 
+  input[type=text] {
+    width: 130px;
+    height: 35px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 0px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+
+input[type=text]:focus {
+    width: 80%;
+}
+input[type=submit]{
+    background-image: url('../Images/search.svg');
+    background-repeat: no-repeat; 
+    width :20px;
+    height: 20px;
+    border: 1px black;
+    padding-top: 1px;
+
+}
+input[type=submit]:focus{
+    outline: none;
+}
+input[type=submit]:hover{
+    box-shadow: rgba(205, 133, 63,0.6);
+  
+
+
+
+}
+  header .highlight, header .current a{
+    color:#4e413b;
+    font-weight:monospace;
+    border-radius: 4px;
+    
+  }
+  
+  header a:hover{
+    
+    color:  #4e413b;
+   
+  
+  }
+  #textimg{
+    color:#000;
+    text-align: center;
+    padding-top:10%;
+  }
+
+  .main{
+      min-height: 100vh;
+      background-color: #AAABBB;
+     
+  }
+  .main .center{
+    min-height: 100vh;
+    background-color: #fff;
+    width: 70%;
+    margin:auto;
+  }
+  nav ul{
+      display: inline-block;
+  }
+
+.banner{
+    background: url('../Images/Vinyl_Records.jpg') fixed no-repeat;
+    background-size: cover;
+    height: 30%;
+}
+.banner p {
+    text-align: center;
+    margin:0;
+    padding: 100px;
+    color: palegoldenrod
+}
+
+.main .center .display-img{
+  text-align: center;
+  padding-top: 5%;
+}
+
+
+.main .center .display-img img{
+    align-self: center;
+    width: 30%;
+    
+
+}
+.main .center .description h4{
+  text-align: center;
+}
+.main .center .description p{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.main .center h1{
+  text-align: center;
+  padding-top: 5%;
+}
+.tracks{
+  display: block;
+  padding: 10%;
+  height: 20vh;
+  overflow: hidden;
+}
+.tracks .track-list{
+  list-style-type: none;
+  overflow-y: scroll;
+  height: 20vh;
+  border-left: .5rem solid rgb(199, 199, 199);
+ 
+}
+
+.tracks .track-list::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgba(245, 245, 245,0);
+}
+
+.tracks .track-list::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgba(245, 245, 245,0);
+}
+
+.tracks .track-list::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+  border-radius: 20px;
+}
+
+.tracks .track-list .track{
+  padding-top:1%;
+  padding-bottom: 1%; 
+  border-bottom: .01rem solid #e2ded3;
+  transition: 0.2s ease-out;
+}
+.tracks .track-list .track:hover{
+  padding-top:1%;
+  padding-bottom: 1%; 
+  border-bottom: .1rem solid #e2ded3;
+  border-right: .5rem solid rgb(184, 214, 253);
+  border-radius: 0px;
+  border-width: 50%;
+  transition: 0.2s ease-out;
+  background-color: #AAABBB;
+     
+}
+
+
+  footer {
+    width:100%;
+    height:200px;
+    background-color:
+    #4e413b;
+    margin: 0;
+    color:#332e2b;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: column;
+    padding-top:20px;
+    
+  }
+  
+  footer p {
+    font-size:0.7em;
+  }
+  
+  footer  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    
+  }
+  
+  /* Add a hover effect if you want */
+  footer .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  footer .fa-facebook {
+    color: white;
+    background: #3B5998;
+  }
+  
+  /* Twitter */
+  footer .fa-twitter {
+  
+    color: white;
+    background: #55ACEE
+  }
+  footer .fa-instagram {
+    background: #ea4c89;
+    color: white;
+  }
+.add-but{
+    padding-left:5%;
+    padding-top:50px;
+    padding-bottom:-50px;
+}
+.button-add {
+    position: relative;
+    background-color:#4c5baf;
+    border: initial;
+    border-width: 0 7px;
+    box-sizing: border-box;
+    border-radius:20px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    font-family: 'Allerta Stencil';
+    color:#FFF;
+    font-size:20px;
+    width: 20%;
+    
+    
+    
+  
+  }
+.button-add:hover{
+   background:var(--nav-color);
+   box-shadow:0px 2px 15px 5px #AAABBB;
+   color:#FFF;
+  }
+  
