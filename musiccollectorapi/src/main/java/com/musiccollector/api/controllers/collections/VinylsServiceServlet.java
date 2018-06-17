@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 
 @WebServlet(urlPatterns = "/vinylsService")
-public class VinylsService extends HttpServlet {
+public class VinylsServiceServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
