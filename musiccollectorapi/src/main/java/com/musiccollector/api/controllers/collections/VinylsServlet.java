@@ -1,22 +1,11 @@
 package com.musiccollector.api.controllers.collections;
 
-import com.google.gson.JsonArray;
-import com.musiccollector.api.controllers.login.LoginService;
-import com.musiccollector.api.model.database.CollectionJava;
-import com.musiccollector.api.model.database.entities.Collections;
-import com.musiccollector.api.model.database.entities.Vinyls;
-import com.musiccollector.api.model.database.user.ConnectedUsers;
-import com.musiccollector.api.model.database.user.Users;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
 
 
 @WebServlet(urlPatterns = "/vinyls")
@@ -26,38 +15,10 @@ public class VinylsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        System.out.println("/vinylsGET");
+
+        request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
 
 
-        if (LoginService.isUserLoggedIn(request.getCookies()))
-        {
-            long uid = ConnectedUsers.getUserIDByCookies(request.getCookies());
-            long colID = Long.parseLong(request.getParameter("id"));
-
-            CollectionJava collectionJava = Collections.getCollectionByID(colID);
-
-            if (collectionJava == null || !Collections.hasUser(uid,colID))
-            {
-                response.setContentType("application/json");
-                response.getWriter().write("fail");
-                return;
-            }
-
-            ArrayList<Vinyls> vinyls = collectionJava.getVinylContent();
-
-            JsonArray jarray = new JsonArray();
-            for (Vinyls v: vinyls)
-            {
-                jarray.add(v.toJson());
-            }
-
-            response.setContentType("application/json");
-            response.getWriter().write(jarray.toString());
-
-        }
-
-        //response.setContentType("application/json");
-        //response.getWriter().write("");
     }
 
     @Override
