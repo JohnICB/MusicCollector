@@ -1,33 +1,33 @@
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\register\RegisterService.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\ArtistQuerryBuilder.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\QueryBuilder.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\Database.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\HomepageServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\AlbumQueryBuilder.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\profile\ProfileService.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\user\Users.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\events\EventsService.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\GetJson.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\profile\ProfileServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Concerts.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\CollectionJava.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\apisearch\ApiSearchServelet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LoginServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Vinyls.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\VinylsServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Collections.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\events\EventsServiceServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\register\RegisterServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\generators\TokenGenerator.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\WelcomeServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\CollectionsServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\AboutServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\TemplateServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\EventsServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\user\ConnectedUsers.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\apisearch\SearchServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\CassettesServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Cassettes.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LoginService.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LogoutServlet.java
-D:\MusicCollector\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\TrackQueryBuilder.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LoginServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Vinyls.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\GetJson.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\AlbumQueryBuilder.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\user\ConnectedUsers.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\user\Users.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\Database.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\VinylsServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\CassettesServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\HomepageServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\EventsServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\QueryBuilder.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LogoutServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\events\EventsServiceServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\apisearch\SearchServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\apisearch\ApiSearchServelet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\TrackQueryBuilder.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\CollectionsServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\profile\ProfileService.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\TemplateServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LoginService.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\generators\TokenGenerator.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\WelcomeServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\events\EventsService.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\staticpages\AboutServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\CollectionJava.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\ArtistQuerryBuilder.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Concerts.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\register\RegisterService.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Cassettes.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\profile\ProfileServlet.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Collections.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\register\RegisterServlet.java

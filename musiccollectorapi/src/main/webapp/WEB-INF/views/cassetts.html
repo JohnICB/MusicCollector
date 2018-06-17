@@ -78,6 +78,7 @@
 
 
             <div class="product-container">
+                
                 <ul class="product-list">
                     <li class="product">
                         <a href="cassetts-preview.html">
@@ -147,6 +148,12 @@
                 </ul>
             </div>
         </div>
+        <div id="contextMenu" class="dropdown clearfix">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display:block;position:static;margin-bottom:5px;">
+                  <a>Delete Coletion
+                  </a>
+                </ul>
+              </div>
 
 
 
@@ -165,6 +172,27 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../../JS/filter.js"></script>
+    <script>
+        $(function() {
+
+var $contextMenu = $("#contextMenu");
+
+$("body").on("contextmenu", "ul li", function(e) {
+     $contextMenu.css({
+          display: "block",
+          left: e.pageX,
+          top: e.pageY
+     });
+     return false;
+});
+
+$('html').click(function() {
+     $contextMenu.hide();
+});
+
+});
+    
+    </script>
 
 </body>
 
