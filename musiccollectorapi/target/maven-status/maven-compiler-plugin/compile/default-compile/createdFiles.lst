@@ -3,6 +3,7 @@ com\musiccollector\api\controllers\apisearch\SearchServlet.class
 com\musiccollector\api\model\database\user\Users.class
 com\musiccollector\api\musicbrainzapi\TrackQueryBuilder.class
 com\musiccollector\api\controllers\login\LogoutServlet.class
+com\musiccollector\api\controllers\collections\VinylsService.class
 com\musiccollector\api\controllers\staticpages\EventsServlet.class
 com\musiccollector\api\model\database\entities\Cassettes.class
 com\musiccollector\api\controllers\collections\CassettesServlet.class
