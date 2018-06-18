@@ -115,7 +115,14 @@ function searchapi() {
 
 }
 
-function addToCollection(){
+function addUserCollections(image, title, description,id) {
+
+    console.log("Image: "+image + " title: "+title + " description: " +description +" id: " +id)
+
+}
+
+
+function createCollectionList(){
 
 
     let xhr = new XMLHttpRequest();
@@ -125,7 +132,16 @@ function addToCollection(){
     xhr.addEventListener("load", function loadCallback() {
         switch (xhr.status) {
             case 200:
-                console.log("Success GET" + JSON.parse(xhr.response));
+                let responeArray = JSON.parse(xhr.response)
+
+                for(var i =0; i<responeArray.length;++i){
+                    let isVinyl = responeArray[i].isVinyl;
+                    if(isVinyl)
+                        addUserCollections("../../Images/vinyl.png",responeArray[i].title,responeArray[i].description,responeArray[i].id);
+
+                }
+                console.log("Success GET" + xhr.response);
+
 
                 break;
             case 404:
