@@ -1,6 +1,7 @@
 package com.musiccollector.api.controllers.register;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.musiccollector.api.model.Database;
 import com.musiccollector.api.model.database.user.Users;
 
@@ -77,45 +78,45 @@ public class RegisterService {
         return true;
     }
 
-    public String getResponseJson(String username, String email, String password, int isPerson)
+    public JsonObject getResponseJson(String username, String email, String password, int isPerson)
     {
-        String status = "fail";
-        String message = "You successfully registered!";
+        boolean isError = true;
+        String text = "You successfully registered!";
 
         switch (checkValidCredentials(username, email, password))
         {
             case 0:
                 if(insertUser(username,email,password,isPerson))
                 {
-                    status = "success";
+                    isError = false;
                 }
                 else
                 {
-                    message = "Internal database error, please try again later";
+                    text = "Internal database error, please try again later";
                 }
                 break;
             case 1:
-                message = "Username already in use";
+                text = "Username already in use";
                 break;
             case 2:
-                message = "Email already in use";
+                text = "Email already in use";
                 break;
             case 3:
-                message = "Password too short! Must be at least 4 characters";
+                text = "Password too short! Must be at least 4 characters";
                 break;
             case 4:
-                message = "Username too short! Must be at least 4 characters";
+                text = "Username too short! Must be at least 4 characters";
                 break;
             default:
-                message = "Internal server error";
+                text = "Internal server error";
                 break;
         }
 
-        Map<String, String> options = new LinkedHashMap<>();
-        options.put("status", status);
-        options.put("message", message);
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("isError", isError);
+        jsonObject.addProperty("text", text);
 
-        return new Gson().toJson(options);
+        return jsonObject;
 
     }
 }

@@ -3,19 +3,12 @@
   <component name="ChangeListManager">
 <<<<<<< Updated upstream
     <list default="true" id="443be7bc-5ac0-4f5d-9d6e-908dde85395f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/index-logat.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/index-logat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/VinylsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/VinylsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/collections/VinylsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/login/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/login/LogoutServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/register/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/classes/com/musiccollector/api/controllers/register/RegisterServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/musiccollectorapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
 =======
     <list default="true" id="443be7bc-5ac0-4f5d-9d6e-908dde85395f" name="Default" comment="" />
@@ -68,9 +61,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="vinyl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/vinyl.html">
+      <file leaf-file-name="CollectionsServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             <state relative-caret-position="616">
               <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-end-line="107" />
@@ -78,6 +72,13 @@
             <state relative-caret-position="6225">
               <caret line="266" column="0" lean-forward="false" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
               <folding />
+>>>>>>> Stashed changes
+=======
+            <state relative-caret-position="216">
+              <caret line="262" column="24" lean-forward="true" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
 >>>>>>> Stashed changes
             </state>
           </provider>
@@ -87,12 +88,26 @@
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <state relative-caret-position="250">
               <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
 =======
             <state relative-caret-position="150">
               <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding />
+>>>>>>> Stashed changes
+=======
+            <state relative-caret-position="1275">
+              <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LoginServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1041">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
 >>>>>>> Stashed changes
             </state>
           </provider>
@@ -101,6 +116,7 @@
       <file leaf-file-name="registration.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             <state relative-caret-position="275">
               <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
@@ -111,13 +127,18 @@
                 <element signature="imports" expanded="false" />
               </folding>
 >>>>>>> Stashed changes
+=======
+            <state relative-caret-position="525">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/register.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             <state relative-caret-position="400">
               <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
@@ -128,6 +149,22 @@
                 <element signature="imports" expanded="false" />
               </folding>
 >>>>>>> Stashed changes
+=======
+            <state relative-caret-position="189">
+              <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+              <folding>
+                <element signature="e#48#446#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/profile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -135,6 +172,7 @@
       <file leaf-file-name="RegisterServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             <state relative-caret-position="275">
               <caret line="44" selection-start-line="44" selection-end-line="44" />
@@ -144,20 +182,33 @@
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
+=======
+            <state relative-caret-position="329">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="musiccollector-api.iml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/musiccollector-api.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
               <folding />
+=======
+      <file leaf-file-name="RegisterService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-344">
+              <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musiccollectorapi/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -217,6 +268,13 @@
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
+>>>>>>> Stashed changes
+=======
+      <file leaf-file-name="Users.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/Users.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
 >>>>>>> Stashed changes
             </state>
           </provider>
@@ -278,14 +336,15 @@
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsService.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServiceServlet.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/VinylsServlet.java" />
-        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.jsp" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/index-logat.html" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/index.html" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LogoutServlet.java" />
-        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.html" />
+        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterService.java" />
+        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/register.js" />
+        <option value="$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html" />
       </list>
     </option>
   </component>
@@ -314,11 +373,19 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="3862" />
     <option name="height" value="2122" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="107" />
+    <option name="y" value="-13" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -400,6 +467,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MusicCollector - Copy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicCollector - Copy" type="462c0819:PsiDirectoryNode" />
+              <item name="musiccollectorapi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="register" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -409,15 +487,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MusicCollector - Copy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicCollector - Copy" type="462c0819:PsiDirectoryNode" />
-              <item name="musiccollectorapi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="JS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MusicCollector - Copy" type="b2602c69:ProjectViewProjectNode" />
@@ -461,7 +530,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3137931" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -675,17 +744,25 @@
       <workItem from="1529249316817" duration="215000" />
 <<<<<<< Updated upstream
       <workItem from="1529263699616" duration="1933000" />
+<<<<<<< Updated upstream
       <workItem from="1529323861604" duration="6229000" />
 =======
       <workItem from="1529263699616" duration="986000" />
       <workItem from="1529341691629" duration="14000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1529323861604" duration="14204000" />
 >>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="48577000" />
+=======
+    <option name="totallyTimeSpent" value="56552000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -722,11 +799,12 @@
       <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32897604" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3278867" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918962" visible="true" weight="0.15671642" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918962" visible="true" weight="0.15671642" />
       <window_info anchor="right" id="Bean Validation" order="11" weight="0.32995737" />
       <window_info id="Web" order="7" side_tool="true" weight="0.32995737" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -736,6 +814,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Find" order="1" />
 =======
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -768,6 +847,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </layout>
   </component>
@@ -805,7 +886,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -893,6 +974,7 @@
       </provider>
     </entry>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -909,6 +991,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/TemplateServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -944,6 +1028,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/register.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
@@ -968,6 +1053,8 @@
       </provider>
     </entry>
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/events/EventsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -989,6 +1076,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/search1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1005,6 +1093,8 @@
         </state>
       </provider>
     </entry>
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/events.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1030,6 +1120,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/Users.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1037,6 +1128,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/profile.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1044,6 +1137,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html">
@@ -1056,6 +1150,9 @@
 >>>>>>> Stashed changes
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.xml/com/sun/org/apache/xalan/internal/xsltc/compiler/LastCall.java" />
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/profile.js" />
+=======
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.xml/com/sun/org/apache/xalan/internal/xsltc/compiler/LastCall.java" />
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/ConnectedUsers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
@@ -1105,6 +1202,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3475">
@@ -1112,11 +1210,14 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
         <state relative-caret-position="3150">
           <caret line="248" column="26" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="26" />
+<<<<<<< Updated upstream
 =======
         <state relative-caret-position="2625">
           <caret line="320" column="0" lean-forward="false" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
@@ -1145,6 +1246,15 @@
             <marker date="1529341661917" expanded="false" signature="8139:8145" ph="{...}" />
           </folding>
 >>>>>>> Stashed changes
+=======
+          <folding>
+            <element signature="method#insert#0;class#Collections#0" />
+            <element signature="method#insertByColID#0;class#Collections#0" />
+            <element signature="method#insert#1;class#Collections#0" />
+            <element signature="method#isVinylCol#0;class#Collections#0" />
+            <element signature="method#delete#0;class#Collections#0" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -1158,6 +1268,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
@@ -1174,6 +1285,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CassettesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
@@ -1266,7 +1379,7 @@
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/vinyl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
-          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-end-line="107" />
+          <caret line="106" column="5" selection-start-line="106" selection-end-line="107" />
         </state>
       </provider>
     </entry>
@@ -1291,45 +1404,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/entities/Vinyls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="143" column="25" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/search1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/model/database/user/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="-344">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/register/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="329">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html">
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="91">
+          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/css/register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="119" column="1" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="525">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/JS/register.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="400">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
 =======
         <state relative-caret-position="150">
           <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding />
+>>>>>>> Stashed changes
+=======
+        <state relative-caret-position="189">
+          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#48#446#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="262" column="24" lean-forward="true" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/webapp/WEB-INF/views/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musiccollectorapi/src/main/java/com/musiccollector/api/controllers/login/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1041">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
 >>>>>>> Stashed changes
         </state>
       </provider>

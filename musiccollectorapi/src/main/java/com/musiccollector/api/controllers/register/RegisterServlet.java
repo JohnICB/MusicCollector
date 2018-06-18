@@ -1,5 +1,7 @@
 package com.musiccollector.api.controllers.register;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.musiccollector.api.controllers.login.LoginService;
 import com.mysql.cj.log.Log;
 
@@ -9,6 +11,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/register")
@@ -37,10 +40,17 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        String name = request.getParameter("username");
-        String password = request.getParameter("psw");
-        String email = request.getParameter("email");
-        String account_type = request.getParameter("account-type");
+        BufferedReader payLoad = request.getReader();
+        JsonObject jsonPayload = new JsonParser().parse(payLoad.readLine()).getAsJsonObject();
+
+        System.out.println(jsonPayload.toString());
+
+//        response.getWriter().write("yes");
+
+        String name = jsonPayload.get("username").getAsString();
+        String password = jsonPayload.get("psw").getAsString();
+        String email = jsonPayload.get("email").getAsString();
+        String account_type = jsonPayload.get("account-type").getAsString();
 
 
 
@@ -51,24 +61,12 @@ public class RegisterServlet extends HttpServlet {
         }
 
         RegisterService registerService = new RegisterService();
-        String json = registerService.getResponseJson(name, email, password, isPerson);
+        String json = registerService.getResponseJson(name, email, password, isPerson).toString();
 
         System.out.println(name + " " + password + " " + email + " " + account_type);
-
-//        if (newUserIsValid() && isNotDuplicated())
-        {
-//            request.getRequestDispatcher("/WEB-INF/views/registrationSucces.jsp").forward(request, response);
-        }
-//        else
-        {
-//            request.getRequestDispatcher("/WEB-INF/views/registrationFail.jsp").forward(request, response);
-        }
-
         System.out.println(json);
+        response.getWriter().write(json);
 
-        request.setAttribute("registerStatus", json);
-
-        request.getRequestDispatcher("/WEB-INF/views/registration.jsp").forward(request, response);
     }
 
 }
