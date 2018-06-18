@@ -8,8 +8,8 @@ $(function() {
     var $contextMenu = $("#contextMenu");
 
     $("body").on("contextmenu", "ul img", function(e) {
-        selectedElment = e.target.parentElement.parentElement;
-        console.log(selectedElment);
+        selectedElment = e.target.parentElement;
+        console.log("Selected: "+selectedElment.getElementsByTagName("h3")[0].innerHTML);
         $contextMenu.css({
             display: "block",
             left: e.pageX,
@@ -24,6 +24,22 @@ $(function() {
 
 });
 
+function openCity(evt, button) {
+    createCollectionList();
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(button).style.display = "block";
+    evt.currentTarget.className += " active";
+
+
+}
 
 function searchapi() {
 
@@ -121,7 +137,66 @@ function addUserCollections(image, title, description,id) {
 
 }
 
+function addToCollection(album, artist){
+    console.log("Getting info...");
+    var title = album;
+    var duration;
+    var artists;
+    var region;
+    var age;
+    var album;
+    var usageGrade;
+    var genre;
+    var releaseDate;
 
+    let jsonStruct = {
+        title:title,
+        duration:duration,
+        artists:artists,
+        region:region,
+        age:age,
+        album:album,
+        usageGrade:usageGrade,
+        genre:genre,
+        releaseDate:releaseDate
+    };
+    let xhrInfo = new XMLHttpRequest();
+    xhrInfo.open("GET","http://localhost:8081/albuminfo"+"&artist="+encodeURIComponent(artist)+"&album="+encodeURIComponent(album));
+    xhrInfo.addEventListener("load", function loadCallback() {
+        switch (xhrInfo.status) {
+            case 200:
+                console.log("INFO RESPONSE: "+xhrInfo.response);
+
+
+
+
+
+                break;
+            case 404:
+                console.log("Oups! Not found");
+                break;
+        }
+
+    });
+
+    // let xhr = new XMLHttpRequest();
+    // xhr.open("PUT","http://localhost:8081/collections");
+    // xhr.addEventListener("load", function loadCallback() {
+    //     switch (xhr.status) {
+    //         case 200:
+    //
+    //
+    //
+    //
+    //
+    //             break;
+    //         case 404:
+    //             console.log("Oups! Not found");
+    //             break;
+    //     }
+    //
+    // });
+}
 function createCollectionList(){
 
 
@@ -136,9 +211,14 @@ function createCollectionList(){
 
                 for(var i =0; i<responeArray.length;++i){
                     let isVinyl = responeArray[i].isVinyl;
-                    if(isVinyl)
-                        addUserCollections("../../Images/vinyl.png",responeArray[i].title,responeArray[i].description,responeArray[i].id);
-
+                    if(isVinyl) {
+                        addUserCollections("../../Images/vinyl.png", responeArray[i].title, responeArray[i].description, responeArray[i].id);
+                        addToCollection(selectedElment.getElementsByTagName("p")[0].innerHTML,selectedElment.getElementsByTagName("h3")[0].innerHTML);
+                    }
+                    else{
+                        addUserCollections("../../Images/cassette.jpg",responeArray[i].title,responeArray[i].description,responeArray[i].id);
+                        addToCollection(selectedElment.getElementsByTagName("p")[0].innerHTML,selectedElment.getElementsByTagName("h3")[0].innerHTML);
+                    }
                 }
                 console.log("Success GET" + xhr.response);
 
