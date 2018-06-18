@@ -45,7 +45,7 @@
         </div>
 
     </header>
-    <div class="main">
+    <div class="main" >
         
         
         <div class="center">
@@ -62,7 +62,7 @@
                 
 
             </div>
-            <div class="search-container">
+            <div class="search-container" id="defaultOpen">
 
                     <input class="search-bar" type="text" placeholder="Cautare dupa nume..." name="search">
                     <select class="search-art">
@@ -75,7 +75,7 @@
                     <button type="button" onclick="searchapi()" class="button-search" name="buttonSearchX">Cautare</button>
 
                 </div>
-            <div class="product-container">
+            <div class="product-container" >
                 <ul class="product-list">
                     <li class="product">
                         <a href="vinyl-preview.html"></a>
@@ -87,10 +87,35 @@
                 </ul>
             </div>
         </div>
-
-
-
+        <div id="contextMenu" class="dropdown clearfix tabcontent">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display:block;position:static;margin-bottom:5px;">
+                  
+                  <button id="myBtn" class="button-search" onclick="openCity(event, 'My Collection')" id="defaultOpen">Add to my Collection
+                        
+                  </button>
+                </ul>
+                <!-- The Modal -->
+          <div id="myModal" class="modal">
+            
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  
+                  
+                  <form id="formObj">
+                    <label >Choose you Collection:</label>
+                    
+              
+                  </form>
+                </div>
+                
+              
+              </div>
+        </div>
+          
+                 
     </div>
+                  
     <footer class="text-center">
 
         <div class="social-icons">
@@ -105,6 +130,9 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../../JS/search1.js"></script>
+    <script src="../../JS/cassetts.js"></script>
+    
+    
 
 </body>
 
