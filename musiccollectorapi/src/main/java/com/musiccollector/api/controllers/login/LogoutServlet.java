@@ -16,9 +16,8 @@ public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        Cookie cookies[] = request.getCookies();
 
-        for (Cookie c: cookies)
+        for (Cookie c: request.getCookies())
         {
             if (c.getName().equals("user") || c.getName().equals("loginToken"))
             {
@@ -30,18 +29,14 @@ public class LogoutServlet extends HttpServlet {
             }
         }
 
-        response.sendRedirect("/welcome");
+        request.getRequestDispatcher("/WEB-INF/index.html").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        if (Math.random() > 0.5f)
-            response.sendRedirect("welcome");
-        else {
-            request.getRequestDispatcher("/WEB-INF/views/TEMPLATE2.jsp").forward(request, response);
-        }
+        doGet(request, response);
     }
 
 }

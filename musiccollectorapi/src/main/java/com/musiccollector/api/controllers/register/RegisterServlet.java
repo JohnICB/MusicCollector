@@ -1,6 +1,7 @@
 package com.musiccollector.api.controllers.register;
 
 import com.musiccollector.api.controllers.login.LoginService;
+import com.mysql.cj.log.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,23 +18,12 @@ public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        request.setAttribute("registerStatus","\"NOTHING YET\"");
+//        request.setAttribute("registerStatus","\"NOTHING YET\"");
 
-        Cookie cookies[] = request.getCookies();
-//        System.out.println(cookies.length);
-        boolean isConnected = false;
-
-        if (cookies != null)
+        System.out.println("/Get Register");
+        if (!LoginService.isUserLoggedIn(request.getCookies()))
         {
-            System.out.println("happening");
-            isConnected = LoginService.isUserLoggedIn(cookies);
-        }
-//            System.out.println(loginToken + " " + user);
-
-        System.out.println("/Register");
-        if (!isConnected)
-        {
-            request.getRequestDispatcher("/WEB-INF/views/registration.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/views/registration.html").forward(request, response);
         }
         else {
             System.out.println("redirect");
@@ -51,6 +41,8 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("psw");
         String email = request.getParameter("email");
         String account_type = request.getParameter("account-type");
+
+
 
         int isPerson = 0;
         if (account_type.equalsIgnoreCase("personal"))

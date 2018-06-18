@@ -1,5 +1,8 @@
 package com.musiccollector.api.controllers.collections;
 
+import com.musiccollector.api.controllers.login.LoginService;
+import com.musiccollector.api.model.database.user.ConnectedUsers;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,8 +18,10 @@ public class VinylsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-
-        request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
+        if (LoginService.isUserLoggedIn(request.getCookies()))
+        {
+            request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
+        }
 
 
     }
