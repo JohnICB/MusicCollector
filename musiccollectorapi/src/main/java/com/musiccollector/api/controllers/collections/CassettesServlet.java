@@ -17,7 +17,7 @@ public class CassettesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         if (LoginService.isUserLoggedIn(request.getCookies()))
-            request.getRequestDispatcher("/WEB-INF/views/cassetts.html").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/views/cassettes-preview.html").forward(request, response);
         else
             response.sendRedirect("welcome");
     }

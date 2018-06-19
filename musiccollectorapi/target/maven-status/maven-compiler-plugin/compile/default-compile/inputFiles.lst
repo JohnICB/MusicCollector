@@ -1,3 +1,4 @@
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\VinylServlet.java
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LoginServlet.java
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\model\database\entities\Vinyls.java
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\musicbrainzapi\GetJson.java
@@ -21,6 +22,7 @@ D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\CollectionsServiceServlet.java
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\TemplateServlet.java
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\login\LoginService.java
+D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\collections\ElementPreviewServlet.java
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\generators\TokenGenerator.java
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\WelcomeServlet.java
 D:\WEB\MusicCollector - Copy\musiccollectorapi\src\main\java\com\musiccollector\api\controllers\events\EventsService.java

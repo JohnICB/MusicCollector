@@ -16,12 +16,12 @@ com\musiccollector\api\model\database\user\ConnectedUsers.class
 com\musiccollector\api\controllers\apisearch\AlbumServlet.class
 com\musiccollector\api\model\database\entities\Vinyls.class
 com\musiccollector\api\WelcomeServlet.class
+com\musiccollector\api\controllers\collections\ElementPreviewServlet.class
 com\musiccollector\api\musicbrainzapi\ArtistQuerryBuilder.class
 com\musiccollector\api\controllers\collections\CollectionsServlet.class
 com\musiccollector\api\controllers\login\LoginServlet.class
 com\musiccollector\api\controllers\login\LoginService.class
 com\musiccollector\api\generators\TokenGenerator.class
-com\musiccollector\api\controllers\collections\CassetteServlet.class
 com\musiccollector\api\controllers\staticpages\HomepageServlet.class
 com\musiccollector\api\musicbrainzapi\GetJson.class
 com\musiccollector\api\musicbrainzapi\AlbumQueryBuilder.class
