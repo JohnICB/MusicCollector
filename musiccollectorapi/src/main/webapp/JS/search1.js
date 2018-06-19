@@ -24,7 +24,7 @@ $(function () {
 });
 
 function openCity(evt, button) {
-    createCollectionList();
+
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -34,10 +34,15 @@ function openCity(evt, button) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(button).style.display = "block";
+    document.getElementById("myModal").style.display = "block";
     evt.currentTarget.className += " active";
+    createCollectionList();
+    console.log("createColletionList");
 
 
+}
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
 }
 
 function searchapi() {
@@ -131,9 +136,48 @@ function addUserCollections(image, title, description, id) {
 
     console.log("Image: " + image + " title: " + title + " description: " + description + " id: " + id)
 
+    let colContainer = document.getElementById("collectionContainer"); //root
+
+    let divContainer = document.createElement("div"); //item container
+    divContainer.classList.add("collectionItem");
+
+    let cid = document.createElement("span");
+    cid.innerHTML=id;
+
+    let link = document.createElement("a");
+    link.setAttribute("href","#");
+
+    let imagee = document.createElement("img"); //image source
+    imagee.src=image;
+
+    let textContainer = document.createElement("div"); //text container
+    textContainer.classList.add("collectionText");
+
+    let tit = document.createElement("h4"); //title
+    tit.innerHTML=title;
+
+    let desc = document.createElement("p"); //description
+    desc.innerHTML=description;
+
+   textContainer.appendChild(tit);
+   textContainer.appendChild(desc);
+
+   divContainer.appendChild(cid)
+   divContainer.appendChild(imagee);
+   divContainer.appendChild(textContainer);
+   link.appendChild(divContainer);
+   colContainer.appendChild(link);
+
+
+    // divContainer.appendChild(tit);
+    // divContainer.appendChild(desc);
+    // colContainer.appendChild(imagee);
+    // colContainer.appendChild(divContainer);
+
 }
 
 function addToCollection(album, artist) {
+
     console.log("Getting info...");
     var title = album;
     var duration;
@@ -157,7 +201,7 @@ function addToCollection(album, artist) {
         releaseDate: releaseDate
     };
     let xhrInfo = new XMLHttpRequest();
-    xhrInfo.open("GET", "http://localhost:8081/albuminfo" + "&artist=" + encodeURIComponent(artist) + "&album=" + encodeURIComponent(album));
+    xhrInfo.open("GET", "http://localhost:8081/albuminfo" + "?artist=" + encodeURIComponent(artist) + "&album=" + encodeURIComponent(album));
     xhrInfo.addEventListener("load", function loadCallback() {
         switch (xhrInfo.status) {
             case 200:
@@ -171,7 +215,7 @@ function addToCollection(album, artist) {
         }
 
     });
-
+    xhrInfo.send(null);
     // let xhr = new XMLHttpRequest();
     // xhr.open("PUT","http://localhost:8081/collections");
     // xhr.addEventListener("load", function loadCallback() {
@@ -192,7 +236,10 @@ function addToCollection(album, artist) {
 }
 
 function createCollectionList() {
+    console.log("createCollectionList");
 
+    let colContainer = document.getElementById("collectionContainer");
+    colContainer.innerHTML="";
 
     let xhr = new XMLHttpRequest();
 
@@ -201,15 +248,18 @@ function createCollectionList() {
     xhr.addEventListener("load", function loadCallback() {
         switch (xhr.status) {
             case 200:
+                console.log("response: "+xhr.response)
                 let responeArray = JSON.parse(xhr.response)
 
                 for (var i = 0; i < responeArray.length; ++i) {
                     let isVinyl = responeArray[i].isVinyl;
                     if (isVinyl) {
+                        console.log("creating vony;");
                         addUserCollections("../../Images/vinyl.png", responeArray[i].title, responeArray[i].description, responeArray[i].id);
                         addToCollection(selectedElment.getElementsByTagName("p")[0].innerHTML, selectedElment.getElementsByTagName("h3")[0].innerHTML);
                     }
                     else {
+                        console.log("creating cassete;");
                         addUserCollections("../../Images/cassette.jpg", responeArray[i].title, responeArray[i].description, responeArray[i].id);
                         addToCollection(selectedElment.getElementsByTagName("p")[0].innerHTML, selectedElment.getElementsByTagName("h3")[0].innerHTML);
                     }

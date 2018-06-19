@@ -90,7 +90,7 @@
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"
             style="display:block;position:static;margin-bottom:5px;">
 
-            <button id="myBtn" class="button-search" onclick="openCity(event, 'My Collection')" id="defaultOpen">Add to
+            <button class="button-search" onclick="openCity(event, 'My Collection')" id="defaultOpen1">Add to
                 my Collection
 
             </button>
@@ -102,15 +102,29 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeModal()">&times;</span>
 
 
             <form id="formObj">
                 <label>Choose you Collection:</label>
-                <select id="Collection" name="colType">
-                    <option value="collection1">exemplu1</option>
-                    <option value="collection2">exemplu2</option>
-                </select>
+                <div id="collectionContainer">
+                    <div class="collectionItem">
+                        <img src="../../Images/cassette.jpg">
+                        <div class="collectionText">
+                            <h4>Title</h4>
+                            <p>description</p>
+                        </div>
+
+                    </div>
+                    <div class="collectionItem">
+                        <img src="../../Images/cassette.jpg">
+                        <div class="collectionText">
+                            <h4>Title</h4>
+                            <p>description</p>
+                        </div>
+
+                    </div>
+                </div>
 
 
             </form>
