@@ -91,7 +91,7 @@ public class Collections {
 
             ResultSet newResults = Database.selectQuery(
                     "SELECT ID_MUSIC, ID_USER, DESCRIPTION, IS_VINYL, TITLE FROM COLLECTIONS WHERE ID_COLLECTION = ?", id);
-            
+
             if (!newResults.next()) {
                 continue;
             }
