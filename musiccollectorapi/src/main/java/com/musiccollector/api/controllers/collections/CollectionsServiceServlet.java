@@ -1,6 +1,8 @@
 package com.musiccollector.api.controllers.collections;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.musiccollector.api.controllers.login.LoginService;
 import com.musiccollector.api.model.database.CollectionJava;
 import com.musiccollector.api.model.database.entities.Cassettes;
@@ -13,8 +15,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 
 
 @WebServlet(urlPatterns = "/collectionsService")
@@ -41,18 +45,14 @@ public class CollectionsServiceServlet extends HttpServlet {
 
             JsonArray jarray = new JsonArray();
 
-            if (collectionJava.isVinyl())
-            {
+            if (collectionJava.isVinyl()) {
                 ArrayList<Vinyls> vinyls = collectionJava.getVinylContent();
                 for (Vinyls v : vinyls) {
                     jarray.add(v.toJson());
                 }
-            }
-            else
-            {
+            } else {
                 ArrayList<Cassettes> cassettes = collectionJava.getCassetesContent();
-                for (Cassettes c : cassettes)
-                {
+                for (Cassettes c : cassettes) {
                     jarray.add(c.toJson());
                 }
             }
@@ -68,15 +68,34 @@ public class CollectionsServiceServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        if (Math.random() > 0.5f)
-            response.sendRedirect("welcome");
-        else {
-            request.getRequestDispatcher("/WEB-INF/views/TEMPLATE2.jsp").forward(request, response);
-        }
-    }
+        if (LoginService.isUserLoggedIn(request.getCookies())) {
+            BufferedReader payLoad = request.getReader();
+            JsonObject jsonPayload = new JsonParser().parse(payLoad.readLine()).getAsJsonObject();
 
+            long uid = ConnectedUsers.getUserIDByCookies(request.getCookies());
+            long collectionID = jsonPayload.get("colID").getAsLong();
+            long musicID = jsonPayload.get("musicID").getAsLong();
+
+            if (collectionID < 0 || !Collections.hasUser(uid, collectionID) || musicID < 0)
+            {
+                response.setContentType("application/json");
+                response.getWriter().write("fail");
+                return;
+            }
+
+            Collections.deleteVinylOrCassette(musicID);
+            response.setContentType("application/json");
+            response.getWriter().write("success");
+        }
+        else
+        {
+            response.setContentType("application/json");
+            response.getWriter().write("mustBeLoggedIn");
+        }
+
+    }
 }
 

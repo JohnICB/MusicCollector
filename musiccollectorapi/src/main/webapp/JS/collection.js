@@ -1,9 +1,13 @@
 function getIDparameter() {
-    var url_string = window.location.href;
-    var url = new URL(url_string);
+    let url_string = window.location.href;
+    let url = new URL(url_string);
     return url.searchParams.get("id");
 }
-
+function getIDfromLI(liElement) {
+    let a = liElement.childNodes[0];
+    let url = new URL(a.getAttribute("href"));
+    return url.searchParams.get("id");
+}
 function createElements(jsonArray) {
 
     let ul = document.getElementsByClassName("product-list")[0];
@@ -40,8 +44,6 @@ function createElements(jsonArray) {
             ul.appendChild(element);
     }
 }
-
-
 function getVinyls() {
     console.log("loaded");
     xhr = new XMLHttpRequest();
@@ -67,5 +69,36 @@ function getVinyls() {
 
     xhr.send(null);
 }
-
 window.onload = getVinyls();
+function deleteElementFromCollection(liElement) {
+
+    let colID = getIDparameter();
+    let elemtID = getIDfromLI(liElement);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("DELETE", "http://localhost:8081/collectionsService");
+
+    xhr.addEventListener("load", function loadCallback() {
+        switch (xhr.status) {
+            case 200:
+                console.log("Success " + xhr.response);
+                //TODO: Sterge elementul din pagina
+                break;
+            case 404:
+                console.log("Oups! Not found");
+                break;
+        }
+
+    });
+
+    xhr.addEventListener("error", function errorCallback() {
+        console.log("Network error");
+    });
+
+    let payload = {
+        colID: colID,
+        musicID: elemtID
+    };
+    xhr.send(JSON.stringify(payload));
+    
+}

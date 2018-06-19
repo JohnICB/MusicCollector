@@ -269,6 +269,22 @@ public class Collections {
         return false;
     }
 
+    public static void deleteVinylOrCassette(long musicID) {
+        try {
+            PreparedStatement ps = Database.getConnection().prepareStatement(
+                    "DELETE FROM collections" +
+                            " WHERE ID_MUSIC = ?"
+            );
+
+            ps.setLong(1, musicID);
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public long getIdCollection() {
         return idCollection;
     }
