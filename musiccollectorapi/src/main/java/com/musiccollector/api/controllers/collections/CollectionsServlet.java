@@ -21,26 +21,25 @@ import java.io.IOException;
 
 /**
  * @author Ciobanu Ionut
- *
- *  Pentru GET:
- *  -trimite un array de json uri cu toate collectiile utilizatorului logat
- *
- *  Pentru POST:
- *  -primeste un json cu titlu, descrierea si tipul unei noi collectii
- *  -o creeaza si o adauga in baza de date
- *  -returneaza id ul collectiei ce va fi pus ca parametru in link pentru a fi utilizat mai tarziu pentru preluarea
- *   obiectelor din acea collectie
- *
- *  Pentru PUT:
- *  -primeste un json cu datele unei cassette / unui vinyl si un id al unei collectii
- *  -creeaza vinyl ul / cassetta si o baga in baza de date
- *  -adauga in baza de date in collectiaa respectiva vinylul / casseta
- *  -returneaza succes / fail
- *
- *  Pentru DELETE:
- *  -primeste un ID ale unei collectii si verifica daca apartine userului logat
- *  -sterge collectia din baza de date
- *
+ * <p>
+ * Pentru GET:
+ * -trimite un array de json uri cu toate collectiile utilizatorului logat
+ * <p>
+ * Pentru POST:
+ * -primeste un json cu titlu, descrierea si tipul unei noi collectii
+ * -o creeaza si o adauga in baza de date
+ * -returneaza id ul collectiei ce va fi pus ca parametru in link pentru a fi utilizat mai tarziu pentru preluarea
+ * obiectelor din acea collectie
+ * <p>
+ * Pentru PUT:
+ * -primeste un json cu datele unei cassette / unui vinyl si un id al unei collectii
+ * -creeaza vinyl ul / cassetta si o baga in baza de date
+ * -adauga in baza de date in collectiaa respectiva vinylul / casseta
+ * -returneaza succes / fail
+ * <p>
+ * Pentru DELETE:
+ * -primeste un ID ale unei collectii si verifica daca apartine userului logat
+ * -sterge collectia din baza de date
  */
 
 
@@ -53,20 +52,18 @@ public class CollectionsServlet extends HttpServlet {
 
         System.out.println("get /collections");
 
-        if (LoginService.isUserLoggedIn(request.getCookies()))
-        {
+        if (LoginService.isUserLoggedIn(request.getCookies())) {
             long uid = ConnectedUsers.getUserIDByCookies(request.getCookies());
             //facem un vector de jsonuri din toate collectiile pe care le are userul la user_id ul pe care il luam
             //de la contul conectat
 
-            if (uid > 0)
-            {
+            if (uid > 0) {
                 JsonArray collectionsJson = CollectionJava.toJsonPreview(Collections.getCollections(uid));
 
+                System.out.println("trimitem " + collectionsJson.toString());
                 response.setContentType("application/json");
                 response.getWriter().write(collectionsJson.toString());
-            }
-            else response.getWriter().write("internal server error, try again later");
+            } else response.getWriter().write("internal server error, try again later");
         }
 
 //        Cookie[] cookies = request.getCookies();
@@ -117,8 +114,7 @@ public class CollectionsServlet extends HttpServlet {
             throws IOException, ServletException {
 
 
-        if(LoginService.isUserLoggedIn(request.getCookies()))
-        {
+        if (LoginService.isUserLoggedIn(request.getCookies())) {
             BufferedReader payLoad = request.getReader();
             JsonObject jsonPayload = new JsonParser().parse(payLoad.readLine()).getAsJsonObject();
 
@@ -127,19 +123,16 @@ public class CollectionsServlet extends HttpServlet {
             String description = jsonPayload.get("description").getAsString();
             boolean isVinyl = jsonPayload.get("isVinyl").getAsBoolean();
 
-            System.out.println( "Am primit ");
+            System.out.println("Am primit ");
             System.out.println(jsonPayload.toString());
 
             long idCol = Collections.insert(uid, title, isVinyl, description);
 
             JsonObject responseJson = new JsonObject();
-            if (idCol > 0)
-            {
+            if (idCol > 0) {
                 responseJson.addProperty("id", idCol);
                 responseJson.addProperty("message", "You succesfuly added this collection");
-            }
-            else
-            {
+            } else {
                 responseJson.addProperty("id", "-1");
                 responseJson.addProperty("message", "Internal server error. Try again later");
             }
@@ -150,8 +143,7 @@ public class CollectionsServlet extends HttpServlet {
             System.out.println("Am trimis");
             System.out.println(responseJson.toString());
 
-        }
-        else System.out.println("error la post, nu e conectat");
+        } else System.out.println("error la post, nu e conectat");
 
 
         //TODO: Acum ca ai jsonul verifica ce e mai jos si baga in baza de date si returneaza ultimul id cu care a fost bagat
@@ -255,36 +247,30 @@ public class CollectionsServlet extends HttpServlet {
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        super.doPut(httpServletRequest, httpServletResponse);
 
-        if (LoginService.isUserLoggedIn(request.getCookies()))
-        {
+        if (LoginService.isUserLoggedIn(request.getCookies())) {
             long uid = ConnectedUsers.getUserIDByCookies(request.getCookies());
             //facem un vector de jsonuri din toate collectiile pe care le are userul la user_id ul pe care il luam
             //de la contul conectat
 
-            if (uid > 0)
-            {
+            if (uid > 0) {
                 BufferedReader payLoad = request.getReader();
                 JsonObject jsonPayload = new JsonParser().parse(payLoad.readLine()).getAsJsonObject();
 
                 long collectionID = -1;
                 collectionID = jsonPayload.get("colID").getAsLong();
 
-                if (collectionID < 0)
-                {
+                if (collectionID < 0) {
                     response.setContentType("application/json");
                     response.getWriter().write("fail");
                     return;
                 }
 
-                if (Collections.isVinylCol(collectionID))
-                {
+                if (Collections.isVinylCol(collectionID)) {
                     Vinyls newVinyl = Vinyls.fromJson(jsonPayload);
                     newVinyl.insert();
 
                     Collections.insertByColID(collectionID, newVinyl.getIdVinyl());
-                }
-                else
-                {
+                } else {
                     Cassettes newCassettes = Cassettes.fromJson(jsonPayload);
                     newCassettes.insert();
 
@@ -303,8 +289,7 @@ public class CollectionsServlet extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if (LoginService.isUserLoggedIn(request.getCookies()))
-        {
+        if (LoginService.isUserLoggedIn(request.getCookies())) {
             long uid = ConnectedUsers.getUserIDByCookies(request.getCookies());
             //facem un vector de jsonuri din toate collectiile pe care le are userul la user_id ul pe care il luam
             //de la contul conectat
@@ -315,15 +300,14 @@ public class CollectionsServlet extends HttpServlet {
 
                 long collectionID = -1;
                 collectionID = jsonPayload.get("colID").getAsLong();
-                System.out.println("collectionID: "+collectionID+Collections.hasUser(uid, collectionID));
-                if (collectionID < 0 || !Collections.hasUser(uid, collectionID))
-                {
+                System.out.println("collectionID: " + collectionID + Collections.hasUser(uid, collectionID));
+                if (collectionID < 0 || !Collections.hasUser(uid, collectionID)) {
                     response.setContentType("application/json");
                     response.getWriter().write("fail");
                     return;
                 }
 
-                    Collections.delete(collectionID);
+                Collections.delete(collectionID);
 
             }
         }

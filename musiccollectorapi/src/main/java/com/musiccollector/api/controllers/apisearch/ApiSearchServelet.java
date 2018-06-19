@@ -18,8 +18,8 @@ public class ApiSearchServelet extends HttpServlet {
             throws IOException, ServletException {
 
 
-        String artist =request.getParameter("seacthtype");
-        String searchcontent  =request.getParameter("searchContent");
+        String artist = request.getParameter("seacthtype");
+        String searchcontent = request.getParameter("searchContent");
 
         System.out.println("cauta " + searchcontent);
 

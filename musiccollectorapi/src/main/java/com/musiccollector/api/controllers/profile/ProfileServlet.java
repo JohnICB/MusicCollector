@@ -16,11 +16,11 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        if(LoginService.isUserLoggedIn(request.getCookies()))
-        request.getRequestDispatcher("/WEB-INF/views/profile.html").forward(request, response);
+        if (LoginService.isUserLoggedIn(request.getCookies()))
+            request.getRequestDispatcher("/WEB-INF/views/profile.html").forward(request, response);
         else
             response.sendRedirect("welcome");
-        }
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

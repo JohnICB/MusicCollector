@@ -1,7 +1,6 @@
-document.addEventListener( "DOMContentLoaded", getJson);
+document.addEventListener("DOMContentLoaded", getJson);
 
-function sendToServer(json, output)
-{
+function sendToServer(json, output) {
 
     console.log("trimit " + json.toString());
 
@@ -29,8 +28,7 @@ function sendToServer(json, output)
     xhr.send(JSON.stringify(json));
 }
 
-function checkInput(json)
-{
+function checkInput(json) {
     let output = document.getElementById("feedback");
     let valid = true;
     let regex = new RegExp('^[a-z0-9]{4,20}$', 'i');
@@ -41,43 +39,36 @@ function checkInput(json)
         text = text + "Name must be alphanumeric and between 4 and 20 characters long!\n";
         valid = false;
     }
-    if (json.psw !== json.pswrepeat)
-    {
+    if (json.psw !== json.pswrepeat) {
         text = text + "Passwords don't match\n";
         valid = false;
     }
-    if (!regex.test(json.psw))
-    {
+    if (!regex.test(json.psw)) {
         text = text + "Password must be alphanumeric and between 4 and 20 characters long!\n"
         valid = false;
     }
 
     console.log(text);
 
-    if (!valid)
-    {
+    if (!valid) {
         printFeedback(output, text, true)
     }
-    else if (valid)
-    {
+    else if (valid) {
         sendToServer(json, output);
     }
-    
+
 }
 
-function printFeedback(output, text, isError)
-{
+function printFeedback(output, text, isError) {
     output.innerText = text;
     output.style.borderRadius = "5px";
     output.style.padding = "5px";
-    if (isError)
-    {
+    if (isError) {
         output.style.backgroundColor = "#ffdfdc";
         output.style.color = "#b30000";
 
     }
-    else
-    {
+    else {
         output.style.backgroundColor = "#d5ffc4";
         output.style.color = "#00b307";
 
@@ -94,33 +85,33 @@ function printFeedback(output, text, isError)
 
 }
 
-function getJson()
-{
-    var form = document.getElementById( "formID" );
+function getJson() {
+    var form = document.getElementById("formID");
     // var output = document.getElementById( "output" );
-    form.addEventListener( "submit", function( e ) {
+    form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var json = toJSONString( this );
+        var json = toJSONString(this);
         json = JSON.parse(json);
 
         console.log(json);
         checkInput(json);
     }, false);
 }
-function toJSONString( form ) {
+
+function toJSONString(form) {
     var obj = {};
-    var elements = form.querySelectorAll( "input, select" );
-    for( var i = 0; i < elements.length; ++i ) {
+    var elements = form.querySelectorAll("input, select");
+    for (var i = 0; i < elements.length; ++i) {
         var element = elements[i];
         var name = element.name;
         var value = element.value;
 
-        if( name ) {
-            obj[ name ] = value;
+        if (name) {
+            obj[name] = value;
         }
     }
 
-    return JSON.stringify( obj );
+    return JSON.stringify(obj);
 }
 
 

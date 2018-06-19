@@ -33,8 +33,7 @@ public class LoginServlet extends HttpServlet {
             throws IOException, ServletException {
 
 
-        if (LoginService.isUserLoggedIn(request.getCookies()))
-        {
+        if (LoginService.isUserLoggedIn(request.getCookies())) {
             response.sendRedirect("/welcome");
 //            request.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(request, response);
 

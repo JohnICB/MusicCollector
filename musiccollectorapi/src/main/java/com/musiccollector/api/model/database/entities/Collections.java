@@ -12,14 +12,13 @@ import java.util.ArrayList;
 
 public class Collections {
 
-  private long idCollection;
-  private long idMusic;
-  private long idUser;
-  private String description;
-  private String isVinyl;
+    private long idCollection;
+    private long idMusic;
+    private long idUser;
+    private String description;
+    private String isVinyl;
 
-    public static ArrayList<CollectionJava> getCollections(long idUser)
-    {
+    public static ArrayList<CollectionJava> getCollections(long idUser) {
         ArrayList<CollectionJava> collections = new ArrayList<>();
 
         try {
@@ -27,7 +26,9 @@ public class Collections {
                     "SELECT ID_COLLECTION FROM COLLECTIONS WHERE ID_USER = ? ",
                     idUser);
 
-            if (!resultSet.next()) { return collections; }
+            if (!resultSet.next()) {
+                return collections;
+            }
 
 //            resultSet.beforeFirst();
 
@@ -40,8 +41,7 @@ public class Collections {
         return collections;
     }
 
-    public static CollectionJava getCollectionByID(long idCollection)
-    {
+    public static CollectionJava getCollectionByID(long idCollection) {
         ResultSet newResults = null;
         ArrayList<Long> musicIDs = new ArrayList<>();
         ArrayList<Long> userIDs = new ArrayList<>();
@@ -55,55 +55,53 @@ public class Collections {
                     "SELECT ID_MUSIC, ID_USER, DESCRIPTION, IS_VINYL, TITLE FROM COLLECTIONS WHERE ID_COLLECTION = ?", idCollection);
 
 
+            if (!newResults.next()) {
+                return null;
+            }
 
-        if (!newResults.next()) { return null; }
+            description = newResults.getString(3);
+            isVinyl = newResults.getBoolean(4);
+            title = newResults.getString(5);
 
-        description = newResults.getString(3);
-        isVinyl = newResults.getBoolean(4);
-        title = newResults.getString(5);
+            while (newResults.next()) {
+                musicIDs.add(newResults.getLong(1));
+                userIDs.add(newResults.getLong(2));
+            }
 
-        while (newResults.next())
-        {
-            musicIDs.add(newResults.getLong(1));
-            userIDs.add(newResults.getLong(2));
+            return new CollectionJava(idCollection, userIDs, musicIDs, description,
+                    isVinyl, title);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
-        return new CollectionJava(idCollection, userIDs, musicIDs, description,
-                isVinyl, title);
-
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-    return null;
+        return null;
     }
 
-    private static ArrayList<CollectionJava> transformResults(ResultSet resultSet) throws SQLException
-    {
+    private static ArrayList<CollectionJava> transformResults(ResultSet resultSet) throws SQLException {
         ArrayList<Long> musicIDs = new ArrayList<>();
         ArrayList<Long> userIDs = new ArrayList<>();
         String title = "";
         String description = "";
 
-        ArrayList<CollectionJava> collectionJavas= new ArrayList<>();
+        ArrayList<CollectionJava> collectionJavas = new ArrayList<>();
         boolean isVinyl = false;
 
-        while (resultSet.next())
-        {
+        while (resultSet.next()) {
             long id = resultSet.getLong(1);
 
             ResultSet newResults = Database.selectQuery(
                     "SELECT ID_MUSIC, ID_USER, DESCRIPTION, IS_VINYL, TITLE FROM COLLECTIONS WHERE ID_COLLECTION = ?", id);
 
 
-
-            if (!newResults.next()) { continue; }
+            if (!newResults.next()) {
+                continue;
+            }
 
             description = newResults.getString(3);
             isVinyl = newResults.getBoolean(4);
             title = newResults.getString(5);
 
-            while (newResults.next())
-            {
+            while (newResults.next()) {
                 musicIDs.add(newResults.getLong(1));
                 userIDs.add(newResults.getLong(2));
             }
@@ -151,14 +149,15 @@ public class Collections {
         return -1;
     }
 
-    public static void insertByColID(long colID, long musicID)
-    {
+    public static void insertByColID(long colID, long musicID) {
         try {
             ResultSet rs = Database.selectQuery(
                     "SELECT ID_USER, TITLE, DESCRIPTIOM, IS_VINYL FROM" +
                             " COLLECTIONS WHERE ID_COLLECTION = ?", colID);
 
-            if (!rs.next()) { return;}
+            if (!rs.next()) {
+                return;
+            }
 
             long uid = rs.getLong(1);
             String title = rs.getString(2);
@@ -177,7 +176,6 @@ public class Collections {
             preparedStatement.executeUpdate();
 
 
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -194,11 +192,11 @@ public class Collections {
             PreparedStatement preparedStatement = connection.prepareStatement(
                     "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE, ID_MUSIC) VALUES (? ,?, ?, ?, ?)");
 
-            preparedStatement.setLong(1,uid);
-            preparedStatement.setString(2,description);
-            preparedStatement.setBoolean(3,isVinyl);
-            preparedStatement.setString(4,title);
-            preparedStatement.setLong(5,idMusic);
+            preparedStatement.setLong(1, uid);
+            preparedStatement.setString(2, description);
+            preparedStatement.setBoolean(3, isVinyl);
+            preparedStatement.setString(4, title);
+            preparedStatement.setLong(5, idMusic);
 
             preparedStatement.executeUpdate();
 
@@ -209,8 +207,7 @@ public class Collections {
 
     }
 
-    public static boolean isVinylCol(long colID)
-    {
+    public static boolean isVinylCol(long colID) {
 
         try {
             PreparedStatement ps = Database.getConnection().prepareStatement(
@@ -251,13 +248,12 @@ public class Collections {
         try {
             ResultSet rs = Database.selectQuery("SELECT ID_USER FROM COLLECTIONS WHERE" +
                     " ID_COLLECTION = ?", idCollection);
-            System.out.println("User id: "+uid);
+            System.out.println("User id: " + uid);
             boolean nxt = rs.next();
             if (!nxt) return false;
 
-            while (nxt)
-            {
-                System.out.println(rs.getLong(1)+"==="+uid);
+            while (nxt) {
+                System.out.println(rs.getLong(1) + "===" + uid);
                 if (rs.getLong(1) == uid)
                     return true;
                 rs.next();
@@ -274,47 +270,47 @@ public class Collections {
     }
 
     public long getIdCollection() {
-    return idCollection;
-  }
+        return idCollection;
+    }
 
-  public void setIdCollection(long idCollection) {
-    this.idCollection = idCollection;
-  }
-
-
-  public long getIdMusic() {
-    return idMusic;
-  }
-
-  public void setIdMusic(long idMusic) {
-    this.idMusic = idMusic;
-  }
+    public void setIdCollection(long idCollection) {
+        this.idCollection = idCollection;
+    }
 
 
-  public long getIdUser() {
-    return idUser;
-  }
+    public long getIdMusic() {
+        return idMusic;
+    }
 
-  public void setIdUser(long idUser) {
-    this.idUser = idUser;
-  }
-
-
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
+    public void setIdMusic(long idMusic) {
+        this.idMusic = idMusic;
+    }
 
 
-  public String getIsVinyl() {
-    return isVinyl;
-  }
+    public long getIdUser() {
+        return idUser;
+    }
 
-  public void setIsVinyl(String isVinyl) {
-    this.isVinyl = isVinyl;
-  }
+    public void setIdUser(long idUser) {
+        this.idUser = idUser;
+    }
+
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    public String getIsVinyl() {
+        return isVinyl;
+    }
+
+    public void setIsVinyl(String isVinyl) {
+        this.isVinyl = isVinyl;
+    }
 
 }

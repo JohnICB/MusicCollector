@@ -24,7 +24,7 @@ public class TemplateServlet extends HttpServlet {
 
         if (Math.random() > 0.5f)
             response.sendRedirect("welcome");
-         else {
+        else {
             request.getRequestDispatcher("/WEB-INF/views/TEMPLATE2.jsp").forward(request, response);
         }
     }

@@ -33,17 +33,17 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
 
@@ -78,13 +78,11 @@ function createColElement(lastID, nameCol, desc, isVynil) {
 
     console.log(isVynil + " la add");
 
-    if(isVynil)
-    {
+    if (isVynil) {
         img.setAttribute("src", "../../Images/vinyl.png");
         link.setAttribute("href", "http://localhost:8081/vinyls?id=" + encodeURIComponent(lastID));
     }
-    else
-    {
+    else {
         img.setAttribute("src", "../../Images/cassette.jpg");
         link.setAttribute("href", "http://localhost:8081/cassettes?id=" + encodeURIComponent(lastID));
     }
@@ -95,7 +93,6 @@ function createColElement(lastID, nameCol, desc, isVynil) {
     link.appendChild(name);
     link.appendChild(img);
     link.appendChild(description);
-
 
 
     element.appendChild(link);
@@ -157,8 +154,7 @@ function getCollections() {
                 let colStringArray = xhr.response;
                 let colArray = JSON.parse(colStringArray);
 
-                for (let i = 0; i < colArray.length; i++)
-                {
+                for (let i = 0; i < colArray.length; i++) {
                     createColElement(colArray[i].id, colArray[i].title, colArray[i].description, colArray[i].isVinyl);
                 }
                 break;
@@ -178,8 +174,7 @@ function getCollections() {
 
 }
 
-function addCollection()
-{
+function addCollection() {
     modal.style.display = "none"; //hide modal
 
     let colName = document.getElementsByName("Collection name")[0].value;

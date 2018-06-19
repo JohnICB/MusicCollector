@@ -3,92 +3,93 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JBC Music | Join us!</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="${pageContext.request.contextPath}./../css/register.css" />
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="${pageContext.request.contextPath}./../css/register.css"/>
     <!-- <LINK REL=STYLESHEET HREF="../css/PDS_style.css"> -->
 </head>
 
 <body>
 
-    <section id="form">
-        <!-- action="/action_page.php" -->
-        <form action="${pageContext.request.contextPath}/register" method="POST" >
-            <div class="container">
-                <h1>Sign Up</h1>
-                <p>Please fill in this form to create an account.</p>
-                <hr>
+<section id="form">
+    <!-- action="/action_page.php" -->
+    <form action="${pageContext.request.contextPath}/register" method="POST">
+        <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
 
 
-                <label for="username">
-                    <b>Username</b>
-                </label>
-                <div class="tooltip">
-                    <input type="text" name="username" id="username" placeholder="Username" required>
-                    <span class="tooltiptext">Enter your username</span>
-                </div>
+            <label for="username">
+                <b>Username</b>
+            </label>
+            <div class="tooltip">
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <span class="tooltiptext">Enter your username</span>
+            </div>
 
-                <label for="email">
-                    <b>Email</b>
-                </label>
-                <div class="tooltip">
+            <label for="email">
+                <b>Email</b>
+            </label>
+            <div class="tooltip">
                 <input type="text" placeholder="Enter Email" name="email" required>
                 <span class="tooltiptext">Enter your email</span>
-                </div>
-                <label for="psw">
-                    <b>Password</b>
-                </label>
+            </div>
+            <label for="psw">
+                <b>Password</b>
+            </label>
 
-                <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <label for="psw-repeat">
-                    <b>Repeat Password</b>
-                </label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                <!--
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-          </label> -->
-                <br>
-                <label for="account-type">
-                    <b>Account type</b>
-                </label>
-                <div class="tooltip">
+            <label for="psw-repeat">
+                <b>Repeat Password</b>
+            </label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <!--
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label> -->
+            <br>
+            <label for="account-type">
+                <b>Account type</b>
+            </label>
+            <div class="tooltip">
                 <select name="account-type" class="dropdown-select" required>
                     <option value="" disabled selected>-----------</option>
                     <option value="personal">Person</option>
                     <option value="company">Company</option>
                 </select>
                 <span class="tooltiptext last">Enter your account type</span>
-                 </div>
-                <p>By creating an account you agree to our
-                    <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-                <div class="clearfix">
-                    <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-                    <button type="submit" class="signupbtn" > Sign Up </button>
-                </div>
             </div>
-        </form>
-    </section>
+            <p>By creating an account you agree to our
+                <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
-    <script>
-        let response =<%= registerStatus %>;
+            <div class="clearfix">
+                <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+                <button type="submit" class="signupbtn"> Sign Up</button>
+            </div>
+        </div>
+    </form>
+</section>
 
-        function getRegisterResponse() {
+<script>
+    let response =<%= registerStatus %>;
 
-            console.log(response);
-            console.log("click");
-            alert(response);
+    function getRegisterResponse() {
 
-            return true;
+        console.log(response);
+        console.log("click");
+        alert(response);
 
-        }
-    </script>
-    <%--<script src="../../JS/main.js"></script>--%>
+        return true;
+
+    }
+</script>
+<%--<script src="../../JS/main.js"></script>--%>
 </body>
 
 </html>

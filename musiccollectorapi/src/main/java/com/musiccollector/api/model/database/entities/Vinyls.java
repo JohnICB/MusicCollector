@@ -9,26 +9,25 @@ import java.util.Objects;
 
 public class Vinyls {
 
-  private long idVinyl;
-  private String externalId;
-  private String title;
-  private String artists;
-  private String region;
-  private String age;
-  private String album;
-  private String size;
-  private boolean isColored;
-  private boolean isStereo;
-  private boolean isSpecialEdition;
-  private String duration;
-  private String genre;
-  private String rarity;
-  private String releaseDate;
+    private long idVinyl;
+    private String externalId;
+    private String title;
+    private String artists;
+    private String region;
+    private String age;
+    private String album;
+    private String size;
+    private boolean isColored;
+    private boolean isStereo;
+    private boolean isSpecialEdition;
+    private String duration;
+    private String genre;
+    private String rarity;
+    private String releaseDate;
 
-  public Vinyls()
-  {
+    public Vinyls() {
 
-  }
+    }
 
     public Vinyls(String externalId, String title, String artists, String region, String age,
                   String album, String size, boolean isColored, boolean isStereo, boolean isSpecialEdition,
@@ -87,12 +86,9 @@ public class Vinyls {
     {
 
         try {
-            if (resultSet == null || !resultSet.next())
-            {
+            if (resultSet == null || !resultSet.next()) {
                 return null;
-            }
-            else
-            {
+            } else {
                 long idVinyl = resultSet.getLong(1);
                 String externalID = resultSet.getString(2);
                 String title = resultSet.getString(3);
@@ -109,7 +105,7 @@ public class Vinyls {
                 String rarity = resultSet.getString(14);
                 String releaseDate = resultSet.getString(15);
 
-                return new Vinyls(idVinyl, externalID, title, artists, region,age, album, size, isColored, isStereo, isSpecialEdition, duration, genre, rarity, releaseDate);
+                return new Vinyls(idVinyl, externalID, title, artists, region, age, album, size, isColored, isStereo, isSpecialEdition, duration, genre, rarity, releaseDate);
 
 
             }
@@ -119,31 +115,7 @@ public class Vinyls {
         }
     }
 
-    public JsonObject toJson()
-    {
-        JsonObject vinylJson = new JsonObject();
-
-        vinylJson.addProperty("title", Objects.requireNonNullElse(title, ""));
-        vinylJson.addProperty("artists", Objects.requireNonNullElse(this.artists, ""));
-        vinylJson.addProperty("region",  Objects.requireNonNullElse(this.region, ""));
-        vinylJson.addProperty("age",  Objects.requireNonNullElse(this.age, ""));
-        vinylJson.addProperty("album",  Objects.requireNonNullElse(this.album, ""));
-        vinylJson.addProperty("size",  Objects.requireNonNullElse(this.size, ""));
-        vinylJson.addProperty("isColored",  Objects.requireNonNullElse(this.isColored, false));
-        vinylJson.addProperty("isStereo",  Objects.requireNonNullElse(this.isStereo, false));
-        vinylJson.addProperty("isSpecialEdition",  Objects.requireNonNullElse(this.isSpecialEdition, false));
-        vinylJson.addProperty("duration",  Objects.requireNonNullElse(this.duration, ""));
-        vinylJson.addProperty("genre",  Objects.requireNonNullElse(this.genre, ""));
-        vinylJson.addProperty("rarity",  Objects.requireNonNullElse(this.rarity, ""));
-        vinylJson.addProperty("releaseDate",  Objects.requireNonNullElse(this.releaseDate, ""));
-
-        return vinylJson;
-
-    }
-
-
-    public static Vinyls fromJson(JsonObject jsonPayload)
-    {
+    public static Vinyls fromJson(JsonObject jsonPayload) {
         String title = jsonPayload.get("title").getAsString();
         String artists = jsonPayload.get("artists").getAsString();
         String region = jsonPayload.get("region").getAsString();
@@ -159,8 +131,29 @@ public class Vinyls {
         String releaseDate = jsonPayload.get("releaseDate").getAsString();
 
         return new Vinyls(
-                title, artists,region,age,album,size,isColored,isStereo,
-                isSpecialEdition,duration,genre,rarity,releaseDate);
+                title, artists, region, age, album, size, isColored, isStereo,
+                isSpecialEdition, duration, genre, rarity, releaseDate);
+
+    }
+
+    public JsonObject toJson() {
+        JsonObject vinylJson = new JsonObject();
+
+        vinylJson.addProperty("title", Objects.requireNonNullElse(title, ""));
+        vinylJson.addProperty("artists", Objects.requireNonNullElse(this.artists, ""));
+        vinylJson.addProperty("region", Objects.requireNonNullElse(this.region, ""));
+        vinylJson.addProperty("age", Objects.requireNonNullElse(this.age, ""));
+        vinylJson.addProperty("album", Objects.requireNonNullElse(this.album, ""));
+        vinylJson.addProperty("size", Objects.requireNonNullElse(this.size, ""));
+        vinylJson.addProperty("isColored", Objects.requireNonNullElse(this.isColored, false));
+        vinylJson.addProperty("isStereo", Objects.requireNonNullElse(this.isStereo, false));
+        vinylJson.addProperty("isSpecialEdition", Objects.requireNonNullElse(this.isSpecialEdition, false));
+        vinylJson.addProperty("duration", Objects.requireNonNullElse(this.duration, ""));
+        vinylJson.addProperty("genre", Objects.requireNonNullElse(this.genre, ""));
+        vinylJson.addProperty("rarity", Objects.requireNonNullElse(this.rarity, ""));
+        vinylJson.addProperty("releaseDate", Objects.requireNonNullElse(this.releaseDate, ""));
+
+        return vinylJson;
 
     }
 
@@ -168,8 +161,7 @@ public class Vinyls {
 
         boolean isDupl = checkIfDuplicate(this.externalId);
 
-        if (isDupl)
-        {
+        if (isDupl) {
             return;
         }
 
@@ -178,10 +170,10 @@ public class Vinyls {
         try {
             connection = Database.getConnection();
 
-        PreparedStatement preparedStatement = connection.prepareStatement(
-                "INSERT INTO vinyls (EXTERNAL_ID, TITLE, ARTISTS, REGION" +
-                        ", AGE, ALBUM, SIZE, IS_COLORED, IS_STEREO, IS_SPECIAL_EDITION," +
-                        "DURATION, GENRE, RARITY, RELEASE_DATE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "INSERT INTO vinyls (EXTERNAL_ID, TITLE, ARTISTS, REGION" +
+                            ", AGE, ALBUM, SIZE, IS_COLORED, IS_STEREO, IS_SPECIAL_EDITION," +
+                            "DURATION, GENRE, RARITY, RELEASE_DATE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             preparedStatement.setString(1, this.externalId);
             preparedStatement.setString(2, this.title);
@@ -203,8 +195,7 @@ public class Vinyls {
             ResultSet r = connection.prepareStatement("SELECT LAST_INSERT_ID() from vinyls").executeQuery();
 
             if (r.next())
-            this.idVinyl = r.getLong(1);
-
+                this.idVinyl = r.getLong(1);
 
 
         } catch (SQLException e) {
@@ -218,7 +209,9 @@ public class Vinyls {
             ResultSet rs = Database.selectQuery(Database.getConnection(),
                     "SELECT ID_VINYL FROM VINYLS WHERE EXTERNAL_ID LIKE ?", externalId);
 
-            if (!rs.next()) {return false;}
+            if (!rs.next()) {
+                return false;
+            }
 
             this.idVinyl = rs.getLong(1);
             return true;

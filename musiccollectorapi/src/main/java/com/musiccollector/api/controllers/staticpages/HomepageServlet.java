@@ -19,13 +19,13 @@ public class HomepageServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-       Cookie[] coockie = request.getCookies();
+        Cookie[] coockie = request.getCookies();
 
 
-        if(LoginService.isUserLoggedIn(coockie))
-             request.getRequestDispatcher("/WEB-INF/index-logat.html").forward(request, response);
+        if (LoginService.isUserLoggedIn(coockie))
+            request.getRequestDispatcher("/WEB-INF/index-logat.html").forward(request, response);
         else
-             request.getRequestDispatcher("/WEB-INF/index.html").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/index.html").forward(request, response);
     }
 
     @Override

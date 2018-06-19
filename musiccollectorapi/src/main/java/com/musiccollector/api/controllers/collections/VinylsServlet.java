@@ -18,8 +18,7 @@ public class VinylsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        if (LoginService.isUserLoggedIn(request.getCookies()))
-        {
+        if (LoginService.isUserLoggedIn(request.getCookies())) {
             request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
         } else
             response.sendRedirect("welcome");

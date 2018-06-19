@@ -12,26 +12,22 @@ public class EventsService {
 
     private long rows;
 
-    public EventsService(long rows)
-    {
+    public EventsService(long rows) {
         this.rows = rows + 1;
     }
 
 
-    public String getEvents()
-    {
+    public String getEvents() {
 //        Map<String, String> eventsJson = new LinkedHashMap<>();
         JsonObject eventsJson = new JsonObject();
         eventsJson.addProperty("status", "empty");
 
 
-        try
-        {
+        try {
             ResultSet resultSet = Database.selectQuery("SELECT * FROM (SELECT TITLE, DESCRIPTION, START_DATE, END_DATE, URL" +
                     " FROM CONCERTS ORDER BY START_DATE IS NULL, START_DATE) AS T LIMIT ? ", this.rows);
 
-            if (!resultSet.next())
-            {
+            if (!resultSet.next()) {
                 return eventsJson.toString();
             }
 
@@ -40,8 +36,7 @@ public class EventsService {
             JsonArray ja = new JsonArray();
             Integer resultsNr = 0;
 
-            while (resultSet.next())
-            {
+            while (resultSet.next()) {
                 resultsNr++;
 
                 String title = resultSet.getString(1);
@@ -54,8 +49,7 @@ public class EventsService {
                 String endDate = "";
 
 
-                if (start != null)
-                {
+                if (start != null) {
                     startDate = start.toString();
                 }
                 if (end != null) {

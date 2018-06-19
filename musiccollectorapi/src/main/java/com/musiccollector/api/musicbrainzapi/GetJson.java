@@ -14,8 +14,6 @@ import java.nio.charset.Charset;
 public class GetJson {
 
 
-
-
     public JsonObject Retrieve(String url) throws IOException {
         System.out.println(url);
         URLConnection connection = new URL(url).openConnection();
@@ -35,7 +33,6 @@ public class GetJson {
         }
         r.close();
         JsonObject json = new JsonParser().parse(sb.toString()).getAsJsonObject();
-
 
 
         return json;

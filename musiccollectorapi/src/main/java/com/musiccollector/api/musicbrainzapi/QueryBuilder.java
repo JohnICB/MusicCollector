@@ -4,8 +4,7 @@ public class QueryBuilder {
     private final String json = "&fmt=json";
     private final String api = "http://musicbrainz.org/ws/2/";
 
-    public String translateQuery()
-    {
+    public String translateQuery() {
         return "";
     }
 }

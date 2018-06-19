@@ -9,15 +9,15 @@ import java.io.IOException;
 
 public class TrackQueryBuilder {
 
-    private GetJson getJson = new GetJson();
     private final String json = "&format=json";
     private final String api = "http://ws.audioscrobbler.com/2.0/";
     private final String api_key = "&api_key=1016e6d54356a89b797df8223c93f1db";
+    private GetJson getJson = new GetJson();
 
-    public String getInfo(String artist, String track,String autocorrect){
+    public String getInfo(String artist, String track, String autocorrect) {
 
         JsonObject nou = new JsonObject();
-        String url =api+"?method=track.getinfo"+api_key+"&artist="+artist+"&track="+track+"&autocorrect="+autocorrect+json;
+        String url = api + "?method=track.getinfo" + api_key + "&artist=" + artist + "&track=" + track + "&autocorrect=" + autocorrect + json;
         try {
             JsonObject jsonObject = getJson.Retrieve(url);
 
@@ -28,19 +28,18 @@ public class TrackQueryBuilder {
             nou.add("album", jsonObject.get("track").getAsJsonObject().get("album"));
 
 
-
-            System.out.println("this is: "+nou.toString());
+            System.out.println("this is: " + nou.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
         return nou.toString();
     }
-    public String getInfo(String mbid){
 
+    public String getInfo(String mbid) {
 
 
         JsonObject nou = new JsonObject();
-        String url =api+"?method=track.getinfo"+api_key+"&mbid="+mbid+json;
+        String url = api + "?method=track.getinfo" + api_key + "&mbid=" + mbid + json;
         try {
             JsonObject jsonObject = getJson.Retrieve(url);
 
@@ -51,20 +50,19 @@ public class TrackQueryBuilder {
             nou.add("album", jsonObject.get("track").getAsJsonObject().get("album"));
 
 
-
-            System.out.println("this is: "+nou.toString());
+            System.out.println("this is: " + nou.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
         return nou.toString();
     }
 
-    public String search(String track){
+    public String search(String track) {
 
         JsonObject nou = new JsonObject();
         JsonObject ret = new JsonObject();
         JsonArray trackmatches = new JsonArray();
-        String url =api+"?method=track.search"+"&track="+track+api_key+json;
+        String url = api + "?method=track.search" + "&track=" + track + api_key + json;
         try {
             JsonObject jsonObject = getJson.Retrieve(url);
 
@@ -72,19 +70,18 @@ public class TrackQueryBuilder {
             //nou.add("trackmatches", jsonObject.get("results").getAsJsonObject().get("trackmatches"));
 
 
-            for(JsonElement j :  jsonObject.get("results").getAsJsonObject().get("trackmatches").getAsJsonObject().get("track").getAsJsonArray()){
+            for (JsonElement j : jsonObject.get("results").getAsJsonObject().get("trackmatches").getAsJsonObject().get("track").getAsJsonArray()) {
                 JsonObject obj = new JsonObject();
-                obj.add("name",j.getAsJsonObject().get("name"));
-                obj.add("artist",j.getAsJsonObject().get("artist"));
-                obj.add("image",j.getAsJsonObject().getAsJsonArray("image").get(2));
-                obj.add("mbid",j.getAsJsonObject().get("mbid"));
+                obj.add("name", j.getAsJsonObject().get("name"));
+                obj.add("artist", j.getAsJsonObject().get("artist"));
+                obj.add("image", j.getAsJsonObject().getAsJsonArray("image").get(2));
+                obj.add("mbid", j.getAsJsonObject().get("mbid"));
                 trackmatches.add(obj);
-                System.out.println("this is a matched track:"+obj.toString());
+                System.out.println("this is a matched track:" + obj.toString());
 
 
             }
-            nou.add("tracks",trackmatches);
-
+            nou.add("tracks", trackmatches);
 
 
         } catch (IOException e) {
@@ -95,9 +92,10 @@ public class TrackQueryBuilder {
         return nou.toString();
 
     }
-    public String search(String track, String artist){
 
-        return api+"?method=track.search"+api_key+"&track="+track+"&artist="+artist+json;
+    public String search(String track, String artist) {
+
+        return api + "?method=track.search" + api_key + "&track=" + track + "&artist=" + artist + json;
     }
 
 

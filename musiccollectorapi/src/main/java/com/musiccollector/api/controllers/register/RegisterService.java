@@ -12,35 +12,28 @@ import java.util.Map;
 
 public class RegisterService {
 
-    private int checkValidCredentials(String username, String email, String password)
-    {
-        if (checkUsernameInUse(username))
-        {
+    private int checkValidCredentials(String username, String email, String password) {
+        if (checkUsernameInUse(username)) {
             return 1;
         }
-        if (checkEmailInUse(email))
-        {
+        if (checkEmailInUse(email)) {
             return 2;
         }
-        if (password.length() < 5)
-        {
+        if (password.length() < 5) {
             return 3;
         }
-        if (username.length() < 5)
-        {
+        if (username.length() < 5) {
             return 4;
         }
 
         return 0;
     }
 
-    private boolean checkUsernameInUse(String username)
-    {
+    private boolean checkUsernameInUse(String username) {
         try {
             ResultSet resultSet = Database.selectQuery(Database.getConnection(),
                     "SELECT ID_USER FROM jbcdb.users WHERE USERNAME LIKE ?", username);
-            if (resultSet.next())
-            {
+            if (resultSet.next()) {
                 return true;
             }
         } catch (SQLException e) {
@@ -49,13 +42,11 @@ public class RegisterService {
         return false;
     }
 
-    private boolean checkEmailInUse(String email)
-    {
+    private boolean checkEmailInUse(String email) {
         try {
             ResultSet resultSet = Database.selectQuery(Database.getConnection(),
                     "SELECT ID_USER FROM jbcdb.users WHERE EMAIL LIKE ?", email);
-            if (resultSet.next())
-            {
+            if (resultSet.next()) {
                 return true;
             }
         } catch (SQLException e) {
@@ -65,8 +56,7 @@ public class RegisterService {
         return false;
     }
 
-    private boolean insertUser(String username, String email, String password, int isPerson)
-    {
+    private boolean insertUser(String username, String email, String password, int isPerson) {
         Users users = new Users(email, isPerson, password, username);
         try {
             users.insert();
@@ -78,20 +68,15 @@ public class RegisterService {
         return true;
     }
 
-    public JsonObject getResponseJson(String username, String email, String password, int isPerson)
-    {
+    public JsonObject getResponseJson(String username, String email, String password, int isPerson) {
         boolean isError = true;
         String text = "You successfully registered!";
 
-        switch (checkValidCredentials(username, email, password))
-        {
+        switch (checkValidCredentials(username, email, password)) {
             case 0:
-                if(insertUser(username,email,password,isPerson))
-                {
+                if (insertUser(username, email, password, isPerson)) {
                     isError = false;
-                }
-                else
-                {
+                } else {
                     text = "Internal database error, please try again later";
                 }
                 break;

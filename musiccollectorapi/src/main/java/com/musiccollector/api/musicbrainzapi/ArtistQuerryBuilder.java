@@ -9,17 +9,16 @@ import java.io.IOException;
 
 public class ArtistQuerryBuilder {
 
-    private GetJson getJson = new GetJson();
     private final String json = "&format=json";
     private final String api = "http://ws.audioscrobbler.com/2.0/";
     private final String api_key = "&api_key=1016e6d54356a89b797df8223c93f1db";
+    private GetJson getJson = new GetJson();
 
-    public String getInfo(String artist,String autocorrect){
-
+    public String getInfo(String artist, String autocorrect) {
 
 
         JsonObject nou = new JsonObject();
-        String url =api+"?method=artist.getinfo"+api_key+"&artist="+artist+"&autocorrect="+autocorrect+json;
+        String url = api + "?method=artist.getinfo" + api_key + "&artist=" + artist + "&autocorrect=" + autocorrect + json;
         try {
             JsonObject jsonObject = getJson.Retrieve(url);
 
@@ -28,7 +27,7 @@ public class ArtistQuerryBuilder {
             nou.add("mbid", jsonObject.get("artist").getAsJsonObject().get("mbid"));
 
 
-            System.out.println("this is: "+nou.toString());
+            System.out.println("this is: " + nou.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,11 +35,12 @@ public class ArtistQuerryBuilder {
 
         return nou.toString();
     }
-    public String getInfo(String mbid){
+
+    public String getInfo(String mbid) {
 
 
         JsonObject nou = new JsonObject();
-        String url =api+"?method=artist.getinfo"+api_key+"&mbid="+mbid+json;
+        String url = api + "?method=artist.getinfo" + api_key + "&mbid=" + mbid + json;
         try {
             JsonObject jsonObject = getJson.Retrieve(url);
 
@@ -49,7 +49,7 @@ public class ArtistQuerryBuilder {
             nou.add("mbid", jsonObject.get("artist").getAsJsonObject().get("mbid"));
 
 
-            System.out.println("this is: "+nou.toString());
+            System.out.println("this is: " + nou.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -58,11 +58,10 @@ public class ArtistQuerryBuilder {
         return nou.toString();
     }
 
-    public String search(String artist){
+    public String search(String artist) {
 
 
-
-        String url =api+"?method=artist.search"+api_key+"&artist="+artist+json;
+        String url = api + "?method=artist.search" + api_key + "&artist=" + artist + json;
         JsonObject nou = new JsonObject();
         JsonObject ret = new JsonObject();
         JsonArray artists = new JsonArray();
@@ -74,19 +73,17 @@ public class ArtistQuerryBuilder {
             //nou.add("trackmatches", jsonObject.get("results").getAsJsonObject().get("trackmatches"));
 
 
-            for(JsonElement j :  jsonObject.get("results").getAsJsonObject().get("artist").getAsJsonObject().getAsJsonArray()){
+            for (JsonElement j : jsonObject.get("results").getAsJsonObject().get("artist").getAsJsonObject().getAsJsonArray()) {
                 JsonObject obj = new JsonObject();
-                obj.add("name",j.getAsJsonObject().get("name"));
-                obj.add("mbid",j.getAsJsonObject().get("mbid"));
-                obj.add("image",j.getAsJsonObject().getAsJsonArray("image").get(2));
+                obj.add("name", j.getAsJsonObject().get("name"));
+                obj.add("mbid", j.getAsJsonObject().get("mbid"));
+                obj.add("image", j.getAsJsonObject().getAsJsonArray("image").get(2));
 
                 artists.add(obj);
 
 
-
             }
-            nou.add("artist",artists);
-
+            nou.add("artist", artists);
 
 
         } catch (IOException e) {
@@ -95,7 +92,6 @@ public class ArtistQuerryBuilder {
 
         System.out.println("this is after catch:" + nou.toString());
         return nou.toString();
-
 
 
     }

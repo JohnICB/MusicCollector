@@ -7,22 +7,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-    @WebServlet(urlPatterns = "/events")
-    public class EventsServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/events")
+public class EventsServlet extends HttpServlet {
 
-        @Override
-        protected void doGet(HttpServletRequest request, HttpServletResponse response)
-                throws IOException, ServletException {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
 
-            request.getRequestDispatcher("/WEB-INF/views/events.html").forward(request, response);
-
-        }
-
-        @Override
-        protected void doPost(HttpServletRequest request, HttpServletResponse response)
-                throws IOException, ServletException {
-
-            request.getRequestDispatcher("/WEB-INF/views/events.html").forward(request, response);
-        }
+        request.getRequestDispatcher("/WEB-INF/views/events.html").forward(request, response);
 
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+
+        request.getRequestDispatcher("/WEB-INF/views/events.html").forward(request, response);
+    }
+
+}

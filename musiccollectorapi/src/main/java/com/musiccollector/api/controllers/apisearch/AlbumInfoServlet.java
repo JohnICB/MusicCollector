@@ -20,8 +20,8 @@ public class AlbumInfoServlet extends HttpServlet {
         String album = request.getParameter("album");
 
         AlbumQueryBuilder aqb = new AlbumQueryBuilder();
-        String info = aqb.getInfo(artist,album,"1");
-        System.out.println("Album info : "+ info);
+        String info = aqb.getInfo(artist, album, "1");
+        System.out.println("Album info : " + info);
 
         response.setContentType("application/json");
         response.getWriter().write(info);

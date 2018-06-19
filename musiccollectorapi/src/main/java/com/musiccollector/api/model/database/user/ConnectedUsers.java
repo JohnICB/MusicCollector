@@ -10,57 +10,66 @@ import java.sql.SQLException;
 
 public class ConnectedUsers {
 
-  private long id;
-  private String username;
-  private String token;
-  private java.sql.Timestamp creationTime;
+    private long id;
+    private String username;
+    private String token;
+    private java.sql.Timestamp creationTime;
 
-  public ConnectedUsers(String username)
-  {
-      this.username = username;
-      try {
-          this.token = TokenGenerator.getToken(64);
-      } catch (SQLException e) {
-          e.printStackTrace();
-      }
+    public ConnectedUsers(String username) {
+        this.username = username;
+        try {
+            this.token = TokenGenerator.getToken(64);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
-  }
+    }
 
+    public static long getUserIDByCookies(Cookie[] cookies) {
+        if (cookies == null) return -1;
 
-  public long getId() {
-    return id;
-  }
+        String username = "";
+        for (Cookie cooky : cookies) {
+            if (cooky.getName().equals("user")) {
+                username = cooky.getValue();
+            }
+        }
 
-  public void setId(long id) {
-    this.id = id;
-  }
+        return Users.getIDbyName(username);
 
+    }
 
-  public String getUsername() {
-    return username;
-  }
+    public long getId() {
+        return id;
+    }
 
-  public void setUsername(String username) {
-    this.username = username;
-  }
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public String getUsername() {
+        return username;
+    }
 
-  public String getToken() {
-    return token;
-  }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-  public void setToken(String token) {
-    this.token = token;
-  }
+    public String getToken() {
+        return token;
+    }
 
+    public void setToken(String token) {
+        this.token = token;
+    }
 
-  public java.sql.Timestamp getCreationTime() {
-    return creationTime;
-  }
+    public java.sql.Timestamp getCreationTime() {
+        return creationTime;
+    }
 
-  public void setCreationTime(java.sql.Timestamp creationTime) {
-    this.creationTime = creationTime;
-  }
+    public void setCreationTime(java.sql.Timestamp creationTime) {
+        this.creationTime = creationTime;
+    }
 
     public void insert() {
 
@@ -78,21 +87,6 @@ public class ConnectedUsers {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-    }
-
-    public static long getUserIDByCookies(Cookie[] cookies)
-    {
-        if (cookies == null) return -1;
-
-        String username = "";
-        for (Cookie cooky : cookies) {
-            if (cooky.getName().equals("user")) {
-                username = cooky.getValue();
-            }
-        }
-
-        return Users.getIDbyName(username);
 
     }
 }

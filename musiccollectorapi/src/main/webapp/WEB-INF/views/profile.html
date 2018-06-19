@@ -2,181 +2,175 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-  <title>JBC MUSIC | Welcome</title>
-  <link rel="stylesheet" href="../../css/profile.css">
-  <link rel="stylesheet" href="../../css/header.css">
-  <link rel="stylesheet" href="../../css/footer.css">
-  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Bowlby One' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+    <title>JBC MUSIC | Welcome</title>
+    <link rel="stylesheet" href="../../css/profile.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bowlby One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
 
 
 </head>
 
 <body>
 
-  <header>
+<header>
 
     <div class="container">
-      <!-- <div id="branding"> -->
-      <img id="logo" src="../../Images/logo.png" alt="">
-      <button class="menu-button">
-        <img src="../../Images/bars.svg" alt="">
-      </button>
-      <!-- </div> -->
-      <nav>
-        <ul>
-          <li class="current">
-            <a href="/welcome">Home</a>
-          </li>
-          <li>
-                <a class="current" href="/cassettes">Cassetts</a>
-          </li>
-          <li>
-                    <a class="current" href="/vinyls">Vinyls</a>
-          </li>
-          <li>
-                <a class="current" href="/events">Concert tickets!</a>
-          </li>
+        <!-- <div id="branding"> -->
+        <img id="logo" src="../../Images/logo.png" alt="">
+        <button class="menu-button">
+            <img src="../../Images/bars.svg" alt="">
+        </button>
+        <!-- </div> -->
+        <nav>
+            <ul>
+                <li class="current">
+                    <a href="/welcome">Home</a>
+                </li>
+                <li>
+                    <a class="current" href="/search">Search</a>
+                </li>
+                <li>
+                    <a class="current" href="/events">Concert tickets!</a>
+                </li>
+                <li>
+                    <a>|</a>
+                </li>
+                <li>
+                    <a href="/logout">
+                        Log out
+                    </a>
+                </li>
 
-          <li>
-            <a>|</a>
-          </li>
-          <li>
-            <a href="/logout">
-              <!--<span style="color:aliceblue;" onclick="openNav()"> Log out</span>-->
-                Log out
-            </a>
-          </li>
-          
-        </ul>
-      </nav>
+            </ul>
+        </nav>
     </div>
 
-  </header>
-  <div class="split left">
+</header>
+<div class="split left">
     <div class="centered">
-      <img src="../../Images/profile.png" alt="Avatar woman">
-      <p>Bogdan</p>
+        <img src="../../Images/profile.png" alt="Avatar woman">
+        <p>Bogdan</p>
     </div>
-    
+
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'My Collection')" id="defaultOpen">My Collection</button>
-      <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
-      <button class="tablinks" onclick="openCity(event, 'Change')">Change avatar</button>
+        <button class="tablinks" onclick="openCity(event, 'My Collection')" id="defaultOpen">My Collection</button>
+        <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
+        <button class="tablinks" onclick="openCity(event, 'Change')">Change avatar</button>
     </div>
-    </div>
-    
-  <div class="split right">
+</div>
+
+<div class="split right">
     <div id="My Collection" class="tabcontent">
         <button id="myBtn">ADD Collections</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <form id="formObj">
-      <label >Collection name</label>
-      <input type="text" id="fname" name="Collection name" placeholder="Name..">
-      <label>Collection type</label>
-      <select id="Collection" name="colType">
-        <option value="Cassetts">Cassette</option>
-        <option value="Vinyls">Vinyls</option>
-      </select>
-      <label>Description</label>
-        <input class="textDesc" type="text" name="colDescription"/>
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="formObj">
+                    <label>Collection name</label>
+                    <input type="text" id="fname" name="Collection name" placeholder="Name..">
+                    <label>Collection type</label>
+                    <select id="Collection" name="colType">
+                        <option value="Cassetts">Cassette</option>
+                        <option value="Vinyls">Vinyls</option>
+                    </select>
+                    <label>Description</label>
+                    <input class="textDesc" type="text" name="colDescription"/>
 
-      <input type="button" id="fbutton" value="Submit" onclick="addCollection()">
+                    <input type="button" id="fbutton" value="Submit" onclick="addCollection()">
 
-    </form>
-  </div>
-  
+                </form>
+            </div>
 
-</div>
-          <div class="product-container">
+
+        </div>
+        <div class="product-container">
             <ul class="product-list">
 
             </ul>
         </div>
         <div id="contextMenu" class="dropdown clearfix">
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display:block;position:static;margin-bottom:5px;">
-              
-              <button onclick="deleteCollection()" class="button-gi"><i class="fa fa-remove"></i>Delete Coletion
-                    
-              </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"
+                style="display:block;position:static;margin-bottom:5px;">
+
+                <button onclick="deleteCollection()" class="button-gi"><i class="fa fa-remove"></i>Delete Coletion
+
+                </button>
             </ul>
-          </div>
-       
-      </div>
-      <div id="Change" class="tabcontent">
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati consectetur labore error voluptates eveniet explicabo! Error voluptatum expedita consectetur eius facilis voluptatibus itaque perferendis quos similique aut, dolor ratione exercitationem.</p> 
-      </div>
-    
-      <div id="Profile" class="tabcontent">
-          <div>
+        </div>
+
+    </div>
+    <div id="Change" class="tabcontent">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati consectetur labore error voluptates
+            eveniet explicabo! Error voluptatum expedita consectetur eius facilis voluptatibus itaque perferendis quos
+            similique aut, dolor ratione exercitationem.</p>
+    </div>
+
+    <div id="Profile" class="tabcontent">
+        <div>
             <h3>E-mail reset!</h3>
-              <form>
+            <form>
                 E-mail:
                 <input type="email" name="email">
                 New E-mail:
                 <input type="email" name="email">
-              </form>
-        <button class="buttonn"></button>
-          </div>
+            </form>
+            <button class="buttonn"></button>
+        </div>
         <div>
-                <h3>Reset password</h3>
-                <form>
+            <h3>Reset password</h3>
+            <form>
                 Old password:
                 <input type="password" name="psw">
                 New password:
                 <input type="password" name="psw">
-                
-                </form>
-                <button class="buttonn"></button>
-      </div>
-        <div>
-              <h3>Change username!</h3>
-              <form>
-              New username:
-              <input type="text" name="username"><br>
-              
-              </form>
-              <button class="buttonn"></button>
+
+            </form>
+            <button class="buttonn"></button>
         </div>
-          
-      </div>
-      
-      
-      
-      
-      
-      
+        <div>
+            <h3>Change username!</h3>
+            <form>
+                New username:
+                <input type="text" name="username"><br>
+
+            </form>
+            <button class="buttonn"></button>
+        </div>
+
     </div>
-  
-    <footer>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <div class="social-icons">
+
+
+</div>
+
+<footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="social-icons">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a>
-      </div>
-      <p id="coded">Music with love,By all artist on the world .</p>
-      <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
+    </div>
+    <p id="coded">Music with love,By all artist on the world .</p>
+    <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
 
-    </footer>
+</footer>
 
-  <script src="../../JS/profile.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../../JS/delete-colections.js"></script>
+<script src="../../JS/profile.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../../JS/delete-colections.js"></script>
 
-    
+
 </body>
 
 </html>

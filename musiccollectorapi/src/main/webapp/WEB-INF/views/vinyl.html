@@ -14,130 +14,130 @@
     <link href='https://fonts.googleapis.com/css?family=Bowlby One' rel='stylesheet'>
 
 
-
 </head>
 
 <body>
 
-    <header>
+<header>
 
-        <div class="container">
-            <!-- <div id="branding"> -->
-            <img id="logo" src="../../Images/logo.png" alt="asd">
-            <!-- </div> -->
-           
-            <nav>
-                <ul>
-                    <li class="current">
-                        <a href="/profile">Home</a>
-                    </li>
+    <div class="container">
+        <!-- <div id="branding"> -->
+        <img id="logo" src="../../Images/logo.png" alt="asd">
+        <!-- </div> -->
 
-                    <li>
-                        <a href="/about">About</a>
+        <nav>
+            <ul>
+                <li class="current">
+                    <a href="/profile">Home</a>
+                </li>
 
-                    </li>
-                    <li>
-                        <a href="/logout">Log Out</a>
+                <li>
+                    <a href="/about">About</a>
 
-                    </li>
-                </ul>
-            </nav>
+                </li>
+                <li>
+                    <a href="/logout">Log Out</a>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</header>
+<div class="main">
+
+
+    <div class="center">
+        <div class="banner">
+            <p>Best Vinyl Collection</p>
         </div>
+        <div class="list-view-buttons">
+            <button onclick="toggleView()">
+                <img src="../../Images/box-view.svg" alt="">
+            </button>
+            <button onclick="toggleView()">
+                <img src="../../Images/list-ul.svg" alt="">
+            </button>
 
-    </header>
-    <div class="main" >
-        
-        
-        <div class="center">
-            <div class="banner">
-                <p>Best Vinyl Collection</p>
-            </div>
-            <div class="list-view-buttons">
-                <button onclick="toggleView()">
-                    <img src="../../Images/box-view.svg" alt="">
-                </button>
-                <button onclick="toggleView()">
-                    <img src="../../Images/list-ul.svg" alt="">
-                </button>
-                
 
-            </div>
-            <div class="search-container" id="defaultOpen">
-
-                    <input class="search-bar" type="text" placeholder="Cautare dupa nume..." name="search">
-                    <select class="search-art">
-                          <option value="Albums">Albums</option>
-                          <option value="Artist">Artist</option>
-                          <option value="Tracks">Tracks</option>
-                          
-                        </select>
-                    
-                    <button type="button" onclick="searchapi()" class="button-search" name="buttonSearchX">Cautare</button>
-
-                </div>
-            <div class="product-container" >
-                <ul class="product-list">
-                    <li class="product">
-                        <a href="vinyl-preview.html"></a>
-                        <h3>Vinyl X</h3>
-                        <img class="vyn" src="../../Images/vinyl.png" alt="">
-                        <p>DESCRIPTION</p>
-                        <img class="preview" src="../../Images/bars.svg" alt="">
-                    </li>
-                </ul>
-            </div>
         </div>
-        <div id="contextMenu" class="dropdown clearfix tabcontent">
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display:block;position:static;margin-bottom:5px;">
-                  
-                  <button id="myBtn" class="button-search" onclick="openCity(event, 'My Collection')" id="defaultOpen">Add to my Collection
-                        
-                  </button>
-                </ul>
-                
+        <div class="search-container" id="defaultOpen">
+
+            <input class="search-bar" type="text" placeholder="Cautare dupa nume..." name="search">
+            <select class="search-art">
+                <option value="Albums">Albums</option>
+                <option value="Artist">Artist</option>
+                <option value="Tracks">Tracks</option>
+
+            </select>
+
+            <button type="button" onclick="searchapi()" class="button-search" name="buttonSearchX">Cautare</button>
+
         </div>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              
-              
-              <form id="formObj">
-                <label >Choose you Collection:</label>
+        <div class="product-container">
+            <ul class="product-list">
+                <li class="product">
+                    <a href="vinyl-preview.html"></a>
+                    <h3>Vinyl X</h3>
+                    <img class="vyn" src="../../Images/vinyl.png" alt="">
+                    <p>DESCRIPTION</p>
+                    <img class="preview" src="../../Images/bars.svg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contextMenu" class="dropdown clearfix tabcontent">
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"
+            style="display:block;position:static;margin-bottom:5px;">
+
+            <button id="myBtn" class="button-search" onclick="openCity(event, 'My Collection')" id="defaultOpen">Add to
+                my Collection
+
+            </button>
+        </ul>
+
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+
+            <form id="formObj">
+                <label>Choose you Collection:</label>
                 <select id="Collection" name="colType">
                     <option value="collection1">exemplu1</option>
                     <option value="collection2">exemplu2</option>
                 </select>
-                
-          
-              </form>
-            </div>
-            
-          
-          </div>
-          
-                 
-    </div>
-                  
-    <footer class="text-center">
 
-        <div class="social-icons">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
+
+            </form>
         </div>
 
-        <p id="coded">Music with love,By all artist on the world .</p>
-        <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
 
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../../JS/search1.js"></script>
-    <script src="../../JS/cassetts.js"></script>
-    
-    
+    </div>
+
+
+</div>
+
+<footer class="text-center">
+
+    <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+
+    <p id="coded">Music with love,By all artist on the world .</p>
+    <p id="copyright">&copy; 2018 JBC MUSIC. All rights reserved.</p>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../../JS/vinyls.js"></script>
+<!--<script src="../../JS/cassetts.js"></script>-->
+
 
 </body>
 

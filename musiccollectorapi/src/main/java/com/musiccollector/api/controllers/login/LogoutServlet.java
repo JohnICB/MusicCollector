@@ -17,10 +17,8 @@ public class LogoutServlet extends HttpServlet {
             throws IOException, ServletException {
 
 
-        for (Cookie c: request.getCookies())
-        {
-            if (c.getName().equals("user") || c.getName().equals("loginToken"))
-            {
+        for (Cookie c : request.getCookies()) {
+            if (c.getName().equals("user") || c.getName().equals("loginToken")) {
                 c.setValue("");
                 c.setMaxAge(0);
                 c.setPath("/");

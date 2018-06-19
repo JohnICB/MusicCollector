@@ -26,16 +26,13 @@ public class VinylsServiceServlet extends HttpServlet {
         System.out.println("/vinylsGET");
 
 
-
-        if (LoginService.isUserLoggedIn(request.getCookies()))
-        {
+        if (LoginService.isUserLoggedIn(request.getCookies())) {
             long uid = ConnectedUsers.getUserIDByCookies(request.getCookies());
             long colID = Long.parseLong(request.getParameter("id"));
 
             CollectionJava collectionJava = Collections.getCollectionByID(colID);
 
-            if (collectionJava == null || !Collections.hasUser(uid,colID))
-            {
+            if (collectionJava == null || !Collections.hasUser(uid, colID)) {
                 response.setContentType("application/json");
                 response.getWriter().write("fail");
                 return;
@@ -44,8 +41,7 @@ public class VinylsServiceServlet extends HttpServlet {
             ArrayList<Vinyls> vinyls = collectionJava.getVinylContent();
 
             JsonArray jarray = new JsonArray();
-            for (Vinyls v: vinyls)
-            {
+            for (Vinyls v : vinyls) {
                 jarray.add(v.toJson());
             }
 

@@ -1,15 +1,14 @@
 let del = 0;
 
 
-
 var selectedElment = null;
-$(function() {
+$(function () {
 
     var $contextMenu = $("#contextMenu");
 
-    $("body").on("contextmenu", "ul img", function(e) {
+    $("body").on("contextmenu", "ul img", function (e) {
         selectedElment = e.target.parentElement;
-        console.log("Selected: "+selectedElment.getElementsByTagName("h3")[0].innerHTML);
+        console.log("Selected: " + selectedElment.getElementsByTagName("h3")[0].innerHTML);
         $contextMenu.css({
             display: "block",
             left: e.pageX,
@@ -18,7 +17,7 @@ $(function() {
         return false;
     });
 
-    $('html').click(function() {
+    $('html').click(function () {
         $contextMenu.hide();
     });
 
@@ -51,7 +50,7 @@ function searchapi() {
 
     xhr = new XMLHttpRequest();
     xhr.open("GET", "http://localhost:8081/searchapi?searchType=" +
-        encodeURIComponent(searchType) +"&searchContent=" + encodeURIComponent(searchValue));
+        encodeURIComponent(searchType) + "&searchContent=" + encodeURIComponent(searchValue));
 
     // console.log(xhr.response);
 
@@ -65,8 +64,7 @@ function searchapi() {
                 console.log(r.artist);
 
                 del = 1;
-                for (let i = 0; i < r.artist.length; i++)
-                {
+                for (let i = 0; i < r.artist.length; i++) {
                     addElement(r.artist[i]);
 
                     del = 0;
@@ -94,11 +92,10 @@ function searchapi() {
         let img = document.createElement("img");
         let desc = document.createElement("p");
 
-        if (del === 1)
-        {
+        if (del === 1) {
             ul.innerHTML = "";
         }
-        
+
 
         newLi.classList.add("product");
         a.setAttribute("href", "");
@@ -116,11 +113,10 @@ function searchapi() {
 
         console.log(newLi);
 
-       // console.log(element.image[Object.keys(element.image)[0]]);
+        // console.log(element.image[Object.keys(element.image)[0]]);
     }
 
     // if (searchType === "Albums")
-
 
 
     xhr.addEventListener("error", function errorCallback() {
@@ -131,13 +127,13 @@ function searchapi() {
 
 }
 
-function addUserCollections(image, title, description,id) {
+function addUserCollections(image, title, description, id) {
 
-    console.log("Image: "+image + " title: "+title + " description: " +description +" id: " +id)
+    console.log("Image: " + image + " title: " + title + " description: " + description + " id: " + id)
 
 }
 
-function addToCollection(album, artist){
+function addToCollection(album, artist) {
     console.log("Getting info...");
     var title = album;
     var duration;
@@ -150,25 +146,22 @@ function addToCollection(album, artist){
     var releaseDate;
 
     let jsonStruct = {
-        title:title,
-        duration:duration,
-        artists:artists,
-        region:region,
-        age:age,
-        album:album,
-        usageGrade:usageGrade,
-        genre:genre,
-        releaseDate:releaseDate
+        title: title,
+        duration: duration,
+        artists: artists,
+        region: region,
+        age: age,
+        album: album,
+        usageGrade: usageGrade,
+        genre: genre,
+        releaseDate: releaseDate
     };
     let xhrInfo = new XMLHttpRequest();
-    xhrInfo.open("GET","http://localhost:8081/albuminfo"+"&artist="+encodeURIComponent(artist)+"&album="+encodeURIComponent(album));
+    xhrInfo.open("GET", "http://localhost:8081/albuminfo" + "&artist=" + encodeURIComponent(artist) + "&album=" + encodeURIComponent(album));
     xhrInfo.addEventListener("load", function loadCallback() {
         switch (xhrInfo.status) {
             case 200:
-                console.log("INFO RESPONSE: "+xhrInfo.response);
-
-
-
+                console.log("INFO RESPONSE: " + xhrInfo.response);
 
 
                 break;
@@ -197,27 +190,28 @@ function addToCollection(album, artist){
     //
     // });
 }
-function createCollectionList(){
+
+function createCollectionList() {
 
 
     let xhr = new XMLHttpRequest();
 
     xhr.open("GET", "http://localhost:8081/collections");
-    console.log("GET: "+xhr.response);
+    console.log("GET: " + xhr.response);
     xhr.addEventListener("load", function loadCallback() {
         switch (xhr.status) {
             case 200:
                 let responeArray = JSON.parse(xhr.response)
 
-                for(var i =0; i<responeArray.length;++i){
+                for (var i = 0; i < responeArray.length; ++i) {
                     let isVinyl = responeArray[i].isVinyl;
-                    if(isVinyl) {
+                    if (isVinyl) {
                         addUserCollections("../../Images/vinyl.png", responeArray[i].title, responeArray[i].description, responeArray[i].id);
-                        addToCollection(selectedElment.getElementsByTagName("p")[0].innerHTML,selectedElment.getElementsByTagName("h3")[0].innerHTML);
+                        addToCollection(selectedElment.getElementsByTagName("p")[0].innerHTML, selectedElment.getElementsByTagName("h3")[0].innerHTML);
                     }
-                    else{
-                        addUserCollections("../../Images/cassette.jpg",responeArray[i].title,responeArray[i].description,responeArray[i].id);
-                        addToCollection(selectedElment.getElementsByTagName("p")[0].innerHTML,selectedElment.getElementsByTagName("h3")[0].innerHTML);
+                    else {
+                        addUserCollections("../../Images/cassette.jpg", responeArray[i].title, responeArray[i].description, responeArray[i].id);
+                        addToCollection(selectedElment.getElementsByTagName("p")[0].innerHTML, selectedElment.getElementsByTagName("h3")[0].innerHTML);
                     }
                 }
                 console.log("Success GET" + xhr.response);
@@ -234,7 +228,6 @@ function createCollectionList(){
 }
 
 
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 // Get the modal
@@ -245,17 +238,17 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
 

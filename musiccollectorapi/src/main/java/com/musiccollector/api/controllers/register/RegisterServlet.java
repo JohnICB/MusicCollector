@@ -24,11 +24,9 @@ public class RegisterServlet extends HttpServlet {
 //        request.setAttribute("registerStatus","\"NOTHING YET\"");
 
         System.out.println("/Get Register");
-        if (!LoginService.isUserLoggedIn(request.getCookies()))
-        {
+        if (!LoginService.isUserLoggedIn(request.getCookies())) {
             request.getRequestDispatcher("/WEB-INF/views/registration.html").forward(request, response);
-        }
-        else {
+        } else {
             System.out.println("redirect");
             response.sendRedirect("/welcome");
         }
@@ -53,10 +51,8 @@ public class RegisterServlet extends HttpServlet {
         String account_type = jsonPayload.get("account-type").getAsString();
 
 
-
         int isPerson = 0;
-        if (account_type.equalsIgnoreCase("personal"))
-        {
+        if (account_type.equalsIgnoreCase("personal")) {
             isPerson = 1;
         }
 

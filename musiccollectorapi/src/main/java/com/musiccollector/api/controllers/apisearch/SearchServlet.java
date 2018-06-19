@@ -15,8 +15,8 @@ public class SearchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        if(LoginService.isUserLoggedIn(request.getCookies()))
-            request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
+        if (LoginService.isUserLoggedIn(request.getCookies()))
+            request.getRequestDispatcher("/WEB-INF/views/search.html").forward(request, response);
         else
             response.sendRedirect("welcome");
     }

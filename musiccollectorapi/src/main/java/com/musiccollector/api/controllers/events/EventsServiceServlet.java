@@ -8,40 +8,36 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/eventsService")
-public class EventsServiceServlet extends HttpServlet
-{
+public class EventsServiceServlet extends HttpServlet {
 
-        @Override
-        protected void doGet(HttpServletRequest request, HttpServletResponse response)
-                throws IOException, ServletException {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
 
-            String rows = request.getParameter("rows");
-            System.out.println(rows + " rows");
+        String rows = request.getParameter("rows");
+        System.out.println(rows + " rows");
 
-            EventsService eventsService;
+        EventsService eventsService;
 
-            if (rows != null)
-            {
-                eventsService = new EventsService(Long.parseLong(rows));
-            }
-            else
-            {
-                eventsService = new EventsService(10);
-            }
+        if (rows != null) {
+            eventsService = new EventsService(Long.parseLong(rows));
+        } else {
+            eventsService = new EventsService(10);
+        }
 
-            response.getWriter();
-            response.setContentType("application/json");
-            response.getWriter().write(eventsService.getEvents());
+        response.getWriter();
+        response.setContentType("application/json");
+        response.getWriter().write(eventsService.getEvents());
 
 //            request.getRequestDispatcher("/WEB-INF/views/TEMPLATE.jsp").forward(request, response);
-        }
+    }
 
-        @Override
-        protected void doPost(HttpServletRequest request, HttpServletResponse response)
-                throws IOException, ServletException {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
 
-           String rows = request.getParameter("rows");
-        }
+        String rows = request.getParameter("rows");
+    }
 
 }
 

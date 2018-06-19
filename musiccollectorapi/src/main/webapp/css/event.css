@@ -1,12 +1,12 @@
 :root {
-    --nav-color: #000; 
+    --nav-color: #000;
     --light-gray: #AAABBB;
     --middle-section-bg: #fff;
     --button-color: #3f4981;
     --bg-col: #161332;
-  }
-  
-body{
+}
+
+body {
     margin: 0;
     padding: 0;
     color: white;
@@ -14,7 +14,7 @@ body{
     background: var(--bg-col) url("../Images/concert-bg.jpeg") fixed center center;
 }
 
-.container nav{
+.container nav {
     /* background-color: red; */
     margin: 0px;
     padding: 0px;
@@ -22,7 +22,7 @@ body{
 
 }
 
-.container nav ul li{
+.container nav ul li {
     background-color: black;
     /* margin: 0 0 20px 0; */
     padding: 5px 15px;
@@ -31,13 +31,13 @@ body{
     right: 140px;
 }
 
-#logo{
+#logo {
     margin-left: 200px;
 }
 
 /* top part */
 
-.top-wrapper{
+.top-wrapper {
     margin-top: 100px;
     margin-bottom: 50px;
     display: grid;
@@ -46,14 +46,14 @@ body{
     /* border: 1px solid beige; */
 }
 
-.line-l, .line-r{
+.line-l, .line-r {
     border-top: 3px white solid;
     background-color: #fff;
     margin: auto, 0;
     align-self: center;
 }
 
-.line-l{
+.line-l {
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -65,7 +65,7 @@ body{
 
 /* Middle section */
 
-.middle-section .wrapper{
+.middle-section .wrapper {
     position: relative;
     /* margin: 30px, auto;    */
     margin-left: auto;
@@ -84,7 +84,7 @@ body{
     border-style: groove;
 }
 
-.middle-section .wrapper .ticket{
+.middle-section .wrapper .ticket {
     position: absolute;
     right: 3%;
     top: 35%;
@@ -96,57 +96,55 @@ body{
     border-radius: 5px;
 }
 
-.middle-section .wrapper:nth-child(2n) .ticket
-{
+.middle-section .wrapper:nth-child(2n) .ticket {
     background-color: red;
 }
 
-footer{
+footer {
     text-align: center;
     height: 15%;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
-    .top-wrapper{
+    .top-wrapper {
         /* margin-top: 20px; */
         justify-content: space-around;
-        grid-template-columns: 3fr minmax(120px ,1fr) 3fr ;
-         /* margin: auto; */
+        grid-template-columns: 3fr minmax(120px, 1fr) 3fr;
+        /* margin: auto; */
     }
 
-    .line-l{
+    .line-l {
         grid-column-start: 1;
         grid-column-end: 2;
     }
 
-    .middle-section .wrapper{
+    .middle-section .wrapper {
         width: 90%;
     }
-    
+
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
 
-    *{
-    overflow-y: scroll;
-    overflow-x: hidden;
+    * {
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
-    .middle-section .wrapper{
+    .middle-section .wrapper {
         text-align: center;
         width: 80%;
     }
 
     .middle-section .wrapper .date,
-    .middle-section .wrapper .location{
+    .middle-section .wrapper .location {
         /* text-align: left; */
-        font-size: 1em; 
+        font-size: 1em;
     }
 
-    .middle-section .wrapper .ticket{
+    .middle-section .wrapper .ticket {
         position: static;
     }
-    
 
 }

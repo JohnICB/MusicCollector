@@ -30,19 +30,14 @@ public class CollectionJava {
         this.title = title;
     }
 
-    public long getCollectionId() {return collectionId; }
-
-    public static JsonArray toJsonPreview (ArrayList<CollectionJava> collectionJava)
-    {
+    public static JsonArray toJsonPreview(ArrayList<CollectionJava> collectionJava) {
         JsonArray jsonArray = new JsonArray();
         JsonObject jobj;
 
         HashSet<Long> cache = new HashSet<>();
 
-        for (CollectionJava i : collectionJava)
-        {
-            if (!cache.contains(i.getCollectionId()))
-            {
+        for (CollectionJava i : collectionJava) {
+            if (!cache.contains(i.getCollectionId())) {
                 cache.add(i.getCollectionId());
 
                 jobj = new JsonObject();
@@ -59,20 +54,21 @@ public class CollectionJava {
         return jsonArray;
     }
 
-    public ArrayList<Vinyls> getVinylContent()
-    {
+    public long getCollectionId() {
+        return collectionId;
+    }
+
+    public ArrayList<Vinyls> getVinylContent() {
 
         ArrayList<Vinyls> vinylArray = new ArrayList<>();
-        for (long id : id_music)
-        {
+        for (long id : id_music) {
             try {
                 ResultSet resultSet = Database.selectQuery(
                         "SELECT * FROM VINYLS WHERE ID_VINYL = ?", id);
 
                 Vinyls vinyl = Vinyls.processResults(resultSet);
 
-                if (vinyl != null)
-                {
+                if (vinyl != null) {
                     vinylArray.add(vinyl);
                 }
 
@@ -85,8 +81,7 @@ public class CollectionJava {
         return vinylArray;
     }
 
-    public ArrayList<Cassettes> getCassetesContent(CollectionJava collectionJava)
-    {
+    public ArrayList<Cassettes> getCassetesContent(CollectionJava collectionJava) {
         ArrayList<Cassettes> cassettesArray = new ArrayList<>();
 
         return cassettesArray;

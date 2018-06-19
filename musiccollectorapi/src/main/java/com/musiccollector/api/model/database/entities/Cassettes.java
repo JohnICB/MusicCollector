@@ -50,8 +50,7 @@ public class Cassettes {
         this.region = region;
     }
 
-    public static Cassettes fromJson(JsonObject jsonPayload)
-    {
+    public static Cassettes fromJson(JsonObject jsonPayload) {
         String title = jsonPayload.get("title").getAsString();
         String duration = jsonPayload.get("duration").getAsString();
         String artists = jsonPayload.get("artists").getAsString();
@@ -62,8 +61,8 @@ public class Cassettes {
         String genre = jsonPayload.get("genre").getAsString();
         String releaseDate = jsonPayload.get("releaseDate").getAsString();
 
-        return new Cassettes(title,album, artists, genre, duration, age,
-                usageGrade,releaseDate, region);
+        return new Cassettes(title, album, artists, genre, duration, age,
+                usageGrade, releaseDate, region);
     }
 
     public long getIdCassettes() {
@@ -157,8 +156,7 @@ public class Cassettes {
 
     public void insert() {
 
-        if (checkIfDuplicate(externalId))
-        {
+        if (checkIfDuplicate(externalId)) {
             return;
         }
 
@@ -199,7 +197,9 @@ public class Cassettes {
             ResultSet rs = Database.selectQuery(Database.getConnection(),
                     "SELECT ID_CASSETTES FROM CASSETTES WHERE EXTERNAL_ID LIKE ?", externalId);
 
-            if (!rs.next()) {return false;}
+            if (!rs.next()) {
+                return false;
+            }
 
             this.idCassettes = rs.getLong(1);
             return true;
