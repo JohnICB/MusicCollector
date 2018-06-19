@@ -21,6 +21,7 @@ com\musiccollector\api\controllers\collections\CollectionsServlet.class
 com\musiccollector\api\controllers\login\LoginServlet.class
 com\musiccollector\api\controllers\login\LoginService.class
 com\musiccollector\api\generators\TokenGenerator.class
+com\musiccollector\api\controllers\collections\CassetteServlet.class
 com\musiccollector\api\controllers\staticpages\HomepageServlet.class
 com\musiccollector\api\musicbrainzapi\GetJson.class
 com\musiccollector\api\musicbrainzapi\AlbumQueryBuilder.class
@@ -29,6 +30,7 @@ com\musiccollector\api\model\Database.class
 com\musiccollector\api\controllers\apisearch\AlbumInfoServlet.class
 com\musiccollector\api\model\database\CollectionJava.class
 com\musiccollector\api\model\database\entities\Collections.class
+com\musiccollector\api\controllers\collections\VinylServlet.class
 com\musiccollector\api\controllers\events\EventsService.class
 com\musiccollector\api\controllers\register\RegisterServlet.class
 com\musiccollector\api\controllers\staticpages\AboutServlet.class

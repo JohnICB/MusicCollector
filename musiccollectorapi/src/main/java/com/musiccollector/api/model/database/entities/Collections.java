@@ -86,13 +86,12 @@ public class Collections {
         ArrayList<CollectionJava> collectionJavas = new ArrayList<>();
         boolean isVinyl = false;
 
-        while (resultSet.next()) {
+        do {
             long id = resultSet.getLong(1);
 
             ResultSet newResults = Database.selectQuery(
                     "SELECT ID_MUSIC, ID_USER, DESCRIPTION, IS_VINYL, TITLE FROM COLLECTIONS WHERE ID_COLLECTION = ?", id);
-
-
+            
             if (!newResults.next()) {
                 continue;
             }
@@ -109,7 +108,7 @@ public class Collections {
             collectionJavas.add(new CollectionJava(id, userIDs, musicIDs, description,
                     isVinyl, title));
 
-        }
+        }while (resultSet.next());
 
 
         return collectionJavas;
