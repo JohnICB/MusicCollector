@@ -136,7 +136,22 @@ public class Vinyls {
 
     }
 
-    public JsonObject toJson() {
+    public static Vinyls getVinylByID(long musicID) {
+
+        try {
+            ResultSet resultSet = Database.selectQuery(
+                    "SELECT * FROM VINYLS WHERE ID_VINYL = ?", musicID);
+
+            return Vinyls.processResults(resultSet);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+        public JsonObject toJson() {
         JsonObject vinylJson = new JsonObject();
 
         vinylJson.addProperty("id", this.idVinyl);

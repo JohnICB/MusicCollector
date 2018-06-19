@@ -5,6 +5,25 @@ body {
 
 }
 
+#propr{
+    background-color: #efefef;
+    padding: 10px 10%;
+
+}
+
+#propr *{
+    display: inline-block;
+    padding: 2px;
+    margin: 2px;
+}
+#propr1{
+    background-color: #efefef;
+    padding: 10px 10%;
+}
+#propr1 p{
+    display: inline;
+}
+
 .container {
     position: relative;
     width: 80%;

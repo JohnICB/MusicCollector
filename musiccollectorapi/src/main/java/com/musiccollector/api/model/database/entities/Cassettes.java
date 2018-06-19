@@ -109,6 +109,21 @@ public class Cassettes {
 
     }
 
+    public static Cassettes getCassetteByID(long musicID) {
+
+        try {
+            ResultSet resultSet = Database.selectQuery(
+                    "SELECT * FROM CASSETTES WHERE ID_CASSETTES = ?", musicID);
+
+            return Cassettes.processResults(resultSet);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    return null;
+    }
+
     public long getIdCassettes() {
         return idCassettes;
     }
