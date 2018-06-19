@@ -86,7 +86,7 @@
                         <form id="formObj">
                             
                             Track name:
-                            <input type="text" id="fname" name="Title" placeholder="Track name.."><br>
+                            <input type="text" id="fname" name="Title" placeholder="Track name.." required><br>
                             Type:<br>
                             <select>
                                     <option value="" selected="selected">Type of the track..</option> 
@@ -95,7 +95,7 @@
                             </select><br>
                             Artist name:<br>
                             
-                            <input type="text" id="fname" name="Artist" placeholder="Artist name.."><br>
+                            <input type="text" id="fname" name="Artist" placeholder="Artist name.." required><br>
                             Region:<br>
                             <select>
                                 <optgroup label="">
@@ -395,7 +395,16 @@
                                <option value="Gold">Gold</option>
                            </select><br>
                            Release-Date:<br>
-                           <input id="date" type="date">
+                           <input id="date" type="date"><br><br>
+                           Colored disk:
+                           <input type="checkbox" name="colored" value="yes"> Yes
+                           <input type="checkbox" name="colored" value="no" checked> No<br><br>
+                           Stereo disk:
+                           <input type="checkbox" name="colored" value="yes"> Yes
+                           <input type="checkbox" name="colored" value="no" checked> No<br><br>
+                           Special edition disk:
+                           <input type="checkbox" name="colored" value="yes"> Yes
+                           <input type="checkbox" name="colored" value="no" checked> No<br>
         
                             <input type="button" id="fbutton" value="Submit" onclick="addCollection()">
         
