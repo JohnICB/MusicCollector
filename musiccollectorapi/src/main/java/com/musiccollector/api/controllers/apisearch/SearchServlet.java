@@ -1,5 +1,7 @@
 package com.musiccollector.api.controllers.apisearch;
 
+import com.musiccollector.api.controllers.login.LoginService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,8 +15,10 @@ public class SearchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-
-        request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
+        if(LoginService.isUserLoggedIn(request.getCookies()))
+            request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
+        else
+            response.sendRedirect("welcome");
     }
 
     @Override

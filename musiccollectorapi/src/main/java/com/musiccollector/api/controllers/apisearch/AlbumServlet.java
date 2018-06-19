@@ -1,7 +1,4 @@
-package com.musiccollector.api.controllers.collections;
-
-import com.musiccollector.api.controllers.login.LoginService;
-import com.musiccollector.api.model.database.user.ConnectedUsers;
+package com.musiccollector.api.controllers.apisearch;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,20 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(urlPatterns = "/vinyls")
-public class VinylsServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/album")
+public class AlbumServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        if (LoginService.isUserLoggedIn(request.getCookies()))
-        {
-            request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
-        } else
-            response.sendRedirect("welcome");
-
-
+        request.getRequestDispatcher("/WEB-INF/views/album-preview.html").forward(request, response);
     }
 
     @Override
@@ -39,4 +30,3 @@ public class VinylsServlet extends HttpServlet {
     }
 
 }
-

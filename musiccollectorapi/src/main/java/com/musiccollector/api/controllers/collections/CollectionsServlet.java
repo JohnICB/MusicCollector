@@ -151,6 +151,7 @@ public class CollectionsServlet extends HttpServlet {
             System.out.println(responseJson.toString());
 
         }
+        else System.out.println("error la post, nu e conectat");
 
 
         //TODO: Acum ca ai jsonul verifica ce e mai jos si baga in baza de date si returneaza ultimul id cu care a fost bagat

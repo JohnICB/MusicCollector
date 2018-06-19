@@ -1,5 +1,7 @@
 package com.musiccollector.api.controllers.profile;
 
+import com.musiccollector.api.controllers.login.LoginService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,9 +16,11 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-
+        if(LoginService.isUserLoggedIn(request.getCookies()))
         request.getRequestDispatcher("/WEB-INF/views/profile.html").forward(request, response);
-    }
+        else
+            response.sendRedirect("welcome");
+        }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

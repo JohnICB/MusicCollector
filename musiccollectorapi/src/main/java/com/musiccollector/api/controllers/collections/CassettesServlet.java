@@ -1,5 +1,7 @@
 package com.musiccollector.api.controllers.collections;
 
+import com.musiccollector.api.controllers.login.LoginService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,8 +16,10 @@ public class CassettesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-
+        if(LoginService.isUserLoggedIn(request.getCookies()))
         request.getRequestDispatcher("/WEB-INF/views/cassetts.html").forward(request, response);
+        else
+            response.sendRedirect("welcome");
     }
 
     @Override

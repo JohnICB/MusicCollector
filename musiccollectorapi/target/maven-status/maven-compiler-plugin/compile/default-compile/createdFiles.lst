@@ -11,6 +11,7 @@ com\musiccollector\api\controllers\events\EventsServiceServlet.class
 com\musiccollector\api\model\database\entities\Concerts.class
 com\musiccollector\api\controllers\profile\ProfileServlet.class
 com\musiccollector\api\model\database\user\ConnectedUsers.class
+com\musiccollector\api\controllers\apisearch\AlbumServlet.class
 com\musiccollector\api\model\database\entities\Vinyls.class
 com\musiccollector\api\WelcomeServlet.class
 com\musiccollector\api\musicbrainzapi\ArtistQuerryBuilder.class
