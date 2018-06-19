@@ -549,3 +549,6 @@ textarea {
     height: 20%;
     align:left;
 }
+#myModal1{
+    display:none;
+}
