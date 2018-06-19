@@ -3,6 +3,7 @@ package com.musiccollector.api.model.database.entities;
 import com.google.gson.JsonObject;
 import com.musiccollector.api.model.Database;
 
+import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.Objects;
 
@@ -165,6 +166,14 @@ public class Vinyls {
 
     public void insert() {
 
+        boolean isDupl = checkIfDuplicate(this.externalId);
+
+        if (isDupl)
+        {
+            return;
+        }
+
+
         Connection connection = null;
         try {
             connection = Database.getConnection();
@@ -201,6 +210,25 @@ public class Vinyls {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private boolean checkIfDuplicate(String externalId) {
+
+        try {
+            ResultSet rs = Database.selectQuery(Database.getConnection(),
+                    "SELECT ID_VINYL FROM VINYLS WHERE EXTERNAL_ID LIKE ?", externalId);
+
+            if (!rs.next()) {return false;}
+
+            this.idVinyl = rs.getLong(1);
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return false;
     }
 
     public long getIdVinyl() {

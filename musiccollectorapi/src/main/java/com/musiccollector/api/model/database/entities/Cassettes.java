@@ -156,6 +156,13 @@ public class Cassettes {
     }
 
     public void insert() {
+
+        if (checkIfDuplicate(externalId))
+        {
+            return;
+        }
+
+
         Connection connection = null;
         try {
             connection = Database.getConnection();
@@ -185,4 +192,24 @@ public class Cassettes {
             e.printStackTrace();
         }
     }
+
+    private boolean checkIfDuplicate(String externalId) {
+
+        try {
+            ResultSet rs = Database.selectQuery(Database.getConnection(),
+                    "SELECT ID_CASSETTES FROM CASSETTES WHERE EXTERNAL_ID LIKE ?", externalId);
+
+            if (!rs.next()) {return false;}
+
+            this.idCassettes = rs.getLong(1);
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return false;
+    }
+
 }
