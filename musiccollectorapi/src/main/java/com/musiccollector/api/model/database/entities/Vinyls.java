@@ -139,7 +139,8 @@ public class Vinyls {
     public JsonObject toJson() {
         JsonObject vinylJson = new JsonObject();
 
-        vinylJson.addProperty("title", Objects.requireNonNullElse(title, ""));
+        vinylJson.addProperty("id", this.idVinyl);
+        vinylJson.addProperty("title", Objects.requireNonNullElse(this.title, ""));
         vinylJson.addProperty("artists", Objects.requireNonNullElse(this.artists, ""));
         vinylJson.addProperty("region", Objects.requireNonNullElse(this.region, ""));
         vinylJson.addProperty("age", Objects.requireNonNullElse(this.age, ""));

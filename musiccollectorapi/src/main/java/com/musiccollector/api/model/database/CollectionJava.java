@@ -81,8 +81,26 @@ public class CollectionJava {
         return vinylArray;
     }
 
-    public ArrayList<Cassettes> getCassetesContent(CollectionJava collectionJava) {
+    public ArrayList<Cassettes> getCassetesContent()
+    {
         ArrayList<Cassettes> cassettesArray = new ArrayList<>();
+
+        for (long id : id_music) {
+            try {
+                ResultSet resultSet = Database.selectQuery(
+                        "SELECT * FROM CASSETTES WHERE ID_CASSETTES = ?", id);
+
+                Cassettes cassettes = Cassettes.processResults(resultSet);
+
+                if (cassettes != null) {
+                    cassettesArray.add(cassettes);
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
 
         return cassettesArray;
     }

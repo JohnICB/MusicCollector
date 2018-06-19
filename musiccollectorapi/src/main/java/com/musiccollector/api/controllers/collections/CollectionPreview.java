@@ -19,7 +19,7 @@ public class CollectionPreview extends HttpServlet {
             throws IOException, ServletException {
 
         if (LoginService.isUserLoggedIn(request.getCookies())) {
-            request.getRequestDispatcher("/WEB-INF/views/vinyl.html").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/views/collection.html").forward(request, response);
         } else
             response.sendRedirect("welcome");
 

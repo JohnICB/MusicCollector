@@ -80,11 +80,11 @@ function createColElement(lastID, nameCol, desc, isVynil) {
 
     if (isVynil) {
         img.setAttribute("src", "../../Images/vinyl.png");
-        link.setAttribute("href", "http://localhost:8081/vinyls?id=" + encodeURIComponent(lastID));
+        link.setAttribute("href", "http://localhost:8081/collection?id=" + encodeURIComponent(lastID));
     }
     else {
         img.setAttribute("src", "../../Images/cassette.jpg");
-        link.setAttribute("href", "http://localhost:8081/cassettes?id=" + encodeURIComponent(lastID));
+        link.setAttribute("href", "http://localhost:8081/collection?id=" + encodeURIComponent(lastID));
     }
 
 

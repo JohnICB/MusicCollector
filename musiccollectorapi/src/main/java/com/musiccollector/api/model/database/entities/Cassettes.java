@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class Cassettes {
 
@@ -24,6 +25,20 @@ public class Cassettes {
     private String region;
 
     public Cassettes(String externalId, String title, String album, String artists, String genre, String duration, String age, String usageGrade, String releaseDate, String region) {
+        this.externalId = externalId;
+        this.title = title;
+        this.album = album;
+        this.artists = artists;
+        this.genre = genre;
+        this.duration = duration;
+        this.age = age;
+        this.usageGrade = usageGrade;
+        this.releaseDate = releaseDate;
+        this.region = region;
+    }
+
+    public Cassettes(long idCassettes, String externalId, String title, String album, String artists, String genre, String duration, String age, String usageGrade, String releaseDate, String region) {
+        this.idCassettes = idCassettes;
         this.externalId = externalId;
         this.title = title;
         this.album = album;
@@ -60,9 +75,38 @@ public class Cassettes {
         String usageGrade = jsonPayload.get("usageGrade").getAsString();
         String genre = jsonPayload.get("genre").getAsString();
         String releaseDate = jsonPayload.get("releaseDate").getAsString();
+        String externalID = jsonPayload.get("mbid").getAsString();
 
-        return new Cassettes(title, album, artists, genre, duration, age,
+        return new Cassettes(externalID, title, album, artists, genre, duration, age,
                 usageGrade, releaseDate, region);
+    }
+
+    public static Cassettes processResults(ResultSet resultSet)
+    {
+        try {
+            if (resultSet == null || !resultSet.next()) {
+                return null;
+            } else {
+                long idCassette = resultSet.getLong(1);
+                String externalID = resultSet.getString(2);
+                String title = resultSet.getString(3);
+                String album = resultSet.getString(4);
+                String artists = resultSet.getString(5);
+                String genre = resultSet.getString(6);
+                String duration = resultSet.getString(7);
+                String age = resultSet.getString(8);
+                String usageGrade = resultSet.getString(9);
+                String releaseDate = resultSet.getString(10);
+                String region = resultSet.getString(11);
+
+                return new Cassettes(idCassette, externalID,title,album,artists,genre,
+                        duration,age,usageGrade,releaseDate,region);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
 
     public long getIdCassettes() {
@@ -167,7 +211,7 @@ public class Cassettes {
 
             PreparedStatement preparedStatement = connection.prepareStatement(
                     "INSERT INTO cassettes (EXTERNAL_ID, TITLE, ARTISTS" +
-                            ", AGE, ALBUM, DURATION, GENRE, RELEASE_DATE, REGION) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                            ", AGE, ALBUM, DURATION, GENRE, RELEASE_DATE, REGION, USAGE_GRADE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?)");
 
             preparedStatement.setString(1, this.externalId);
             preparedStatement.setString(2, this.title);
@@ -178,6 +222,7 @@ public class Cassettes {
             preparedStatement.setString(7, this.genre);
             preparedStatement.setString(8, this.releaseDate);
             preparedStatement.setString(9, this.region);
+            preparedStatement.setString(10, this.usageGrade);
 
             preparedStatement.executeUpdate();
 
@@ -212,4 +257,22 @@ public class Cassettes {
         return false;
     }
 
+    public JsonObject toJson() {
+        JsonObject vinylJson = new JsonObject();
+
+        vinylJson.addProperty("id", this.idCassettes);
+        vinylJson.addProperty("title", Objects.requireNonNullElse(this.title, ""));
+        vinylJson.addProperty("artists", Objects.requireNonNullElse(this.artists, ""));
+        vinylJson.addProperty("region", Objects.requireNonNullElse(this.region, ""));
+        vinylJson.addProperty("age", Objects.requireNonNullElse(this.age, ""));
+        vinylJson.addProperty("album", Objects.requireNonNullElse(this.album, ""));
+        vinylJson.addProperty("duration", Objects.requireNonNullElse(this.duration, ""));
+        vinylJson.addProperty("genre", Objects.requireNonNullElse(this.genre, ""));
+        vinylJson.addProperty("age", Objects.requireNonNullElse(this.age, ""));
+        vinylJson.addProperty("usageGrade", Objects.requireNonNullElse(this.usageGrade, ""));
+        vinylJson.addProperty("releaseDate", Objects.requireNonNullElse(this.releaseDate, ""));
+
+        return vinylJson;
+
+    }
 }
