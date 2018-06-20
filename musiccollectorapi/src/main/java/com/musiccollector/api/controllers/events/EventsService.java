@@ -75,7 +75,7 @@ public class EventsService {
             eventsJson.add("events", ja);
             eventsJson.addProperty("rows", resultsNr.toString());
 
-//            System.out.println(eventsJson.toString());
+            System.out.println(eventsJson.toString());
 
             return eventsJson.toString();
 
