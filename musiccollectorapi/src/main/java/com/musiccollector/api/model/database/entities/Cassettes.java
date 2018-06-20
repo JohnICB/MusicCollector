@@ -215,10 +215,10 @@ public class Cassettes {
 
     public void insert() {
 
-        if (checkIfDuplicate(externalId)) {
-            return;
-        }
-
+//        if (checkIfDuplicate(externalId)) {
+//            return;
+//        }
+        System.out.println("INSERT LA CASETE");
 
         Connection connection = null;
         try {
@@ -240,11 +240,13 @@ public class Cassettes {
             preparedStatement.setString(10, this.usageGrade);
 
             preparedStatement.executeUpdate();
-
-            ResultSet r = connection.prepareStatement("SELECT LAST_INSERT_ID() from cassettes").executeQuery();
+            System.out.println("execjta LA CASETE");
+            ResultSet r = connection.prepareStatement("SELECT MAX(ID_CASSETTES) from cassettes").executeQuery();
 
             if (r.next())
                 this.idCassettes = r.getLong(1);
+
+                System.out.println(this.idCassettes);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -252,6 +254,11 @@ public class Cassettes {
     }
 
     private boolean checkIfDuplicate(String externalId) {
+
+        if (externalId.equals(""))
+        {
+            return false;
+        }
 
         try {
             ResultSet rs = Database.selectQuery(Database.getConnection(),

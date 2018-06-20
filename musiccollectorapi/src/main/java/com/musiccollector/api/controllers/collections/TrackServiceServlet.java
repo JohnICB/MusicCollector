@@ -25,25 +25,25 @@ public class TrackServiceServlet extends HttpServlet {
 
         if (musicID < 0 || !LoginService.isUserLoggedIn(request.getCookies())) return;
 
-        if (isVinyl) {
-            Vinyls v = Vinyls.getVinylByID(musicID);
-
-            if (v != null) {
-                response.setContentType("application/json");
-                response.getWriter().write(v.toJson().toString());
-                System.out.println(v.toJson().toString());
-                return;
-            }
-        } else {
-            Cassettes c = Cassettes.getCassetteByID(musicID);
-
-            if (c != null) {
-                System.out.println(c.toJson().toString());
-                response.setContentType("application/json");
-                response.getWriter().write(c.toJson().toString());
-                return;
-            }
-        }
+//        if (isVinyl) {
+//            Vinyls v = Vinyls.getVinylByID(musicID);
+//
+//            if (v != null) {
+//                response.setContentType("application/json");
+//                response.getWriter().write(v.toJson().toString());
+//                System.out.println(v.toJson().toString());
+//                return;
+//            }
+//        } else {
+//            Cassettes c = Cassettes.getCassetteByID(musicID);
+//
+//            if (c != null) {
+//                System.out.println(c.toJson().toString());
+//                response.setContentType("application/json");
+//                response.getWriter().write(c.toJson().toString());
+//                return;
+//            }
+//        }
 
         response.setContentType("application/json");
         response.getWriter().write("error");

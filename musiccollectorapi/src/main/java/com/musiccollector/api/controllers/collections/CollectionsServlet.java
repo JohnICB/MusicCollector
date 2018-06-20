@@ -269,6 +269,11 @@ public class CollectionsServlet extends HttpServlet {
                 } else {
                     Cassettes newCassettes = Cassettes.fromJson(jsonPayload);
                     newCassettes.insert();
+
+                    System.out.println("adaugam");
+                    System.out.println(newCassettes.toJson().toString());
+
+
                     Collections.insertByColID(collectionID, newCassettes.getIdCassettes());
                 }
 

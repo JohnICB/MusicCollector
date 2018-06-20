@@ -45,12 +45,17 @@ function createElements(jsonArray) {
         img.classList.add("vyn");
         if (jsonArray[i].hasOwnProperty("isColored")) {
             img.setAttribute("src", "../../Images/vinyl.png");
-            link.setAttribute("href", "http://localhost:8081/vinyls?id=" + encodeURIComponent(jsonArray[i].id));
+            // link.setAttribute("href", "http://localhost:8081/vinyls?id=" + encodeURIComponent(jsonArray[i].id));
+            link.setAttribute("href", "http://localhost:8081/vinyls?id=" +
+                encodeURIComponent(jsonArray[i].id)
+                + "&colID=" + encodeURIComponent(getIDparameter()));
         }
         else {
             img.setAttribute("src", "../../Images/cassette.jpg");
-            link.setAttribute("href", "http://localhost:8081/cassettes?id=" + encodeURIComponent(jsonArray[i].id));
-
+            // link.setAttribute("href", "http://localhost:8081/cassettes?id=" + encodeURIComponent(jsonArray[i].id));
+            link.setAttribute("href", "http://localhost:8081/cassettes?id=" +
+                encodeURIComponent(jsonArray[i].id)
+                + "&colID=" + encodeURIComponent(getIDparameter()));
         }
         link.appendChild(name);
         link.appendChild(img);
@@ -85,39 +90,7 @@ function getCollection() {
     });
     xhr.send(null);
 }
-function deleteElementFromCollection(liElement) {
 
-    let colID = getIDparameter();
-    let elemtID = getIDfromLI(liElement);
-
-    let xhr = new XMLHttpRequest();
-    xhr.open("DELETE", "http://localhost:8081/collectionsService");
-
-    xhr.addEventListener("load", function loadCallback() {
-        switch (xhr.status) {
-            case 200:
-                console.log("Success " + xhr.response);
-                //TODO: Sterge elementul din pagina
-                liElement.parentNode.removeChild(liElement); //fixme
-                break;
-            case 404:
-                console.log("Oups! Not found");
-                break;
-        }
-
-    });
-    liElement.innerHTML = "";
-    xhr.addEventListener("error", function errorCallback() {
-        console.log("Network error");
-    });
-
-    let payload = {
-        colID: colID,
-        musicID: elemtID
-    };
-    xhr.send(JSON.stringify(payload));
-    
-}
 function openCity(evt, button) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
