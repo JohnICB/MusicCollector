@@ -1,7 +1,6 @@
 package com.musiccollector.api.controllers.collections;
 
 import com.musiccollector.api.controllers.login.LoginService;
-import com.musiccollector.api.model.database.user.ConnectedUsers;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

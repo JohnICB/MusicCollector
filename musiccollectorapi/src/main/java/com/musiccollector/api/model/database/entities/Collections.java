@@ -108,7 +108,7 @@ public class Collections {
             collectionJavas.add(new CollectionJava(id, userIDs, musicIDs, description,
                     isVinyl, title));
 
-        }while (resultSet.next());
+        } while (resultSet.next());
 
 
         return collectionJavas;
@@ -150,9 +150,20 @@ public class Collections {
 
     public static void insertByColID(long colID, long musicID) {
         try {
-            ResultSet rs = Database.selectQuery(
-                    "SELECT ID_USER, TITLE, DESCRIPTIOM, IS_VINYL FROM" +
-                            " COLLECTIONS WHERE ID_COLLECTION = ?", colID);
+//            ResultSet rs = Database.selectQuery(
+//                    "SELECT ID_USER, TITLE, DESCRIPTION, IS_VINYL FROM" +
+//                            " COLLECTIONS WHERE ID_COLLECTION = ?", colID);
+//
+//            if (!rs.next()) {
+//                return;
+//            }
+
+            ResultSet rs = null;
+            PreparedStatement ps = Database.getConnection().prepareStatement(
+                    "SELECT ID_USER, TITLE, DESCRIPTION, IS_VINYL FROM COLLECTIONS WHERE ID_COLLECTION = ?");
+
+            ps.setLong(1, colID);
+            rs = ps.executeQuery();
 
             if (!rs.next()) {
                 return;
@@ -164,13 +175,14 @@ public class Collections {
             boolean isVinyl = rs.getBoolean(4);
 
             PreparedStatement preparedStatement = Database.getConnection().prepareStatement(
-                    "INSERT INTO collections (ID_USER, DESCRIPTION, IS_VINYL, TITLE, ID_COLLECTION) VALUES (?, ?, ?, ?, ?)");
+                    "INSERT INTO collections (ID_USER ,DESCRIPTION, IS_VINYL, TITLE, ID_COLLECTION, ID_MUSIC) VALUES (?, ?, ?, ?, ?, ?)");
 
             preparedStatement.setLong(1, uid);
             preparedStatement.setString(2, description);
             preparedStatement.setBoolean(3, isVinyl);
             preparedStatement.setString(4, title);
             preparedStatement.setLong(5, colID);
+            preparedStatement.setLong(6, musicID);
 
             preparedStatement.executeUpdate();
 

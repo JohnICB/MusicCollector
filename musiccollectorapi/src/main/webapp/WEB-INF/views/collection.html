@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
 
     <title>JBC MUSIC | Browse</title>
-    <link rel="stylesheet" href="../../css/vinyl.css">
+    <link rel="stylesheet" href="../../css/vinyl1.css">
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -73,7 +73,7 @@
             <!--</select>-->
 
             <button type="button" onclick="" class="button-search" name="buttonSearchX">Cautare</button>
-            <button id="myBtn">Add Track</button>
+            <button id="myBtnAddTrack">Add Track</button>
             <div id="My Collection" class="tabcontent">
                 
         
@@ -86,18 +86,11 @@
                         <form id="formObj wowobj">
                             
                             Track name:
-                            <input type="text" id="fname" name="Title" placeholder="Track name.." required><br>
-                            Type:<br>
-                            <select>
-                                    <option value="" selected="selected">Type of the track..</option> 
-                                <option value="Cassetts">Cassette</option>
-                                <option value="Vinyls">Vinyls</option>
-                            </select><br>
+                            <input type="text" id="fname" name="title" placeholder="Track name.." required><br>
                             Artist name:<br>
-                            
-                            <input type="text" id="fname" name="Artist" placeholder="Artist name.." required><br>
+                            <input type="text" id="fname" name="artists" placeholder="Artist name.." required><br>
                             Region:<br>
-                            <select>
+                            <select name="region">
                                 <optgroup label="">
                                     <option value="" selected="selected">Select Country</option> 
                                 </optgroup>
@@ -371,16 +364,19 @@
                                 </optgroup>
                             </select><br>
                             Age:<br>
-                            <input type="text" id="fname" name="Age" placeholder="Age..."><br>
+                            <select name="age">
+                                <option value="new">New</option>
+                                <option value="old">Old</option>
+                            </select><br>
                             Album:<br>
-                            <input type="text" id="fname" name="Title" placeholder="Album.."><br>
+                            <input type="text" id="fname" name="album" placeholder="Album.."><br>
                             Size:<br>
-                            <input type="text" id="fname" name="Size" placeholder="Size.."><br><br>
-                            Duration (1-1000):
-                            <input type="number" name="fname" min="1" max="1000"><br><br>
+                            <input type="text" id="fname" name="size" placeholder="Size.."><br><br>
+                            Duration;
+                            <input type="time" name="duration" step="1" min="00:00:00" max="23:59:59" ><br><br>
                             Genre:<br>
-                            <select>
-                                    <option value="" selected="selected">Genre..</option> 
+                            <select name="genre">
+                                <option value="" selected="selected">Genre..</option>
                                 <option value="Rap">Rap</option>
                                 <option value="Rock">Rock</option>
                                 <option value="HipHop">Hip hop</option>
@@ -388,25 +384,25 @@
                                 <option value="LatinMusic">Latin music</option>
                             </select><br>
                            Rarity:<br>
-                           <select>
+                           <select name="rarity">
                                <option value="" selected="" >Rarity...</option>
                                <option value="Bronze">Bronze</option>
                                <option value="Silver">Silver</option>
                                <option value="Gold">Gold</option>
                            </select><br>
                            Release-Date:<br>
-                           <input id="date" type="date"><br><br>
+                           <input name="releaseDate" id="date" type="date"><br><br>
                            Colored disk:
-                           <input type="radio" name="colored" value="yes"> Yes
-                           <input type="radio" name="colored" value="no" checked> No<br><br>
+                           <input type="radio" name="isColored" value="yes"> Yes
+                           <input type="radio" name="isColored" value="no" checked> No<br><br>
                            Stereo disk:
-                           <input type="radio" name="Stereo" value="yes"> Yes
-                           <input type="radio" name="Stereo" value="no" checked> No<br><br>
+                           <input type="radio" name="isStereo" value="yes"> Yes
+                           <input type="radio" name="isStereo" value="no" checked> No<br><br>
                            Special edition disk:
-                           <input type="radio" name="edition" value="yes"> Yes
-                           <input type="radio" name="edition" value="no" checked> No<br>
+                           <input type="radio" name="isSpecialEdition" value="yes"> Yes
+                           <input type="radio" name="isSpecialEdition" value="no" checked> No<br>
         
-                            <input type="button" id="fbutton" value="Submit" onclick="addCollection()">
+                            <input type="button" id="fbutton" value="Submit" onclick="addToCollection(true)">
         
                         </form>
 
@@ -420,21 +416,14 @@
                     <!-- Modal content -->
                     <div class="modal-content">
                         <span class="close">&times;</span><br>
-                        <form id="formObj wowobj">
+                        <form id="formObj wowobj cassette">
                             
                             Track name:
-                            <input type="text" id="fname" name="Title" placeholder="Track name.." required><br>
-                            Type:<br>
-                            <select>
-                                    <option value="" selected="selected">Type of the track..</option> 
-                                <option value="Cassetts">Cassette</option>
-                                <option value="Vinyls">Vinyls</option>
-                            </select><br>
+                            <input type="text" id="fname" name="title" placeholder="Track name.." required><br>
                             Artist name:<br>
-                            
-                            <input type="text" id="fname" name="Artist" placeholder="Artist name.." required><br>
+                            <input type="text" id="fname" name="artists" placeholder="Artists name.." required><br>
                             Region:<br>
-                            <select>
+                            <select name="region">
                                 <optgroup label="">
                                     <option value="" selected="selected">Select Country</option> 
                                 </optgroup>
@@ -708,15 +697,18 @@
                                 </optgroup>
                             </select><br>
                             Age:<br>
-                            <input type="text" id="fname" name="Age" placeholder="Age..."><br>
+                            <select name="age">
+                                <option value="new">New</option>
+                                <option value="old">Old</option>
+                            </select><br>
                             Album:<br>
-                            <input type="text" id="fname" name="Title" placeholder="Album.."><br>
+                            <input type="text" id="fname" name="album" placeholder="Album.."><br>
                             Size:<br>
                             <input type="text" id="fname" name="Size" placeholder="Size.."><br><br>
-                            Duration (1-1000):
-                            <input type="number" name="fname" min="1" max="1000"><br><br>
+                            Duration;
+                            <input type="time" name="duration" step="1" min="00:00:00" max="23:59:59" ><br><br>
                             Genre:<br>
-                            <select>
+                            <select name="genre">
                                     <option value="" selected="selected">Genre..</option> 
                                 <option value="Rap">Rap</option>
                                 <option value="Rock">Rock</option>
@@ -725,20 +717,19 @@
                                 <option value="LatinMusic">Latin music</option>
                             </select><br>
                            Rarity:<br>
-                           <select>
+                           <select name="rarity">
                                <option value="" selected="" >Rarity...</option>
                                <option value="Bronze">Bronze</option>
                                <option value="Silver">Silver</option>
                                <option value="Gold">Gold</option>
                            </select><br>
                            Release-Date:<br>
-                           <input id="date" type="date"><br><br>
-                           Usage-Grade disk:
-                           <input type="radio" name="usage-grade" value="yes"> Yes
-                           <input type="radio" name="usage-grade" value="no" checked> No<br><br>
+                           <input name="releaseDate" id="date" type="date"><br><br>
+                           Usage-Grade disk (0 = new - 10 = very used):
+                           <input type="number" name="usageGrade" min="0" max="10"> <br>
                            
         
-                            <input type="button" id="fbutton" value="Submit" onclick="addCollection()">
+                            <input type="button" id="fbutton" value="Submit" onclick="addToCollection(false)">
         
                         </form>
 

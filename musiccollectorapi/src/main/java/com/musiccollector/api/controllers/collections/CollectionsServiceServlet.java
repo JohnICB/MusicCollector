@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 
 
 @WebServlet(urlPatterns = "/collectionsService")
@@ -79,8 +78,7 @@ public class CollectionsServiceServlet extends HttpServlet {
             long collectionID = jsonPayload.get("colID").getAsLong();
             long musicID = jsonPayload.get("musicID").getAsLong();
 
-            if (collectionID < 0 || !Collections.hasUser(uid, collectionID) || musicID < 0)
-            {
+            if (collectionID < 0 || !Collections.hasUser(uid, collectionID) || musicID < 0) {
                 response.setContentType("application/json");
                 response.getWriter().write("fail");
                 return;
@@ -89,9 +87,7 @@ public class CollectionsServiceServlet extends HttpServlet {
             Collections.deleteVinylOrCassette(musicID);
             response.setContentType("application/json");
             response.getWriter().write("success");
-        }
-        else
-        {
+        } else {
             response.setContentType("application/json");
             response.getWriter().write("mustBeLoggedIn");
         }

@@ -2,9 +2,7 @@ package com.musiccollector.api.controllers.collections;
 
 
 import com.musiccollector.api.controllers.login.LoginService;
-import com.musiccollector.api.controllers.login.LoginService;
 import com.musiccollector.api.model.database.entities.Cassettes;
-import com.musiccollector.api.model.database.entities.Collections;
 import com.musiccollector.api.model.database.entities.Vinyls;
 
 import javax.servlet.ServletException;
@@ -23,28 +21,23 @@ public class TrackServiceServlet extends HttpServlet {
         long musicID = -1;
         musicID = Long.parseLong(request.getParameter("id"));
         boolean isVinyl = Boolean.parseBoolean(request.getParameter("isVinyl"));
-        System.out.println("get prv elm " + musicID + " " +isVinyl);
+        System.out.println("get prv elm " + musicID + " " + isVinyl);
 
         if (musicID < 0 || !LoginService.isUserLoggedIn(request.getCookies())) return;
 
-        if (isVinyl)
-        {
+        if (isVinyl) {
             Vinyls v = Vinyls.getVinylByID(musicID);
 
-            if (v != null)
-            {
+            if (v != null) {
                 response.setContentType("application/json");
                 response.getWriter().write(v.toJson().toString());
                 System.out.println(v.toJson().toString());
                 return;
             }
-        }
-        else
-        {
+        } else {
             Cassettes c = Cassettes.getCassetteByID(musicID);
 
-            if (c!=null)
-            {
+            if (c != null) {
                 System.out.println(c.toJson().toString());
                 response.setContentType("application/json");
                 response.getWriter().write(c.toJson().toString());

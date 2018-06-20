@@ -30,3 +30,5 @@ public class TemplateServlet extends HttpServlet {
     }
 
 }
+
+//tomcat7:run -Dmaven.tomcat.port=8081

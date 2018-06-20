@@ -1,13 +1,11 @@
 package com.musiccollector.api.model.database;
 
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.musiccollector.api.model.Database;
 import com.musiccollector.api.model.database.entities.Cassettes;
 import com.musiccollector.api.model.database.entities.Vinyls;
 
-import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -81,8 +79,7 @@ public class CollectionJava {
         return vinylArray;
     }
 
-    public ArrayList<Cassettes> getCassetesContent()
-    {
+    public ArrayList<Cassettes> getCassetesContent() {
         ArrayList<Cassettes> cassettesArray = new ArrayList<>();
 
         for (long id : id_music) {

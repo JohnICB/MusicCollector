@@ -249,7 +249,9 @@ public class CollectionsServlet extends HttpServlet {
 
             if (uid > 0) {
                 BufferedReader payLoad = request.getReader();
-                JsonObject jsonPayload = new JsonParser().parse(payLoad.readLine()).getAsJsonObject();
+                String p = payLoad.readLine();
+                System.out.println(p);
+                JsonObject jsonPayload = new JsonParser().parse(p).getAsJsonObject();
 
                 long collectionID = -1;
                 collectionID = jsonPayload.get("colID").getAsLong();
@@ -263,7 +265,6 @@ public class CollectionsServlet extends HttpServlet {
                 if (Collections.isVinylCol(collectionID)) {
                     Vinyls newVinyl = Vinyls.fromJson(jsonPayload);
                     newVinyl.insert();
-
                     Collections.insertByColID(collectionID, newVinyl.getIdVinyl());
                 } else {
                     Cassettes newCassettes = Cassettes.fromJson(jsonPayload);

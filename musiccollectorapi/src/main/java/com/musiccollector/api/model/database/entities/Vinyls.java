@@ -3,8 +3,10 @@ package com.musiccollector.api.model.database.entities;
 import com.google.gson.JsonObject;
 import com.musiccollector.api.model.Database;
 
-import javax.xml.crypto.Data;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class Vinyls {
@@ -151,7 +153,7 @@ public class Vinyls {
         return null;
     }
 
-        public JsonObject toJson() {
+    public JsonObject toJson() {
         JsonObject vinylJson = new JsonObject();
 
         vinylJson.addProperty("id", this.idVinyl);

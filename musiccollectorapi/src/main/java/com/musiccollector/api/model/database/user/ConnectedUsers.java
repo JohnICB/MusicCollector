@@ -5,7 +5,6 @@ import com.musiccollector.api.generators.TokenGenerator;
 import com.musiccollector.api.model.Database;
 
 import javax.servlet.http.Cookie;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectedUsers {

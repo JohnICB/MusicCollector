@@ -75,14 +75,14 @@ public class Cassettes {
         String usageGrade = jsonPayload.get("usageGrade").getAsString();
         String genre = jsonPayload.get("genre").getAsString();
         String releaseDate = jsonPayload.get("releaseDate").getAsString();
-        String externalID = jsonPayload.get("mbid").getAsString();
+//        String externalID = jsonPayload.get("mbid").getAsString();
+        String externalID = "";
 
         return new Cassettes(externalID, title, album, artists, genre, duration, age,
                 usageGrade, releaseDate, region);
     }
 
-    public static Cassettes processResults(ResultSet resultSet)
-    {
+    public static Cassettes processResults(ResultSet resultSet) {
         try {
             if (resultSet == null || !resultSet.next()) {
                 return null;
@@ -99,8 +99,8 @@ public class Cassettes {
                 String releaseDate = resultSet.getString(10);
                 String region = resultSet.getString(11);
 
-                return new Cassettes(idCassette, externalID,title,album,artists,genre,
-                        duration,age,usageGrade,releaseDate,region);
+                return new Cassettes(idCassette, externalID, title, album, artists, genre,
+                        duration, age, usageGrade, releaseDate, region);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -121,7 +121,7 @@ public class Cassettes {
             e.printStackTrace();
         }
 
-    return null;
+        return null;
     }
 
     public long getIdCassettes() {

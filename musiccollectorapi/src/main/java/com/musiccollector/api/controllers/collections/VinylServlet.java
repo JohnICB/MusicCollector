@@ -1,8 +1,5 @@
 package com.musiccollector.api.controllers.collections;
 
-import com.musiccollector.api.controllers.login.LoginService;
-import com.musiccollector.api.model.database.entities.Vinyls;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

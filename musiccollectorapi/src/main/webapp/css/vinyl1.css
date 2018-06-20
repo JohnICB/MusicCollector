@@ -515,7 +515,7 @@ textarea {
     resize: none;
 }
 
-#myBtn {
+#myBtn, #myBtnAddTrack {
     padding: 5px 30px;
 
     border-radius: 10px;
@@ -523,7 +523,7 @@ textarea {
     border-color: #4c5baf;
 }
 
-#myBtn:hover {
+#myBtn:hover ,#myBtnAddTrack:hover {
     background: #4c5baf;
     box-shadow: 0px 2px 15px 5px white;
     color: white;
