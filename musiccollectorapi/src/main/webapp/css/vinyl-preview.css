@@ -25,24 +25,18 @@ body {
     margin-left: 110px;
 }
 
-#propr{
+#propr, #propr1{
     background-color: #efefef;
     padding: 10px 10%;
 
 }
 
-#propr *{
+#propr *, #propr1 *{
     display: inline-block;
     padding: 2px;
     margin: 2px;
 }
-#propr1{
-    background-color: #efefef;
-    padding: 10px 10%;
-}
-#propr1 p{
-    display: inline;
-}
+
 
 .container {
     position: relative;
