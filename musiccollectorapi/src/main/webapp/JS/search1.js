@@ -7,7 +7,7 @@ $(function () {
 
     var $contextMenu = $("#contextMenu");
 
-    $("body").on("contextmenu", "a", function (e) {
+    $("body").on("contextmenu", "img", function (e) {
         selectedElment = e.target.parentElement;
         console.log("Selected: " + selectedElment.getElementsByTagName("h3")[0].innerHTML);
         $contextMenu.css({

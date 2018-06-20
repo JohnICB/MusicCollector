@@ -83,12 +83,12 @@
 <!-- END NAVBAR -->
 
 <div class="main">
-    <div class="center">
+    <div class="center" id="defaultOpen">
         <div class="banner">
             <p id=textimg>ALBUM PAGE</p>
         </div>
         <div class="add-but">
-            <button class="button-add">Add Album to your collection</button>
+            <button id="myBtn" class="button-add">Add Album to your collection</button>
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
@@ -96,18 +96,27 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <form id="formObj">
-                        <label>Collection name</label>
-                        <input type="text" id="fname" name="Collection name" placeholder="Name..">
-                        <label>Collection type</label>
-                        <select id="Collection" name="colType">
-                            <option value="Cassetts">Cassette</option>
-                            <option value="Vinyls">Vinyls</option>
-                        </select>
-                        <label>Description</label>
-                        <input class="textDesc" type="text" name="colDescription"/>
-
-                        <input type="button" id="fbutton" value="Submit" onclick="addCollection()">
-
+                        <label>Choose you Collection:</label>
+                        <div id="collectionContainer">
+                            <div class="collectionItem">
+                                <img src="../../Images/cassette.jpg">
+                                <div class="collectionText">
+                                    <h4>Title</h4>
+                                    <p>description</p>
+                                </div>
+        
+                            </div>
+                            <div class="collectionItem">
+                                <img src="../../Images/cassette.jpg">
+                                <div class="collectionText">
+                                    <h4>Title</h4>
+                                    <p>description</p>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+        
                     </form>
                 </div>
             </div>

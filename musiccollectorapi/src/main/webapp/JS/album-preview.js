@@ -1,6 +1,6 @@
 function openCity(evt, button) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("add-but");
+    tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
@@ -13,7 +13,7 @@ function openCity(evt, button) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-//document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen").click();
 // Get the modal
 var modal = document.getElementById('myModal');
 // Get the button that opens the modal
@@ -22,9 +22,9 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-// btn.onclick = function () {
-//     modal.style.display = "block";
-// };
+btn.onclick = function () {
+    modal.style.display = "block";
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
@@ -43,7 +43,6 @@ window.onclick = function (event) {
         colDesc.innerHTML = "";
     }
 };
-
 
 window.onload = function () {
     console.log(window.location.href);
