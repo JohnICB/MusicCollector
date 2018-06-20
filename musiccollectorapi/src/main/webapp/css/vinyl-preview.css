@@ -5,6 +5,26 @@ body {
 
 }
 
+#delButton{
+    position: absolute;
+    background-color: #af4d48;
+    border: initial;
+    border-width: 0 7px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    font-family: 'Allerta Stencil', serif;
+    color: #FFF;
+    font-size: 20px;
+    width: 15%;
+
+    margin-top: 30px;
+    margin-left: 110px;
+}
+
 #propr{
     background-color: #efefef;
     padding: 10px 10%;
