@@ -47,14 +47,15 @@ public class AlbumQueryBuilder {
         try {
             JsonObject jsonObject = getJson.Retrieve(url);
 
-
             nou.add("name", jsonObject.get("album").getAsJsonObject().get("name"));
             nou.add("artist", jsonObject.get("album").getAsJsonObject().get("artist"));
             nou.add("mbid", jsonObject.get("album").getAsJsonObject().get("mbid"));
             nou.add("image", jsonObject.get("album").getAsJsonObject().get("image").getAsJsonArray().get(2));
             nou.add("wiki", jsonObject.get("album").getAsJsonObject().get("wiki"));
 
+            //JsonArray trackArray = jsonObject.get("album").getAsJsonObject().get("tracks").getAsJsonObject().getAsJsonArray();
 
+            nou.add("tracks",jsonObject.get("album").getAsJsonObject().get("tracks").getAsJsonObject().get("track"));
             System.out.println("this is: " + nou.toString());
         } catch (IOException e) {
             e.printStackTrace();

@@ -35,5 +35,6 @@ com\musiccollector\api\controllers\collections\VinylServlet.class
 com\musiccollector\api\controllers\events\EventsService.class
 com\musiccollector\api\controllers\register\RegisterServlet.class
 com\musiccollector\api\controllers\staticpages\AboutServlet.class
+com\musiccollector\api\controllers\collections\AlbumServiceServlet.class
 com\musiccollector\api\controllers\profile\ProfileService.class
 com\musiccollector\api\controllers\apisearch\ApiSearchServelet.class

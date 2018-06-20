@@ -7,7 +7,7 @@ $(function () {
 
     var $contextMenu = $("#contextMenu");
 
-    $("body").on("contextmenu", "ul img", function (e) {
+    $("body").on("contextmenu", "a", function (e) {
         selectedElment = e.target.parentElement;
         console.log("Selected: " + selectedElment.getElementsByTagName("h3")[0].innerHTML);
         $contextMenu.css({
@@ -68,10 +68,11 @@ function searchapi() {
 
                 // console.log(xhr.response);
                 let r = JSON.parse(xhr.response);
-                console.log(r.artist);
+                console.log("r.artist: "+JSON.stringify(r.artist));
 
                 del = 1;
                 for (let i = 0; i < r.artist.length; i++) {
+                    console.log("artist i: "+JSON.stringify(r.artist[i]));
                     addElement(r.artist[i]);
 
                     del = 0;
@@ -105,15 +106,18 @@ function searchapi() {
 
 
         newLi.classList.add("product");
-        a.setAttribute("href", "");
+        a.setAttribute("href", "http://localhost:8081/album?mbid="+encodeURIComponent(element.mbid));
         name.appendChild(document.createTextNode(element.name));
         img.setAttribute("class", "vyn");
+
         img.setAttribute("src", element.image[Object.keys(element.image)[0]]);
-        desc.appendChild(document.createTextNode(element.artist))
+        desc.appendChild(document.createTextNode(element.artist));
 
         newLi.appendChild(a);
         newLi.appendChild(name);
-        newLi.appendChild(img);
+        a.appendChild(img);
+        newLi.appendChild(a);
+
         newLi.appendChild(desc);
 
         ul.appendChild(newLi);
@@ -376,9 +380,9 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-btn.onclick = function () {
-    modal.style.display = "block";
-};
+// btn.onclick = function () {
+//     modal.style.display = "block";
+// };
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
