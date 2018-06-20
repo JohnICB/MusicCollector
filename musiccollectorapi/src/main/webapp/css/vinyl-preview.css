@@ -5,7 +5,7 @@ body {
 
 }
 
-#delButton{
+#delButton, #delButton2{
     position: absolute;
     background-color: #af4d48;
     border: initial;

@@ -83,7 +83,7 @@ function getInfo() {
 function deleteElementFromCollection() {
 
     let ask = prompt("Are you sure? Enter yes to delete");
-   if (ask !== "yes" || ask !=="YES") return;
+   if (ask !== "yes") return;
 
 
     let url_string = window.location.href;
