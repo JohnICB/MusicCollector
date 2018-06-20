@@ -30,6 +30,7 @@ public class CollectionsServiceServlet extends HttpServlet {
         System.out.println("/collections service");
 
         if (LoginService.isUserLoggedIn(request.getCookies())) {
+            boolean ok = false;
             System.out.println("get la collection service");
             long uid = ConnectedUsers.getUserIDByCookies(request.getCookies());
             long colID = Long.parseLong(request.getParameter("id"));
@@ -44,22 +45,29 @@ public class CollectionsServiceServlet extends HttpServlet {
 
             JsonArray jarray = new JsonArray();
 
+            System.out.println("add obiecte to jarray");
             if (collectionJava.isVinyl()) {
+                ok = true;
                 ArrayList<Vinyls> vinyls = collectionJava.getVinylContent();
                 for (Vinyls v : vinyls) {
                     jarray.add(v.toJson());
+                    ok = false;
                 }
             } else {
                 ArrayList<Cassettes> cassettes = collectionJava.getCassetesContent();
                 for (Cassettes c : cassettes) {
                     jarray.add(c.toJson());
+                    ok = false;
                 }
             }
 
-            if (jarray.size() < 1) {
+            if (ok && jarray.size() == 0) {
+
+
                 JsonObject job = new JsonObject();
                 job.addProperty("isColored", "");
                 jarray.add(job);
+
             }
 
             System.out.println("trimit " + jarray.toString());

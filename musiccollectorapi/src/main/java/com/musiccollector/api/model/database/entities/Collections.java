@@ -47,7 +47,7 @@ public class Collections {
         ArrayList<Long> userIDs = new ArrayList<>();
         String title = "";
         String description = "";
-        boolean isVinyl = false;
+        boolean isVinyl;
         CollectionJava collectionJava = null;
 
         try {
@@ -63,10 +63,10 @@ public class Collections {
             isVinyl = newResults.getBoolean(4);
             title = newResults.getString(5);
 
-            while (newResults.next()) {
+            do {
                 musicIDs.add(newResults.getLong(1));
                 userIDs.add(newResults.getLong(2));
-            }
+            }while (newResults.next());
 
             return new CollectionJava(idCollection, userIDs, musicIDs, description,
                     isVinyl, title);

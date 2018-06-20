@@ -14,8 +14,12 @@ function getIDfromLI(liElement) {
 }
 function createElements(jsonArray) {
 
-    if (jsonArray.length === 1 && !jsonArray[0].hasOwnProperty("title"))  {
+    if (jsonArray.length === 1 && jsonArray[0].hasOwnProperty("isColored") && !jsonArray[0].hasOwnProperty("title"))  {
         globalisVinyl = true;
+        return;
+    }
+    else if(jsonArray.length === 1 && !jsonArray[0].hasOwnProperty("isColored") && !jsonArray[0].hasOwnProperty("title")) {
+        globalisVinyl = false;
         return;
     }
 
