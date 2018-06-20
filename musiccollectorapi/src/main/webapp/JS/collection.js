@@ -255,6 +255,8 @@ function addToCollection(isVinyl)
         json = toJSONString(formCassette);
     }
 
+    if (json.title === "") {formReset(); return;}
+
     json["colID"] = getIDparameter(); //idul collectiei la care adaugam
 
     console.log("\n\n" + json);
@@ -284,6 +286,17 @@ function addToCollection(isVinyl)
     });
     xhr.send(JSON.stringify(json));
 
+    formReset();
 
 
+}
+
+function formReset()
+{
+    console.log("reset");
+    modal.style.display = "none";
+    modal1.style.display = "none";
+
+        formViny.reset();
+        formCassette.reset();
 }
