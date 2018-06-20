@@ -333,4 +333,28 @@ footer .fa-instagram {
 textarea {
     resize: none;
 }
+#collectionContainer{
+    display: inline-block;
+}
+.collectionItem{
+    display: flex;
+}
+.collectionItem span{
+    display:none;
+}
+.collectionText{
+
+    flex-direction: row;
+    width: 20%;
+    height: 20%;
+}
+.collectionItem img{
+
+    width: 20%;
+    height: 20%;
+    align:left;
+}
+#myModal1{
+    display:none;
+}
   

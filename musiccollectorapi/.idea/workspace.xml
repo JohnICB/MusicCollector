@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ccf11c-ee5a-4371-8276-3235fece8216" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/musiccollector/api/controllers/collections/AlbumServiceServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/musiccollector/api/controllers/collections/CollectionsServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/musiccollector/api/controllers/collections/CollectionsServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/musiccollector/api/musicbrainzapi/AlbumQueryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/musiccollector/api/musicbrainzapi/AlbumQueryBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/JS/album-preview.js" afterPath="$PROJECT_DIR$/src/main/webapp/JS/album-preview.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/JS/search1.js" afterPath="$PROJECT_DIR$/src/main/webapp/JS/search1.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/album-preview.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/album-preview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,69 +22,99 @@
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="jbcdb@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="jbcdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="jbcdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="jbcdb: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="jbcdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="jbcdb: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="connected_users: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="jbcdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="jbcdb: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="users: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-          <file leaf-file-name="album-preview.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/album-preview.js">
+          <file leaf-file-name="CollectionsServlet.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="857">
-                  <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+                <state relative-caret-position="515">
+                  <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="album-preview.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/album-preview.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1038">
+                  <caret line="154" column="33" lean-forward="true" selection-start-line="154" selection-start-column="33" selection-end-line="154" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#1605#3615#0" expanded="false" />
+                    <element signature="n#!!block;n#addUserCollections#0" expanded="false" />
+                    <element signature="n#!!block;n#createCollectionList#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="album-preview.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/css/album-preview.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="700">
+                  <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/search.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="775">
-                  <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+                <state relative-caret-position="2500">
+                  <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Collections.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1940">
+                  <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                    <element signature="method#insert#0;class#Collections#0" expanded="false" />
+                    <element signature="e#9169#9170#0" expanded="false" />
+                    <element signature="e#9204#9205#0" expanded="false" />
+                    <element signature="e#9258#9259#0" expanded="false" />
+                    <element signature="e#9306#9307#0" expanded="false" />
+                    <element signature="e#9339#9340#0" expanded="false" />
+                    <element signature="e#9369#9370#0" expanded="false" />
+                    <element signature="e#9413#9414#0" expanded="false" />
+                    <element signature="e#9451#9452#0" expanded="false" />
+                    <element signature="e#9483#9484#0" expanded="false" />
+                    <element signature="e#9512#9513#0" expanded="false" />
+                    <element signature="e#9554#9555#0" expanded="false" />
+                    <element signature="e#9590#9591#0" expanded="false" />
+                    <element signature="e#9629#9630#0" expanded="false" />
+                    <element signature="e#9663#9664#0" expanded="false" />
+                    <element signature="e#9717#9718#0" expanded="false" />
+                    <element signature="e#9763#9764#0" expanded="false" />
+                    <element signature="e#9798#9799#0" expanded="false" />
+                    <element signature="e#9828#9829#0" expanded="false" />
+                    <element signature="e#9874#9875#0" expanded="false" />
+                    <element signature="e#9912#9913#0" expanded="false" />
+                    <marker date="1529474178126" expanded="true" signature="3743:3785" ph="SELECT MAX(I... COLLECTIONS" />
+                    <marker date="1529474178126" expanded="true" signature="4026:4127" ph="INSERT INTO collections... " />
+                    <marker date="1529474178126" expanded="true" signature="5064:5149" ph="SELECT ID_US... COLLECTIONS" />
+                    <marker date="1529474178126" expanded="true" signature="5589:5703" ph="INSERT INTO collections... " />
+                    <marker date="1529474178126" expanded="true" signature="6505:6601" ph="INSERT INTO collections... " />
+                    <marker date="1529474178126" expanded="true" signature="7167:7256" ph="SELECT IS_VI... collections" />
+                    <marker date="1529474178126" expanded="true" signature="7760:7840" ph="DELETE FROM " />
+                    <marker date="1529474178126" expanded="true" signature="8887:8962" ph="DELETE FROM " />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -99,8 +126,8 @@
           <file leaf-file-name="album-preview.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/album-preview.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1195">
-                  <caret line="120" column="33" lean-forward="true" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="33" />
+                <state relative-caret-position="1574">
+                  <caret line="94" column="38" lean-forward="true" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -109,14 +136,13 @@
           <file leaf-file-name="search1.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/search1.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="350">
-                  <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+                <state relative-caret-position="1175">
+                  <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
                   <folding>
-                    <element signature="n#!!block;n#openCity#0" expanded="false" />
-                    <element signature="n#!!block;n#closeModal#0" expanded="false" />
-                    <element signature="n#!!block;n#addUserCollections#0" expanded="false" />
-                    <element signature="n#!!block;n#addToCollection#0" expanded="false" />
+                    <element signature="n#!!block;n#searchapi#0" expanded="false" />
                     <element signature="n#!!block;n#createCollectionList#0" expanded="false" />
+                    <marker date="1529486305001" expanded="false" signature="587:1154" ph="{...}" />
+                    <marker date="1529486305001" expanded="false" signature="1177:1243" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -137,7 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>join</find>
       <find>about</find>
       <find>de[</find>
       <find>clos</find>
@@ -166,6 +191,8 @@
       <find>contextmenu</find>
       <find>addToCollection</find>
       <find>addEleme</find>
+      <find>add</find>
+      <find>Add Al</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,9 +255,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/musiccollector/api/controllers/collections/AboutServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/musiccollector/api/controllers/collections/AlbumServiceServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/musiccollector/api/controllers/collections/AlbumServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JS/album-preview.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/album-preview.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/JS/search1.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JS/album-preview.js" />
       </list>
     </option>
   </component>
@@ -279,10 +306,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-135" />
-    <option name="y" value="271" />
-    <option name="width" value="3862" />
-    <option name="height" value="2122" />
+    <option name="x" value="252" />
+    <option name="y" value="150" />
+    <option name="width" value="3221" />
+    <option name="height" value="1850" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -712,7 +739,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3137931" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1191,21 +1218,20 @@
       <workItem from="1529341721656" duration="289000" />
       <workItem from="1529342483250" duration="11173000" />
       <workItem from="1529437213591" duration="11074000" />
-      <workItem from="1529474206178" duration="9081000" />
+      <workItem from="1529474206178" duration="12543000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152882000" />
+    <option name="totallyTimeSpent" value="156344000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-135" y="271" width="3862" height="2122" extended-state="0" />
-    <editor active="true" />
+    <frame x="252" y="150" width="3221" height="1850" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07453581" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08980505" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1222,9 +1248,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15877147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18496059" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13236074" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15947588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1245,7 +1271,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1254,7 +1280,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/musiccollector/api/controllers/events/EventsServiceServlet.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/musiccollector/api/model/database/user/Users.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
@@ -1457,32 +1482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2090">
-          <caret line="277" column="77" lean-forward="false" selection-start-line="277" selection-start-column="77" selection-end-line="277" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="86" column="32" lean-forward="false" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
-          <folding>
-            <element signature="method#insert#0;class#Collections#0" expanded="false" />
-            <marker date="1529474178126" expanded="true" signature="3743:3785" ph="SELECT MAX(I... COLLECTIONS" />
-            <marker date="1529474178126" expanded="true" signature="4026:4127" ph="INSERT INTO collections... " />
-            <marker date="1529474178126" expanded="true" signature="5064:5149" ph="SELECT ID_US... COLLECTIONS" />
-            <marker date="1529474178126" expanded="true" signature="5589:5703" ph="INSERT INTO collections... " />
-            <marker date="1529474178126" expanded="true" signature="6505:6601" ph="INSERT INTO collections... " />
-            <marker date="1529474178126" expanded="true" signature="7167:7256" ph="SELECT IS_VI... collections" />
-            <marker date="1529474178126" expanded="true" signature="7760:7840" ph="DELETE FROM " />
-            <marker date="1529474178126" expanded="true" signature="8887:8962" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cassettes-preview.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-225">
@@ -1579,14 +1578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/album-preview.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/cassetts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1611,41 +1602,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/album-preview.js">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/40c19f23-06af-47d4-97cf-7b95038a3fdb/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
-          <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/album-preview.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/musiccollector/api/model/database/entities/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1195">
-          <caret line="120" column="33" lean-forward="true" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/search1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="1940">
+          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#openCity#0" expanded="false" />
-            <element signature="n#!!block;n#closeModal#0" expanded="false" />
-            <element signature="n#!!block;n#addUserCollections#0" expanded="false" />
-            <element signature="n#!!block;n#addToCollection#0" expanded="false" />
-            <element signature="n#!!block;n#createCollectionList#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#insert#0;class#Collections#0" expanded="false" />
+            <element signature="e#9169#9170#0" expanded="false" />
+            <element signature="e#9204#9205#0" expanded="false" />
+            <element signature="e#9258#9259#0" expanded="false" />
+            <element signature="e#9306#9307#0" expanded="false" />
+            <element signature="e#9339#9340#0" expanded="false" />
+            <element signature="e#9369#9370#0" expanded="false" />
+            <element signature="e#9413#9414#0" expanded="false" />
+            <element signature="e#9451#9452#0" expanded="false" />
+            <element signature="e#9483#9484#0" expanded="false" />
+            <element signature="e#9512#9513#0" expanded="false" />
+            <element signature="e#9554#9555#0" expanded="false" />
+            <element signature="e#9590#9591#0" expanded="false" />
+            <element signature="e#9629#9630#0" expanded="false" />
+            <element signature="e#9663#9664#0" expanded="false" />
+            <element signature="e#9717#9718#0" expanded="false" />
+            <element signature="e#9763#9764#0" expanded="false" />
+            <element signature="e#9798#9799#0" expanded="false" />
+            <element signature="e#9828#9829#0" expanded="false" />
+            <element signature="e#9874#9875#0" expanded="false" />
+            <element signature="e#9912#9913#0" expanded="false" />
+            <marker date="1529474178126" expanded="true" signature="3743:3785" ph="SELECT MAX(I... COLLECTIONS" />
+            <marker date="1529474178126" expanded="true" signature="4026:4127" ph="INSERT INTO collections... " />
+            <marker date="1529474178126" expanded="true" signature="5064:5149" ph="SELECT ID_US... COLLECTIONS" />
+            <marker date="1529474178126" expanded="true" signature="5589:5703" ph="INSERT INTO collections... " />
+            <marker date="1529474178126" expanded="true" signature="6505:6601" ph="INSERT INTO collections... " />
+            <marker date="1529474178126" expanded="true" signature="7167:7256" ph="SELECT IS_VI... collections" />
+            <marker date="1529474178126" expanded="true" signature="7760:7840" ph="DELETE FROM " />
+            <marker date="1529474178126" expanded="true" signature="8887:8962" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state relative-caret-position="2500">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/musiccollector/api/controllers/collections/CollectionsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/album-preview.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/album-preview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1574">
+          <caret line="94" column="38" lean-forward="true" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/search1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1175">
+          <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#searchapi#0" expanded="false" />
+            <element signature="n#!!block;n#createCollectionList#0" expanded="false" />
+            <marker date="1529486305001" expanded="false" signature="587:1154" ph="{...}" />
+            <marker date="1529486305001" expanded="false" signature="1177:1243" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JS/album-preview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1038">
+          <caret line="154" column="33" lean-forward="true" selection-start-line="154" selection-start-column="33" selection-end-line="154" selection-end-column="33" />
+          <folding>
+            <element signature="e#1605#3615#0" expanded="false" />
+            <element signature="n#!!block;n#addUserCollections#0" expanded="false" />
+            <element signature="n#!!block;n#createCollectionList#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
