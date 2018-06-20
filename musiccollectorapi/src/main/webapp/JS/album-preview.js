@@ -24,6 +24,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal
 btn.onclick = function () {
     modal.style.display = "block";
+    createCollectionList();
 };
 
 // When the user clicks on <span> (x), close the modal
@@ -36,11 +37,11 @@ window.onclick = function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
 
-        let colName = document.getElementsByName("Collection name")[0].value;
-        let colDesc = document.getElementsByName("colDescription")[0].value;
-
-        colName.innerText = "";
-        colDesc.innerHTML = "";
+        // let colName = document.getElementsByName("Collection name")[0].value;
+        // let colDesc = document.getElementsByName("colDescription")[0].value;
+        //
+        // colName.innerText = "";
+        // colDesc.innerHTML = "";
     }
 };
 
@@ -66,7 +67,8 @@ window.onload = function () {
 
                 let name = document.getElementById("name");
                 name.innerHTML=r.name;
-
+                let artist = document.getElementById("artist");
+                artist.innerHTML = r.artist;
                 let image = document.getElementById("imag");
                 console.log("IMAGE "+r.image[Object.keys(r.image)[0]]);
                 image.setAttribute("src",r.image[Object.keys(r.image)[0]]);
@@ -97,4 +99,194 @@ window.onload = function () {
     });
     xhr.send(null);
 
+}
+function addToCollection(id) {
+
+    try{
+
+        let collectionID = id.getElementsByTagName("span")[0].innerHTML;
+
+        currentAlbumInfo["colID"] = collectionID;
+        console.log(currentAlbumInfo);
+
+
+    }catch(ex){console.log(ex)}
+
+
+
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("PUT","http://localhost:8081/collections");
+    xhr.addEventListener("load", function loadCallback() {
+        switch (xhr.status) {
+            case 200:
+
+
+                console.log("PUT response"+xhr.response);
+
+
+                break;
+            case 404:
+                console.log("Oups! Not found");
+                break;
+        }
+
+    });
+    let jsonStruct = {
+        title: currentAlbumInfo["title"],
+        duration: currentAlbumInfo["duration"],
+        artists: currentAlbumInfo["artists"],
+        region: currentAlbumInfo["region"],
+        age: String(parseInt(Math.random()*100)),
+        album: currentAlbumInfo["album"],
+        usageGrade: currentAlbumInfo["usageGrade"],
+        genre: currentAlbumInfo["genre"],
+        releaseDate: currentAlbumInfo["releaseDate"],
+        size: "120",
+        isColored:false,
+        isStereo:true,
+        isSpecialEdition:false,
+        rarity:"rare",
+        colID : currentAlbumInfo["colID"]
+    };
+    console.log("json struct"+JSON.stringify(jsonStruct));
+
+    xhr.send(JSON.stringify(jsonStruct));
+    modal.style.display = "none";
+}
+function addUserCollections(image, title, description, id) {
+
+    console.log("Image: " + image + " title: " + title + " description: " + description + " id: " + id)
+
+    let colContainer = document.getElementById("collectionContainer"); //root
+
+    let divContainer = document.createElement("div"); //item container
+    divContainer.classList.add("collectionItem");
+
+    let cid = document.createElement("span");
+    cid.innerHTML=id;
+
+    let link = document.createElement("a");
+    link.setAttribute("href","#");
+    link.setAttribute("onClick","addToCollection(this)");
+
+    let imagee = document.createElement("img"); //image source
+    imagee.src=image;
+
+    let textContainer = document.createElement("div"); //text container
+    textContainer.classList.add("collectionText");
+
+    let tit = document.createElement("h4"); //title
+    tit.innerHTML=title;
+
+    let desc = document.createElement("p"); //description
+    desc.innerHTML=description;
+
+    textContainer.appendChild(tit);
+    textContainer.appendChild(desc);
+
+    divContainer.appendChild(cid)
+    divContainer.appendChild(imagee);
+    divContainer.appendChild(textContainer);
+    link.appendChild(divContainer);
+    colContainer.appendChild(link);
+
+
+    // divContainer.appendChild(tit);
+    // divContainer.appendChild(desc);
+    // colContainer.appendChild(imagee);
+    // colContainer.appendChild(divContainer);
+
+}
+function createCollectionList() {
+    console.log("createCollectionList");
+
+    let colContainer = document.getElementById("collectionContainer");
+    colContainer.innerHTML="";
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "http://localhost:8081/collections");
+    console.log("GET: " + xhr.response);
+    xhr.addEventListener("load", function loadCallback() {
+        switch (xhr.status) {
+            case 200:
+                console.log("response: "+xhr.response)
+                let responeArray = JSON.parse(xhr.response)
+
+                for (var i = 0; i < responeArray.length; ++i) {
+                    let isVinyl = responeArray[i].isVinyl;
+                    if (isVinyl) {
+                        var title = document.getElementById("name").innerHTML;
+                        var duration = 0;
+                        var artists =  document.getElementById("artist").innerHTML;
+                        var region = "null";
+                        var age = "null";
+                        var album =document.getElementById("name").innerHTML;
+                        var usageGrade = "null";
+                        var genre = "null";
+                        var releaseDate = "null";
+
+                        let jsonStruct = {
+                            title: title,
+                            duration: duration,
+                            artists: artists,
+                            region: region,
+                            size:"120",
+                            age: age,
+                            album: album,
+                            usageGrade: usageGrade,
+                            genre: genre,
+                            releaseDate: releaseDate,
+                            colID : null
+                        };
+                        currentAlbumInfo = jsonStruct;
+                        console.log("creating vony;");
+                        addUserCollections("../../Images/vinyl.png", responeArray[i].title, responeArray[i].description, responeArray[i].id);
+
+
+
+
+                    }
+                    else {
+                        //console.log("P element"+ selectedElment.getElementsByTagName("p")[0].innerHTML);
+                        var title = document.getElementById("name").innerHTML;
+                        var duration = 0;
+                        var artists =   document.getElementById("artist").innerHTML;
+                        var region = "null";
+                        var age = "null";
+                        var album =document.getElementById("name").innerHTML;
+                        var usageGrade = "null";
+                        var genre = "null";
+                        var releaseDate = "null";
+
+                        let jsonStruct = {
+                            title: title,
+                            duration: duration,
+                            artists: artists,
+                            region: region,
+                            age: age,
+                            album: album,
+                            usageGrade: usageGrade,
+                            genre: genre,
+                            releaseDate: releaseDate,
+                            colID : null
+                        };
+                        currentAlbumInfo = jsonStruct;
+                        console.log("creating cassete;");
+                        addUserCollections("../../Images/cassette.jpg", responeArray[i].title, responeArray[i].description, responeArray[i].id);
+
+                    }
+                }
+                console.log("Success GET" + xhr.response);
+
+
+                break;
+            case 404:
+                console.log("Oups! Not found");
+                break;
+        }
+
+    });
+    xhr.send(null);
 }

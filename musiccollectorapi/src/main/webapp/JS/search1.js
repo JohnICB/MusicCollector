@@ -273,7 +273,7 @@ try{
     console.log("json struct"+JSON.stringify(jsonStruct));
 
     xhr.send(JSON.stringify(jsonStruct));
-    closeModal();
+
 }
 
 function createCollectionList() {
