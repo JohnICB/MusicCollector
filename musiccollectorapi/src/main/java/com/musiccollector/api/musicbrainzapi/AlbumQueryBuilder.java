@@ -27,7 +27,9 @@ public class AlbumQueryBuilder {
             nou.add("image", jsonObject.get("album").getAsJsonObject().get("image").getAsJsonArray().get(2));
             nou.add("wiki", jsonObject.get("album").getAsJsonObject().get("wiki"));
 
+            //JsonArray trackArray = jsonObject.get("album").getAsJsonObject().get("tracks").getAsJsonObject().getAsJsonArray();
 
+            nou.add("tracks",jsonObject.get("album").getAsJsonObject().get("tracks").getAsJsonObject().get("track"));
             System.out.println("this is: " + nou.toString());
         } catch (IOException e) {
             e.printStackTrace();

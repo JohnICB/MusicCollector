@@ -118,6 +118,7 @@ public class Vinyls {
     }
 
     public static Vinyls fromJson(JsonObject jsonPayload) {
+
         String title = jsonPayload.get("title").getAsString();
         String artists = jsonPayload.get("artists").getAsString();
         String region = jsonPayload.get("region").getAsString();

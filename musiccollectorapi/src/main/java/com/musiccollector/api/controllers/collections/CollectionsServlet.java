@@ -250,10 +250,11 @@ public class CollectionsServlet extends HttpServlet {
             if (uid > 0) {
                 BufferedReader payLoad = request.getReader();
                 String p = payLoad.readLine();
-                System.out.println(p);
+                System.out.println("colection put data: "+p);
                 JsonObject jsonPayload = new JsonParser().parse(p).getAsJsonObject();
 
                 long collectionID = -1;
+
                 collectionID = jsonPayload.get("colID").getAsLong();
 
                 if (collectionID < 0) {
