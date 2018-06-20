@@ -269,7 +269,6 @@ public class CollectionsServlet extends HttpServlet {
                 } else {
                     Cassettes newCassettes = Cassettes.fromJson(jsonPayload);
                     newCassettes.insert();
-
                     Collections.insertByColID(collectionID, newCassettes.getIdCassettes());
                 }
 

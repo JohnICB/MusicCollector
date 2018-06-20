@@ -14,12 +14,17 @@ function getIDfromLI(liElement) {
 }
 function createElements(jsonArray) {
 
-    
+    if (jsonArray.length === 1 && !jsonArray[0].hasOwnProperty("title"))  {
+        globalisVinyl = true;
+        return;
+    }
+
+
     let ul = document.getElementsByClassName("product-list")[0];
 
     for (let i = 0; i < jsonArray.length; ++i)
     {
-        if (jsonArray[i].hasOwnProperty("isStereo")) globalisVinyl = true;
+        if (jsonArray[i].hasOwnProperty("isColored")) globalisVinyl = true;
 
         let element = document.createElement("li");
         let link = document.createElement("a");

@@ -56,6 +56,12 @@ public class CollectionsServiceServlet extends HttpServlet {
                 }
             }
 
+            if (jarray.size() < 1) {
+                JsonObject job = new JsonObject();
+                job.addProperty("isColored", "");
+                jarray.add(job);
+            }
+
             System.out.println("trimit " + jarray.toString());
             response.setContentType("application/json");
             response.getWriter().write(jarray.toString());
